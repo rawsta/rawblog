@@ -4,6 +4,7 @@
 
 html {
   height: 100%;
+  font-size: 62.5%;
 }
 
 body {
@@ -11,6 +12,8 @@ body {
   padding: 0;
   min-height: 100%;
   min-width: 100%;
+  background: #363636;
+  color: #eaeaea;
 }
 
 #___gatsby #gatsby-focus-wrapper {
@@ -24,3 +27,20 @@ body {
   display: flex;
   padding: 20px;
 }
+
+a {
+  color: #ff8300;
+  text-decoration: underline;
+  text-decoration-style: solid;
+}
+
+a:hover {
+    color: #830000;
+    text-decoration-style: dashed;
+}
+
+a:visited {
+    color: #ff8300;
+    text-decoration-style: dotted;
+}
+
