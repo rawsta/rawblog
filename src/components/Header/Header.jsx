@@ -5,18 +5,19 @@ import "./Header.css";
 class Header extends Component {
   render() {
     const { config } = this.props;
-    const url = config.siteRss;
+    const title = config.siteTitle;
+    const url = config.siteUrl;
     return (
       <header className="header">
-        <div className="notice-container">
+        <span className="kopfzeile">
 
           <Link to={url}>
-            <button>Works</button>
+            <h2>{title}</h2>
           </Link>
           <h4>
             yeah!
           </h4>
-        </div>
+        </span>
       </header>
     );
   }
