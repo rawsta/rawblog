@@ -17,3 +17,12 @@
   display: flex;
   justify-content: space-between;
 }
+
+
+.posts_container {
+  /*min-width: 100%;*/
+  display: flex;
+  justify-content: space-between;
+  border: solid #900;
+  border-width: 2px 0;
+}
