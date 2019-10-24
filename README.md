@@ -35,11 +35,12 @@
     </a>
 </div>
 
-# Gatsby Advanced Starter
+# rawBlog | home of rawsta
 
+Der Plan ist eine neue Webseite mit React/Gatsby aufzubauen und dabei endlich auch mehr JavaScript und React zu lernen.  
+Um den Start etwas zu vereinfachen habe ich mit dem Gatsby Advanced Starter angefangen.
 A starter skeleton with advanced features for [Gatsby](https://github.com/gatsbyjs/gatsby/).
-
-**NOTE**: This branch contains Gatsby v2 compatible version of the starter. To get the Gatsby v1 compatible version, use the [`v1`](https://github.com/Vagr9K/gatsby-advanced-starter/tree/v1) branch.
+[`Vagr9K/gatsby-advanced-starter`](https://github.com/Vagr9K/gatsby-advanced-starter/) 
 
 ## Lighthouse Audit Score
 
