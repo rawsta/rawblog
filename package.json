@@ -1,7 +1,7 @@
 {
   "name": "rawBlog",
   "description": "new home of rawsta.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
   "dependencies": {
     "gatsby": "^2.15.28",

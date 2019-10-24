@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import config from "../../../data/SiteConfig";
 import { Link } from "gatsby";
 import "./Header.css";
 
