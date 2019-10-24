@@ -26,22 +26,21 @@ export default class PostTemplate extends React.Component {
     }
     return (
       <Layout>
-        <div>
+        <div className="post_wrap">
           <Helmet>
             <title>{`${post.title} | ${config.siteTitle}`}</title>
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
-          <div>
-            <h1>{post.title}</h1>
+          <article className="post_single">
+            <h2>{post.title}</h2>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <div className="post-meta">
               <PostTags tags={post.tags} />
               <SocialLinks postPath={slug} postNode={postNode} />
             </div>
             <UserInfo config={config} />
-            <Disqus postNode={postNode} />
             <Footer config={config} />
-          </div>
+          </article>
         </div>
       </Layout>
     );

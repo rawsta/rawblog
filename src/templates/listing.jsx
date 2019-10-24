@@ -17,7 +17,7 @@ class Listing extends React.Component {
 
     return (
       <div className="paging-container">
-        {!isFirstPage && <Link to={prevPage}>Previous</Link>}
+        {!isFirstPage && <Link to={prevPage}>Vorherige</Link>}
         {[...Array(pageCount)].map((_val, index) => {
           const pageNum = index + 1;
           return (
@@ -29,7 +29,7 @@ class Listing extends React.Component {
             </Link>
           );
         })}
-        {!isLastPage && <Link to={nextPage}>Next</Link>}
+        {!isLastPage && <Link to={nextPage}>Nächste</Link>}
       </div>
     );
   }
@@ -39,14 +39,14 @@ class Listing extends React.Component {
 
     return (
       <Layout>
-        <div className="listing-container">
+        <section className="listing-container">
           <div className="posts-container">
             <Helmet title={config.siteTitle} />
             <SEO />
             <PostListing postEdges={postEdges} />
           </div>
           {this.renderPaging()}
-        </div>
+        </section>
       </Layout>
     );
   }
