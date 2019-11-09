@@ -3,17 +3,17 @@ const config = {
   siteTitleShort: "rawblog", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "rawblog - playground of rawsta", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
-  siteUrl: "https://gatsby-advanced-starter-demo.netlify.com", // Domain of your website without pathPrefix.
+  siteUrl: "/", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "A GatsbyJS thing with nothing in mind.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
-  siteFBAppID: "1825356251115265", // FB Application ID for using app insights
-  googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
+  siteFBAppID: "", // FB Application ID for using app insights
+  googleAnalyticsID: "", // GA tracking ID.
   postDefaultCategoryID: "Tech", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
   postsPerPage: 6, // Amount of posts displayed per listing page.
-  userName: "rawsta", // Username to display in the author segment.
+  userName: "Rawsta", // Username to display in the author segment.
   userEmail: "rawsta@rawsta.de", // Email used for RSS feed's author segment
   userTwitter: "rawsta", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "Muenster, Germany", // User location to display in the author segment.
