@@ -9,7 +9,8 @@ import "./listing.css";
 
 class Listing extends React.Component {
   renderPaging() {
-    const { currentPageNum, pageCount } = this.props.pageContext;
+    const thisProps = this.props;
+    const { currentPageNum, pageCount } = thisProps.pageContext;
     const prevPage = currentPageNum - 1 === 1 ? "/" : `/${currentPageNum - 1}/`;
     const nextPage = `/${currentPageNum + 1}/`;
     const isFirstPage = currentPageNum === 1;
@@ -35,7 +36,9 @@ class Listing extends React.Component {
   }
 
   render() {
-    const postEdges = this.props.data.allMarkdownRemark.edges;
+    const thisProps = this.props;
+    const propsData = thisProps.data;
+    const postEdges = propsData.allMarkdownRemark.edges;
 
     return (
       <Layout>

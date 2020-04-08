@@ -20,7 +20,7 @@ class Footer extends Component {
           <p>{copyright}</p>
 
           <Link to={url}>
-            <button>Contact</button>
+            <span>Contact</span>
           </Link>
 
           <p>

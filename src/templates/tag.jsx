@@ -7,8 +7,9 @@ import config from "../../data/SiteConfig";
 
 export default class TagTemplate extends React.Component {
   render() {
-    const { tag } = this.props.pageContext;
-    const postEdges = this.props.data.allMarkdownRemark.edges;
+    const thisProps = this.props;
+    const { tag } = thisProps.pageContext;
+    const postEdges = thisProps.data.allMarkdownRemark.edges;
     return (
       <Layout>
         <span className="tag_container">

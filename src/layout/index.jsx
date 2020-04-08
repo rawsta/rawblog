@@ -7,8 +7,8 @@ import "./index.css";
 
 export default class MainLayout extends React.Component {
 
-    render() {
-        const { children } = this.props;
+  render() {
+    const { children } = this.props;
 
     return (
       <div className="layout_container">
@@ -20,8 +20,8 @@ export default class MainLayout extends React.Component {
           <meta name="description" content={config.siteDescription} />
           <html lang="de" />
         </Helmet>
-        <Navigation/>
-       <main id="main-content">{children}</main>
+        <Navigation />
+        <main id="main-content">{children}</main>
       </div>
     );
   }

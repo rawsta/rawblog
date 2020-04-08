@@ -1,10 +1,10 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
+import Img from 'gatsby-image'
 import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
 import PostTags from "../components/PostTags/PostTags";
-import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
 // import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
@@ -32,25 +32,33 @@ export default class PostTemplate extends React.Component {
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div className="post-wrap">
           <article className="post-single">
-            {post.img && (
+            {post.cover && (
               <div className="page-cover-image">
                 <figure>
                   <Img
                     className="page-image"
-                    key={post.img.childImageSharp.fluid.src}
-                    fluid={post.img.childImageSharp.fluid}
+                    key={post.cover.childImageSharp.src}
+                    fluid={post.cover.childImageSharp}
                   />
                 </figure>
               </div>
             )}
             <h2>{post.title}</h2>
             <div className="post-info">
-              <p>{post.date}</p>
+              <p>
+                {post.date}
+                in
+                {post.category}
+              </p>
             </div>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <span className="post-meta">
-              <PostTags tags={post.tags} />
-              <UserInfo config={config} />
+              <PostTags
+                tags={post.tags}
+              />
+              <UserInfo
+                config={config}
+              />
             </span>
             <Footer config={config} />
           </article>

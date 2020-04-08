@@ -4,7 +4,9 @@ import { Link } from "gatsby";
 class PostListing extends React.Component {
   getPostList() {
     const postList = [];
-    this.props.postEdges.forEach(postEdge => {
+    const {postEdges} = this.props;
+    // this.props.postEdges.forEach(postEdge => {
+    postEdges.forEach(postEdge => {
       postList.push({
         path: postEdge.node.fields.slug,
         tags: postEdge.node.frontmatter.tags,
@@ -21,14 +23,22 @@ class PostListing extends React.Component {
   render() {
     const postList = this.getPostList();
     return (
-      <div className="post_list">
-        {/* Your post list here. */
-        postList.map(post => (
+      <div className="post_-list">
+        {postList.map(post => (
           <Link to={post.path} key={post.title}>
-            <h2 className="post_title">{post.title}</h2>
+            <img
+              src={post.cover}
+              className="logo-small"
+              alt={post.title}
+            />
+            <h2 className="post-title">{post.title}</h2>
+            <span className="post-info">
+              {post.timeToRead}
+              &mdash;
+              {post.date}
+            </span>
           </Link>
-        ))
-}
+        ))}
       </div>
     );
   }
