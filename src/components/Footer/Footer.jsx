@@ -18,13 +18,13 @@ class Footer extends Component {
           <h4>{copyright}</h4>
 
           <Link to={url}>
-            <button>Subscribe</button>
+            <button>Contact</button>
           </Link>
           <h4>
-            Based on
+            Handcrafted by
             {" "}
-            <a href="https://github.com/Vagr9K/gatsby-advanced-starter">
-              Gatsby Advanced Starter
+            <a href="https://github.com/rawsta">
+              rawsta
             </a>
             .
           </h4>
