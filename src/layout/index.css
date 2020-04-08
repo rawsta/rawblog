@@ -1,66 +1,185 @@
-* {
-  box-sizing: border-box;
+html {
+    overflow-x: hidden;
+    box-sizing: border-box;
+    max-width: 100vw;
+    height: 100%;
+    font-size: 62.5%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
-html {
-  height: 100%;
-  font-size: 62.5%;
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+:root {
+    --head-font: 'Exo 2', sans-serif;
+    --main-font: 'Lato', sans-serif;
+
+    --main-bg: #eaeaea;
+    --font-color: #232323;
+    --font-color-alt: #141414;
+
+    --text-bg: #efefef;
+    --medium-grey: #81939b;
+
+    --primary: #830000;
+    --secondary: #ff8300;
+
+    --ketchup: #dd2c06;
+
+    --black75: rgba(0, 0, 0, 0.75);
+    --black50: rgba(0, 0, 0, 0.5);
+    --black25: rgba(0, 0, 0, 0.25);
+
+    --border: 3px solid #fff;
+    --border-radius: 3px;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-  min-width: 100%;
-  background: #363636;
-  color: #eaeaea;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background: var(--main-bg);
+    color: var(--font-color);
+    font-family: var(--main-font);
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.625;
+    text-rendering: optimizeLegibility;
 }
 
 #___gatsby #gatsby-focus-wrapper {
-  min-height: 100vh;
-  min-width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
 }
 
 .layout_container {
-  min-height: 100vh;
-  min-width: 100vw;
-  display: flex;
-  padding: 20px;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    padding: 20px;
 }
 
-a {
-  color: #ff8300;
-  text-decoration: underline;
-  text-decoration-style: solid;
-}
-
-a:hover {
-    color: #830000;
-    text-decoration-style: dashed;
+a,
+a:link {
+    color: var(--font-color);
+    text-decoration: none;
+    background-position-y: -0%;
+    background-image: linear-gradient( transparent 50%, var(--primary) 50%);
+    transition: background 500ms ease;
+    background-size: 2px;
+    background-size: auto 175%;
 }
 
 a:visited {
-    color: #ff8300;
-    text-decoration-style: dotted;
+    color: var(--font-color);
 }
 
-h1 {
-    font-size: 3.2rem;
-    font-weight: 600;
+a:hover,
+a:active {
+    color: var(--font-color);
+    background-position-y: 100%;
 }
 
-h2 {
-    font-size: 2.8rem;
-    font-weight: 600;
+a:focus {
+    outline: none;
+    text-decoration: underline;
 }
 
-h3 {
-    font-size: 2.4rem;
-    font-weight: 600;
-}
+/* Headings */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--head-font);
+        font-weight: 600;
+        line-height: 1.25;
+        margin: 0 0 20px;
+    }
 
+    h1 {
+        font-size: 3.2rem;
+        font-weight: 600;
+    }
 
-p {
-    font-size: 1.6rem;
-    font-weight: 400;
-}
+    h2 {
+        font-size: 2.8rem;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+        font-weight: 600;
+    }
+
+    /* Content */
+
+    p {
+        font-size: 1.8rem;
+        font-weight: 400;
+    }
+
+/* Typo Basics
+--------------------------------------- */
+    :focus {
+        color: var(--font-color);
+        outline: var(--font-color) solid 1px;
+    }
+
+    ::selection {
+        background: var(--primary);
+        color: var(--main-bg);
+    }
+
+    [hidden] {
+        display: none;
+    }
+
+/* Sidebar
+--------------------------------------- */
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 240px;
+        height: 100%;
+        padding: 20px 10px;
+        background-color: var(--main-bg);
+        border-right: 5px solid var(--medium-grey);
+    }
+
+    footer.copyright {
+        font-size: 14px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .post {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        min-height: 11rem;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all .3s ease;
+        box-shadow: 0 1px 1px 0 rgba(31, 35, 46, .15);
+    }
+
+    .post:hover {
+        transform: translate(0px, -2px);
+        box-shadow: 0 15px 45px -10px rgba(10, 16, 34, .2);
+    }

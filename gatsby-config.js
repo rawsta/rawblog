@@ -32,14 +32,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "posts",
-        path: `${__dirname}/content/posts/`
-      }
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: `${__dirname}/content/pages/`
+        path: `${__dirname}/content/`
       }
     },
     {
@@ -123,7 +116,7 @@ module.exports = {
         setup(ref) {
           const ret = ref.query.site.siteMetadata.rssMetadata;
           ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-          ret.generator = "rawBlog | handcrafted data";
+          ret.generator = "Rawsta";
           return ret;
         },
         query: `

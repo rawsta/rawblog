@@ -1,25 +1,38 @@
 const config = {
-  siteTitle: "rawblog - home of rawsta", // Site title.
+  siteTitle: "Sebastian Fiele aka rawsta", // Site title.
   siteTitleShort: "rawblog", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "rawblog - the playground", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
-  siteUrl: "https://rawblog.netlify.com/", // Domain of your website without pathPrefix.
+  siteUrl: "https://rawblog.netlify.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "Playground and maybe-blog of Sebastian Fiele.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
-  siteFBAppID: "", // FB Application ID for using app insights
-  googleAnalyticsID: "", // GA tracking ID.
   postDefaultCategoryID: "Tech", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
   postsPerPage: 6, // Amount of posts displayed per listing page.
+  menuLinks: [
+    {
+      name: 'About me',
+      link: '/me/',
+    },
+    {
+      name: 'Articles',
+      link: '/blog/',
+    },
+    {
+      name: 'Contact',
+      link: '/contact/',
+    },
+  ],
   userName: "Rawsta", // Username to display in the author segment.
   userEmail: "rawsta@rawsta.de", // Email used for RSS feed's author segment
   userTwitter: "rawsta", // Optionally renders "Follow Me" in the UserInfo segment.
+  userGithub: "rawsta", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "Muenster, Germany", // User location to display in the author segment.
   userAvatar: "https://avatars3.githubusercontent.com/u/1809314?s=460&v=4", // User avatar to display in the author segment.
   userDescription:
-    "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
+    "Developer with far too many Interests.", // User description to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   userLinks: [
     {
@@ -38,7 +51,7 @@ const config = {
       iconClassName: "fa fa-envelope"
     }
   ],
-  copyright: "Copyright © 2020. Sebastian -rawsta- Fiele", // Copyright string for the footer of the website and RSS feed.
+  copyright: "Copyright ©2020. Sebastian -rawsta- Fiele", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#830000", // Used for setting manifest and progress theme colors.
   backgroundColor: "#363636" // Used for setting manifest background color.
 };
