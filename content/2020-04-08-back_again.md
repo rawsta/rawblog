@@ -3,6 +3,7 @@ title: "Back Again"
 cover: "7.jpg"
 date: "2020-04-08"
 category: "alles"
+template: post
 tags:
     - restart
     - react
