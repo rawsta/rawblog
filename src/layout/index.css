@@ -68,11 +68,12 @@ a,
 a:link {
     color: var(--font-color);
     text-decoration: none;
-    background-position-y: -0%;
+    transition: all 500ms ease;
+    /* background-position-y: -0%;
     background-image: linear-gradient( transparent 50%, var(--primary) 50%);
     transition: background 500ms ease;
     background-size: 2px;
-    background-size: auto 175%;
+    background-size: auto 175%; */
 }
 
 a:visited {
@@ -81,8 +82,10 @@ a:visited {
 
 a:hover,
 a:active {
-    color: var(--font-color);
-    background-position-y: 100%;
+    color: var(--primary);
+
+    /* color: var(--font-color); */
+    /* background-position-y: 100%; */
 }
 
 a:focus {
@@ -118,7 +121,11 @@ a:focus {
         font-weight: 600;
     }
 
-    /* Content */
+/* Content */
+
+    main#main-content {
+        padding-left: 260px;
+    }
 
     p {
         font-size: 1.8rem;

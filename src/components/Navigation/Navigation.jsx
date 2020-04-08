@@ -8,6 +8,7 @@ class Navigation extends Component {
     render() {
         // const { config } = this.props;
         const title = config.siteTitle;
+        const titleShort = config.siteTitleShort;
         const url = config.siteUrl;
 
         return (
@@ -17,7 +18,7 @@ class Navigation extends Component {
                     <span className="kopfzeile">
                         <a href={url}>
                             <img src={rawLogo} className="logo-small" alt="Sebastian- Rawsta -Fiele" />
-                            <h2>{title}</h2>
+                            <h2>{titleShort}</h2>
                         </a>
                     </span>
                 </header>
@@ -52,7 +53,7 @@ class Navigation extends Component {
 
                     <div className="copyright">
                         <p>
-                            {new Date().getFullYear()} &copy; {config.userName}
+                            &copy;{new Date().getFullYear()} {config.userName}
                         </p>
                     </div>
 

@@ -25,7 +25,7 @@ const config = {
       link: '/contact/',
     },
   ],
-  userName: "Rawsta", // Username to display in the author segment.
+  userName: "Sebastian Fiele", // Username to display in the author segment.
   userEmail: "rawsta@rawsta.de", // Email used for RSS feed's author segment
   userTwitter: "rawsta", // Optionally renders "Follow Me" in the UserInfo segment.
   userGithub: "rawsta", // Optionally renders "Follow Me" in the UserInfo segment.
