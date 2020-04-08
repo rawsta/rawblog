@@ -7,14 +7,14 @@ const config = {
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "Playground and maybe-blog of Sebastian Fiele.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
-  postDefaultCategoryID: "Tech", // Default category for posts.
+  postDefaultCategoryID: "Ramblings", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
   postsPerPage: 6, // Amount of posts displayed per listing page.
   menuLinks: [
     {
-      name: 'About me',
-      link: '/me/',
+      name: 'About',
+      link: '/about/',
     },
     {
       name: 'Articles',
