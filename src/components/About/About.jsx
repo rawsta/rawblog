@@ -10,7 +10,8 @@ class About extends Component {
         </h1>
 
         <p>
-        Mein Name ist Sebastian Fiele. Besserbekannt als rawsta.
+          Mein Name ist Sebastian Fiele. Auch bekannt als rawsta.
+        </p>
 
       </div>
     );

@@ -1,11 +1,11 @@
 const config = {
   siteTitle: "rawblog - home of rawsta", // Site title.
   siteTitleShort: "rawblog", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: "rawblog - playground of rawsta", // Alternative site title for SEO.
+  siteTitleAlt: "rawblog - the playground", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "/", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: "A GatsbyJS thing with nothing in mind.", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "Playground and maybe-blog of Sebastian Fiele.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "", // FB Application ID for using app insights
   googleAnalyticsID: "", // GA tracking ID.
@@ -24,7 +24,7 @@ const config = {
   userLinks: [
     {
       label: "GitHub",
-      url: "https://github.com/rawsta/rawblog",
+      url: "https://github.com/rawsta/",
       iconClassName: "fa fa-github"
     },
     {
@@ -38,7 +38,7 @@ const config = {
       iconClassName: "fa fa-envelope"
     }
   ],
-  copyright: "Copyright © 2019. Sebastian -rawsta- Fiele", // Copyright string for the footer of the website and RSS feed.
+  copyright: "Copyright © 2020. Sebastian -rawsta- Fiele", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#ff8300", // Used for setting manifest and progress theme colors.
   backgroundColor: "#363636" // Used for setting manifest background color.
 };
