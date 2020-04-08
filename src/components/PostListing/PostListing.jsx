@@ -12,6 +12,7 @@ class PostListing extends React.Component {
         tags: postEdge.node.frontmatter.tags,
         cover: postEdge.node.frontmatter.cover,
         title: postEdge.node.frontmatter.title,
+        shortdate: postEdge.node.frontmatter.date,
         date: postEdge.node.fields.date,
         excerpt: postEdge.node.excerpt,
         timeToRead: postEdge.node.timeToRead
@@ -23,20 +24,22 @@ class PostListing extends React.Component {
   render() {
     const postList = this.getPostList();
     return (
-      <div className="post_-list">
+      <div className="post-list">
         {postList.map(post => (
           <Link to={post.path} key={post.title}>
-            <img
-              src={post.cover}
-              className="logo-small"
-              alt={post.title}
-            />
-            <h2 className="post-title">{post.title}</h2>
-            <span className="post-info">
-              {post.timeToRead}
-              &mdash;
-              {post.date}
-            </span>
+            <article className="post-item">
+              <img
+                src={post.cover}
+                className="title-img"
+                alt={post.title}
+              />
+              <h2 className="post-title">{post.title}</h2>
+              <div className="post-info">
+                <span>{post.shortdate}</span>
+                <span>{`Lesezeit: `}{post.timeToRead} Min.</span>
+
+              </div>
+            </article>
           </Link>
         ))}
       </div>

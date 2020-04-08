@@ -37,8 +37,8 @@ export default class PostTemplate extends React.Component {
                 <figure>
                   <Img
                     className="page-image"
-                    key={post.cover.childImageSharp.src}
-                    fluid={post.cover.childImageSharp}
+                    key={post.cover.fluid.src}
+                    fluid={post.cover.fluid}
                   />
                 </figure>
               </div>
