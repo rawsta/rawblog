@@ -1,4 +1,7 @@
+.post-single .page-cover-image {
+  width: 100%;
 
+}
 
 .post-meta {
   display: flex;
@@ -11,6 +14,7 @@
 .post-tag-container {
   color: var(--medium-grey);
   font-size: 1.6rem;
+  line-height: 2;
 }
 
 .post-tag-container a {

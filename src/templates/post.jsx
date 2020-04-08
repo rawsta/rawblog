@@ -18,12 +18,19 @@ export default class PostTemplate extends React.Component {
     const { slug } = pageContext;
     const postNode = data.markdownRemark;
     const post = postNode.frontmatter;
+    let cover;
+
     if (!post.id) {
       post.id = slug;
     }
     if (!post.category_id) {
       post.category_id = config.postDefaultCategoryID;
     }
+
+    if (post.cover) {
+      cover = post.cover;
+    }
+
     return (
       <Layout>
         <Helmet>
@@ -32,24 +39,21 @@ export default class PostTemplate extends React.Component {
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div className="post-wrap">
           <article className="post-single">
-            {post.cover && (
+            {cover && (
               <div className="page-cover-image">
                 <figure>
-                  <Img
-                    className="page-image"
-                    key={post.cover.fluid.src}
-                    fluid={post.cover.fluid}
+                  <img
+                    src={cover}
+                    className="title-img"
+                    alt={post.title}
                   />
                 </figure>
               </div>
             )}
             <h2>{post.title}</h2>
             <div className="post-info">
-              <p>
-                {post.date}
-                in
-                {post.category}
-              </p>
+              <p>{post.date}</p>
+              <p>{post.category}</p>
             </div>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <span className="post-meta">

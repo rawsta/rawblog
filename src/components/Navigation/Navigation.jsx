@@ -7,6 +7,8 @@ import "./Navigation.css";
 class Navigation extends Component {
   render() {
     // const { config } = this.props;
+    // const { menuLinks } = this.props;
+    const menuLinks = config.menuLinks;
     const title = config.siteTitle;
     const titleShort = config.siteTitleShort;
     const url = config.siteUrl;
@@ -26,6 +28,16 @@ class Navigation extends Component {
             </a>
           </span>
         </header>
+
+        <nav className="main-nav">
+          <ul>
+            {menuLinks.map(link => (
+              <Link key={link.name} to={link.link} activeClassName="active">
+                <li>{link.name}</li>
+              </Link>
+            ))}
+          </ul>
+        </nav>
 
         <footer>
           <section className="contact">
@@ -70,7 +82,7 @@ class Navigation extends Component {
           <div className="copyright">
             <p>
               &copy;
-              {new Date().getFullYear()}
+              {new Date().getFullYear()}&nbsp;
               {config.userName}
             </p>
           </div>
