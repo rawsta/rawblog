@@ -42,15 +42,22 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 1024,
+              maxWidth: 1000,
             }
           },
           {
             resolve: "gatsby-remark-responsive-iframe"
           },
+          "gatsby-remark-prismjs",
           "gatsby-remark-copy-linked-files",
-          "gatsby-remark-autolink-headers",
-          "gatsby-remark-prismjs"
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: `100`,
+              maintainCase: false,
+              removeAccents: true,
+            },
+          },
         ]
       }
     },
@@ -87,13 +94,13 @@ module.exports = {
             type: "image/png"
           },
           {
-            src: "/logos/logo-256.png",
-            sizes: "256x256",
+            src: "/logos/logo-512.png",
+            sizes: "512x512",
             type: "image/png"
           },
           {
-            src: "/logos/logo-512.png",
-            sizes: "512x512",
+            src: "/logos/logo-1024.png",
+            sizes: "1024x1024",
             type: "image/png"
           }
         ]
@@ -107,7 +114,12 @@ module.exports = {
         enableIdentityWidget: true,
         publicPath: "admin",
         htmlTitle: "Content Manager",
-        includeRobots: false
+        includeRobots: false,
+        headers: {
+          '/*.js': ['cache-control: public, max-age=31536000, immutable'],
+          '/*.css': ['cache-control: public, max-age=31536000, immutable'],
+          '/sw.js': ['cache-control: public, max-age=0, must-revalidate'],
+        },
       }
     },
     {
@@ -116,7 +128,7 @@ module.exports = {
         setup(ref) {
           const ret = ref.query.site.siteMetadata.rssMetadata;
           ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-          ret.generator = "Rawsta";
+          ret.generator = "rawBlog - Sebastian Fiele";
           return ret;
         },
         query: `
