@@ -1,29 +1,27 @@
 .listing_container {
-  min-height: 100%;
-  min-width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  /*box-shadow: 0 0 10px rgba(255,255,255,0.8);*/
-  border: solid #999;
-  border-width: 0 3px;
+    min-height: 100%;
+    min-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /*box-shadow: 0 0 10px rgba(255,255,255,0.8);*/
+    /* border: solid #999;
+    border-width: 0 3px; */
 }
 
 .paging_container {
-  min-width: 100%;
-  display: flex;
-  justify-content: space-between;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
-
 .posts_container {
-  min-width: 100%;
-  display: flex;
-  justify-content: space-between;
-  border: solid #900;
-  border-width: 2px 0;
-  padding: 30px 10px;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid var(--medium-grey);
+    padding: 30px 10px;
 }

@@ -94,6 +94,7 @@ a:focus {
 }
 
 /* Headings */
+
     h1,
     h2,
     h3,
@@ -134,6 +135,7 @@ a:focus {
 
 /* Typo Basics
 --------------------------------------- */
+
     :focus {
         color: var(--font-color);
         outline: var(--font-color) solid 1px;
@@ -162,8 +164,9 @@ a:focus {
         width: 240px;
         height: 100%;
         padding: 20px 10px;
-        background-color: var(--main-bg);
-        border-right: 5px solid var(--medium-grey);
+        background-color: var(--medium-grey);
+        /* border-right: 5px solid var(--medium-grey); */
+        box-shadow: 0 3px 5px 7px rgba(0, 0, 0, 0.15);
     }
 
     footer.copyright {
