@@ -8,6 +8,7 @@ class UserLinks extends Component {
     return userLinks.map(link => (
       <a href={link.url}>
         <button type="button" key={link.label}>
+          <i className={link.iconClassName}></i>&nbsp;
           {labeled ? link.label : ""}
         </button>
       </a>

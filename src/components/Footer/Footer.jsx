@@ -13,21 +13,24 @@ class Footer extends Component {
     }
     return (
       <footer className="footer">
+
         <UserLinks config={config} labeled />
+
         <div className="notice-container">
-          <h4>{copyright}</h4>
+          <p>{copyright}</p>
 
           <Link to={url}>
             <button>Contact</button>
           </Link>
-          <h4>
+
+          <p>
             Handcrafted by
             {" "}
             <a href="https://github.com/rawsta">
               rawsta
             </a>
             .
-          </h4>
+          </p>
         </div>
       </footer>
     );

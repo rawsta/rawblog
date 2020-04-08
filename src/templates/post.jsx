@@ -26,23 +26,32 @@ export default class PostTemplate extends React.Component {
     }
     return (
       <Layout>
-        <div className="post_wrap">
-          <Helmet>
-            <title>{`${post.title} | ${config.siteTitle}`}</title>
-          </Helmet>
-
-          <SEO postPath={slug} postNode={postNode} postSEO />
-
-          {/* <Header config={config} /> */}
-          <article className="post_single">
+        <Helmet>
+          <title>{`${post.title} | ${config.siteTitle}`}</title>
+        </Helmet>
+        <SEO postPath={slug} postNode={postNode} postSEO />
+        <div className="post-wrap">
+          <article className="post-single">
+            {post.img && (
+              <div className="page-cover-image">
+                <figure>
+                  <Img
+                    className="page-image"
+                    key={post.img.childImageSharp.fluid.src}
+                    fluid={post.img.childImageSharp.fluid}
+                  />
+                </figure>
+              </div>
+            )}
             <h2>{post.title}</h2>
-            <div className="post_meta">
-              <PostTags tags={post.tags} />
-
-              <SocialLinks postPath={slug} postNode={postNode} />
+            <div className="post-info">
+              <p>{post.date}</p>
             </div>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            <UserInfo config={config} />
+            <span className="post-meta">
+              <PostTags tags={post.tags} />
+              <UserInfo config={config} />
+            </span>
             <Footer config={config} />
           </article>
         </div>

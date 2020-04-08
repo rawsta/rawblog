@@ -1,9 +1,15 @@
 
 
-.post_meta {
+.post-meta {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: solid #eaeaea;
+  flex-direction: row;
+  justify-content: space-between;
+  border: solid var(--medium-grey);
   border-width: 3px 0;
+}
+
+.post-tag-container,
+.post-tag-container a {
+  color: var(--medium-grey);
+  font-size: 1.6rem;
 }

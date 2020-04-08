@@ -1,6 +1,6 @@
 const config = {
-  siteTitle: "Sebastian Fiele aka rawsta", // Site title.
-  siteTitleShort: "rawblog", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
+  siteTitle: "rawBlog - my playground ", // Site title.
+  siteTitleShort: "rawBlog", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "rawblog - the playground", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "https://rawblog.netlify.com", // Domain of your website without pathPrefix.
@@ -38,20 +38,20 @@ const config = {
     {
       label: "GitHub",
       url: "https://github.com/rawsta/",
-      iconClassName: "fa fa-github"
+      iconClassName: "fab fa-github"
     },
     {
       label: "Twitter",
       url: "https://twitter.com/rawsta",
-      iconClassName: "fa fa-twitter"
+      iconClassName: "fab fa-twitter"
     },
     {
       label: "Email",
       url: "mailto:rawsta@rawsta.de",
-      iconClassName: "fa fa-envelope"
+      iconClassName: "far fa-envelope"
     }
   ],
-  copyright: "Copyright ©2020. Sebastian -rawsta- Fiele", // Copyright string for the footer of the website and RSS feed.
+  copyright: "Copyright ©2020 -rawsta", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#830000", // Used for setting manifest and progress theme colors.
   backgroundColor: "#363636" // Used for setting manifest background color.
 };

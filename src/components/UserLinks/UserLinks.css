@@ -5,3 +5,26 @@
   align-items: center;
   max-width: 100%;
 }
+
+.user_links a {
+  margin-left: 20px;
+  transition: all 500ms ease;
+}
+.user_links a:first-of-type {
+  margin-left: 0;
+}
+
+footer button {
+  padding: 6px 14px;
+  background-color: transparent;
+  border:2px solid var(--primary);
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+footer button:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--main-bg);
+}
