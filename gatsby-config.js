@@ -55,12 +55,6 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: config.googleAnalyticsID
-      }
-    },
-    {
       resolve: "gatsby-plugin-nprogress",
       options: {
         color: config.themeColor
@@ -83,8 +77,18 @@ module.exports = {
         display: "minimal-ui",
         icons: [
           {
+            src: "/logos/logo-48.png",
+            sizes: "48x48",
+            type: "image/png"
+          },
+          {
             src: "/logos/logo-192.png",
             sizes: "192x192",
+            type: "image/png"
+          },
+          {
+            src: "/logos/logo-256.png",
+            sizes: "256x256",
             type: "image/png"
           },
           {
@@ -112,7 +116,7 @@ module.exports = {
         setup(ref) {
           const ret = ref.query.site.siteMetadata.rssMetadata;
           ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-          ret.generator = "rawBlog | home of rawsta";
+          ret.generator = "rawBlog | handcrafted data";
           return ret;
         },
         query: `
