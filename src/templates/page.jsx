@@ -2,6 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
+import Footer from "../components/Footer/Footer";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 
@@ -27,7 +28,7 @@ export default class PostTemplate extends React.Component {
             <header className="page-header">
               <h1>{page.title}</h1>
             </header>
-              <div className="page" dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            <div className="page" dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <Footer config={config} />
           </article>
         </div>

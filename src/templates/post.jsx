@@ -1,16 +1,17 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image';
 import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
 import PostTags from "../components/PostTags/PostTags";
 import SEO from "../components/SEO/SEO";
-// import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
 import "./post.css";
+
+import { formatDate } from '../utils/global';
 
 export default class PostTemplate extends React.Component {
   render() {
@@ -41,18 +42,16 @@ export default class PostTemplate extends React.Component {
           <article className="post-single">
             {cover && (
               <div className="page-cover-image">
-                <figure>
-                  <img
-                    src={cover}
-                    className="title-img"
-                    alt={post.title}
-                  />
-                </figure>
+                <img
+                  src={cover}
+                  className="title-img"
+                  alt={post.title}
+                />
               </div>
             )}
             <h2>{post.title}</h2>
             <div className="post-info">
-              <p>{post.date}</p>
+              <p>{formatDate(post.date)}</p>
               <p>{post.category}</p>
             </div>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />

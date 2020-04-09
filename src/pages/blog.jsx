@@ -33,25 +33,12 @@ export default class BlogPage extends Component {
   render() {
     const { filteredPosts, searchTerm } = this.state
     const filterCount = filteredPosts.length
-    const categories = this.props.data.categories.group
+    const categories = this.props.data.category.group
 
     return (
       <Layout>
         <Helmet title={`Articles – ${config.siteTitle}`} />
         <SEO />
-        <div className="gradient-section articles">
-          <div className="container">
-            <h2 className="text-center">The Missing Instruction Manuals of the Web</h2>
-            <div className="instruction-manuals">
-              {manuals.map(manual => (
-                <Link to={manual.url}>
-                  <img src={manual.image} alt={manual.name} />
-                  <h3>{manual.name}</h3>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </div>
         <div className="container">
           <h1 className="articles-title">Articles</h1>
           <div className="category-container">
