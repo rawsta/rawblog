@@ -2,7 +2,7 @@
 title: "Back Again"
 cover: "7.jpg"
 date: "2020-04-08"
-category: "alles"
+category: "Ramblings"
 template: post
 tags:
     - restart

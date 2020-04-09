@@ -1,12 +1,12 @@
 ---
 title: "Random project 4 With Super Long Title Phase One"
 cover: "4.jpg"
-category: "test"
+category: test
 template: post
 date: "2019-01-02"
 slug: random-project-4
 tags:
-    - test
+    - testtag
 ---
 
 # Artificem honorati ore temperat Lycus quam antiquum
