@@ -3,9 +3,10 @@ title: "Random project 4 With Super Long Title Phase One"
 cover: "4.jpg"
 category: "test"
 template: post
-date: "2019-11-09"
+date: "2019-01-02"
+slug: random-project-4
 tags:
-    - goldvibes
+    - test
 ---
 
 # Artificem honorati ore temperat Lycus quam antiquum

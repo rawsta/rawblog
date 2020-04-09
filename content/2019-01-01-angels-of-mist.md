@@ -1,9 +1,10 @@
 ---
-title: "Angels of Mist"
+title: Angels of Mist
 cover: "6.jpg"
-category: "test3"
-date: "2020-03-01"
+category: test
+date: 2019-01-01
 template: post
+slug: angels-of-mist
 tags:
     - cheese
     - other
