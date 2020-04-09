@@ -2,15 +2,67 @@
 
 const path = require("path");
 const _ = require("lodash");
+const kebabCase = require('lodash.kebabcase');
 const moment = require("moment");
 const siteConfig = require("./data/SiteConfig");
+const sharp = require('sharp');
+sharp.simd(false);
+sharp.cache(false);
+
+const postNodes = []
+
+function addSiblingNodes(createNodeField) {
+  postNodes.sort(({ frontmatter: { date: date1 } }, { frontmatter: { date: date2 } }) => {
+    const dateA = moment(date1, siteConfig.dateFromFormat)
+    const dateB = moment(date2, siteConfig.dateFromFormat)
+
+    if (dateA.isBefore(dateB)) return 1
+    if (dateB.isBefore(dateA)) return -1
+
+    return 0
+  })
+
+  for (let i = 0; i < postNodes.length; i += 1) {
+    const nextID = i + 1 < postNodes.length ? i + 1 : 0
+    const prevID = i - 1 >= 0 ? i - 1 : postNodes.length - 1
+    const currNode = postNodes[i]
+    const nextNode = postNodes[nextID]
+    const prevNode = postNodes[prevID]
+
+    createNodeField({
+      node: currNode,
+      name: 'nextTitle',
+      value: nextNode.frontmatter.title,
+    })
+
+    createNodeField({
+      node: currNode,
+      name: 'nextSlug',
+      value: nextNode.fields.slug,
+    })
+
+    createNodeField({
+      node: currNode,
+      name: 'prevTitle',
+      value: prevNode.frontmatter.title,
+    })
+
+    createNodeField({
+      node: currNode,
+      name: 'prevSlug',
+      value: prevNode.fields.slug,
+    })
+  }
+}
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   let slug;
+
   if (node.internal.type === "MarkdownRemark") {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
+
     if (
       Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, "title")
@@ -32,16 +84,32 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         if (!date.isValid)
           console.warn(`WARNING: Invalid date.`, node.frontmatter);
 
-        createNodeField({ node, name: "date", value: date.toISOString() });
+        createNodeField({
+          node,
+          name: "date",
+          value: date.toISOString(),
+        });
       }
     }
     createNodeField({ node, name: "slug", value: slug });
+    postNodes.push(node);
   }
 };
 
+exports.setFieldsOnGraphQLNodeType = ({ type, actions }) => {
+  const { name } = type;
+  const { createNodeField } = actions;
+  if (name === 'MarkdownRemark') {
+    addSiblingNodes(createNodeField)
+  }
+};
+
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
+
   const postPage = path.resolve("src/templates/post.jsx");
+  const pagePage = path.resolve("src/templates/page.jsx");
   const tagPage = path.resolve("src/templates/tag.jsx");
   const categoryPage = path.resolve("src/templates/category.jsx");
   const listingPage = path.resolve("./src/templates/listing.jsx");
@@ -59,7 +127,7 @@ exports.createPages = async ({ graphql, actions }) => {
               title
               tags
               category
-              date
+              template
             }
           }
         }
@@ -126,23 +194,53 @@ exports.createPages = async ({ graphql, actions }) => {
       categorySet.add(edge.node.frontmatter.category);
     }
 
-    // Create post pages
-    const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
-    const prevID = index - 1 >= 0 ? index - 1 : postsEdges.length - 1;
-    const nextEdge = postsEdges[nextID];
-    const prevEdge = postsEdges[prevID];
+    if (edge.node.frontmatter.template === 'post') {
+      // Create post pages
+      const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
+      const prevID = index - 1 >= 0 ? index - 1 : postsEdges.length - 1;
+      const nextEdge = postsEdges[nextID];
+      const prevEdge = postsEdges[prevID];
 
+      createPage({
+        path: edge.node.fields.slug,
+        component: postPage,
+        context: {
+          slug: edge.node.fields.slug,
+          nexttitle: nextEdge.node.frontmatter.title,
+          nextslug: nextEdge.node.fields.slug,
+          prevtitle: prevEdge.node.frontmatter.title,
+          prevslug: prevEdge.node.fields.slug
+        }
+      });
+    }
+
+  if (edge.node.frontmatter.template === 'page') {
     createPage({
       path: edge.node.fields.slug,
-      component: postPage,
+      component: pagePage,
       context: {
         slug: edge.node.fields.slug,
-        nexttitle: nextEdge.node.frontmatter.title,
-        nextslug: nextEdge.node.fields.slug,
-        prevtitle: prevEdge.node.frontmatter.title,
-        prevslug: prevEdge.node.fields.slug
-      }
-    });
+      },
+    })
+  }
+
+    // // Create post pages
+    // const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
+    // const prevID = index - 1 >= 0 ? index - 1 : postsEdges.length - 1;
+    // const nextEdge = postsEdges[nextID];
+    // const prevEdge = postsEdges[prevID];
+
+    // createPage({
+    //   path: edge.node.fields.slug,
+    //   component: postPage,
+    //   context: {
+    //     slug: edge.node.fields.slug,
+    //     nexttitle: nextEdge.node.frontmatter.title,
+    //     nextslug: nextEdge.node.fields.slug,
+    //     prevtitle: prevEdge.node.frontmatter.title,
+    //     prevslug: prevEdge.node.fields.slug
+    //   }
+    // });
   });
 
   //  Create tag pages
