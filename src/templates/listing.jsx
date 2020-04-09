@@ -17,7 +17,7 @@ class Listing extends React.Component {
     const isLastPage = currentPageNum === pageCount;
 
     return (
-      <div className="paging_container">
+      <div className="paging-container">
         {!isFirstPage && <Link to={prevPage}>Vorherige</Link>}
         {[...Array(pageCount)].map((_val, index) => {
           const pageNum = index + 1;
@@ -42,8 +42,8 @@ class Listing extends React.Component {
 
     return (
       <Layout>
-        <section className="listing_container">
-          <div className="posts_container">
+        <section className="listing-container">
+          <div className="posts-container">
             <Helmet title={config.siteTitle} />
             <SEO />
             <PostListing postEdges={postEdges} />

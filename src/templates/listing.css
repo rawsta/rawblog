@@ -1,4 +1,4 @@
-.listing_container {
+.listing-container {
     min-height: 100%;
     min-width: 60%;
     margin-left: auto;
@@ -12,16 +12,34 @@
     border-width: 0 3px; */
 }
 
-.paging_container {
+.paging-container {
     min-width: 100%;
     display: flex;
     justify-content: space-around;
 }
 
-.posts_container {
+.posts-container {
     min-width: 100%;
     display: flex;
     justify-content: space-between;
     border-top: 2px solid var(--medium-grey);
     padding: 30px 10px;
+}
+
+/* Post Listing */
+.post-item {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px 0;
+    border: solid var(--primary);
+    border-width: 2px 0;
+    margin-bottom: 20px;
+}
+
+.post-item .post-item-img .title-img {
+    max-width: 200px;
+}
+
+.post-item .post-item-content {
+    margin-left: 20px;
 }
