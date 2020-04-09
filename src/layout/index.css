@@ -126,6 +126,7 @@ a:focus {
 
     main#main-content {
         padding-left: 260px;
+        max-width: 1000px;
     }
 
     p {

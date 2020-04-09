@@ -8,7 +8,7 @@ class Navigation extends Component {
   render() {
     // const { config } = this.props;
     // const { menuLinks } = this.props;
-    const menuLinks = config.menuLinks;
+    const {menuLinks} = config;
     const title = config.siteTitle;
     const titleShort = config.siteTitleShort;
     const url = config.siteUrl;
@@ -82,7 +82,8 @@ class Navigation extends Component {
           <div className="copyright">
             <p>
               &copy;
-              {new Date().getFullYear()}&nbsp;
+              {new Date().getFullYear()}
+&nbsp;
               {config.userName}
             </p>
           </div>
