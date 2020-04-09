@@ -1,16 +1,16 @@
-.listing-container {
+/* .listing-container {
     min-height: 100%;
-    min-width: 60%;
+    min-width: 80%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
     /*box-shadow: 0 0 10px rgba(255,255,255,0.8);*/
     /* border: solid #999;
     border-width: 0 3px; */
-}
+/* } */
 
 .paging-container {
     min-width: 100%;
@@ -23,23 +23,89 @@
     display: flex;
     justify-content: space-between;
     border-top: 2px solid var(--medium-grey);
-    padding: 30px 10px;
+    padding: 30px 0;
 }
 
 /* Post Listing */
 .post-item {
     display: flex;
     flex-flow: row wrap;
-    padding: 20px 0;
-    border: solid var(--primary);
-    border-width: 2px 0;
-    margin-bottom: 20px;
+    padding: 0;
+    /* padding: 20px 0; */
+    /* border: solid var(--primary);
+    border-width: 2px 0; */
+    margin-bottom: 40px;
+}
+
+
+.post-item-img {
+    position: relative;
+    margin-left: 60px;
+    height: 200px;
+    overflow: hidden;
+    /* box-shadow: 0 0 10px rgba(0,0,0,0.5); */
+    border: 4px solid var(--medium-grey);
+    transition: all 400ms ease;
+}
+.post-item-img:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .post-item .post-item-img .title-img {
-    max-width: 200px;
+    max-width: 920px;
+}
+
+.post-header {
+    padding: 0 20px 0 0;
+}
+
+.post-header h2.post-title {
+    margin: 0;
 }
 
 .post-item .post-item-content {
-    margin-left: 20px;
+    margin: 40px auto auto -10px;;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: #e8ded2;
+    padding: 5px 0;
+    border: 4px solid var(--medium-grey);
+    transition: all 400ms ease;
+}
+
+.post-item .post-item-content:hover {
+    box-shadow: 0 0 7px rgba(0,0,0,0.75);
+}
+
+.post-item-content > span i {
+    font-size: 5rem;
+    line-height: 1;
+    padding: 0 10px;
+}
+
+.post-item-content > span i.fa-js-square {
+    color: #f7df1e;
+    text-shadow: 0 0 3px #000;
+}
+.post-item-content > span i.fa-php {
+    color: #777bb3;
+}
+.post-item-content > span i.fa-wordpress-simple {
+    color: #333;
+}
+.post-item-content > span i.fa-typo3 {
+    color: #ff8700;
+}
+.post-item-content > span i.fa-server {
+    color: var(--teal);
+}
+.post-item-content > span i.fa-linux {
+    color: #000;
+}
+.post-item-content > span i.fa-windows {
+    color: #0A7ED2;
+}
+.post-item-content > span i.fa-test {
+    color: var(--ketchup);
 }

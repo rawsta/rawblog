@@ -42,14 +42,12 @@ class Listing extends React.Component {
 
     return (
       <Layout>
-        <section className="listing-container">
           <div className="posts-container">
             <Helmet title={config.siteTitle} />
             <SEO />
             <PostListing postEdges={postEdges} />
           </div>
           {this.renderPaging()}
-        </section>
       </Layout>
     );
   }
@@ -78,6 +76,7 @@ export const listingQuery = graphql`
             tags
             cover
             date
+            category
           }
         }
       }

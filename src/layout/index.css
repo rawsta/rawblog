@@ -29,6 +29,7 @@ html {
     --secondary: #ff8300;
 
     --ketchup: #dd2c06;
+    --teal: #0c6667;
 
     --black75: rgba(0, 0, 0, 0.75);
     --black50: rgba(0, 0, 0, 0.5);
@@ -125,8 +126,8 @@ a:focus {
 /* Content */
 
     main#main-content {
-        padding-left: 260px;
-        max-width: 1000px;
+        padding-left: 270px;
+        max-width: 1250px;
     }
 
     p {
@@ -162,7 +163,7 @@ a:focus {
         top: 0;
         left: 0;
         bottom: 0;
-        width: 240px;
+        width: 250px;
         height: 100%;
         padding: 20px 10px;
         background-color: var(--medium-grey);

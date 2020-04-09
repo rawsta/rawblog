@@ -31,13 +31,13 @@
     }
 
     .kopfzeile .logo-small {
-        max-width: 123px;
+        max-width: 160px;
         transition: transform 0.35s;
         margin: 0 auto;
     }
 
     .kopfzeile .logo-small:hover {
-        transform: scale3d(0.90,0.90,1) rotate(-5deg);
+        transform: scale3d(1.10,1.10,1) rotate(-5deg);
     }
 
 /* Contact Footer */
