@@ -2,14 +2,17 @@ import React from "react";
 import Helmet from "react-helmet";
 import config from "../../data/SiteConfig";
 import Navigation from "../components/Navigation/Navigation";
-import '../../static/assets/css/all.min.css'
+import ThemeContext from '../context/ThemeContext';
+import '../../static/assets/css/all.min.css';
 import "./index.css";
 
 export default class MainLayout extends React.Component {
 
+  static contextType = ThemeContext;
+
   render() {
-    const { children } = this.props;
     const { dark, notFound } = this.context;
+    const { children } = this.props;
     let themeClass = ''
 
     if (dark && !notFound) {

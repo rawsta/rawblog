@@ -27,7 +27,6 @@ class PostListing extends React.Component {
 
   render() {
     const postList = this.getPostList();
-    // const newDate = formatDate(post.date);
     return (
       <section className="post-list">
         {postList.map(post => (
@@ -43,7 +42,8 @@ class PostListing extends React.Component {
               <div className="post-item-content">
                 <h2 className="post-title">{post.title}</h2>
                 <div className="post-info">
-                  <span>{formatDate(post.date)}</span>
+                  <span>{formatDate(post.date)} </span>
+                  {` | `}
                   <span>
                     {`Lesezeit: `}
                     {post.timeToRead}

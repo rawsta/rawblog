@@ -194,3 +194,18 @@ a:focus {
         transform: translate(0px, -2px);
         box-shadow: 0 15px 45px -10px rgba(10, 16, 34, .2);
     }
+
+/* Blog page */
+a.category-filter::before {
+    content: "X";
+    color: var(--black25);
+    margin-right: 10px;
+}
+a.category-filter {
+    background-color: var(--medium-grey);
+    color: var(--main-bg);
+    padding: 4px 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 1.4rem;
+}
