@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Layout from "../layout";
-import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
+// import Layout from "../layout";
+// import SEO from "../components/SEO/SEO";
+import config from "../../../data/SiteConfig";
 import "./About.css";
 
 class About extends Component {
@@ -9,7 +9,9 @@ class About extends Component {
     return (
       <div className="about">
         <h1>
-          rawBlog &mdash; Sebastian Fiele
+          rawBlog &mdash; 
+          {' '}
+          {config.userName}
         </h1>
 
         <p>
