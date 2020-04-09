@@ -22,3 +22,5 @@ Da ich selbst nicht weiß wie aktiv ich hier werde, hinterlasse ich einfach mal 
  * [B-Side Kultur e.V.](https://www.b-side.ms)
  * [warpzone Hackerspace](https://www.warpzone.ms)
  * [Hawerkamp 31 e.V.](https://am-hawerkamp.de)
+
+ _Mit der Zeit kommt hoffentlich mehr._

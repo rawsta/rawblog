@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import Layout from "../layout";
+import SEO from "../components/SEO/SEO";
+import config from "../../data/SiteConfig";
 import "./About.css";
 
 class About extends Component {
