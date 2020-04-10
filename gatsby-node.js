@@ -126,6 +126,7 @@ exports.createPages = async ({ graphql, actions }) => {
             }
             frontmatter {
               title
+              cover
               tags
               category
               template
@@ -215,15 +216,15 @@ exports.createPages = async ({ graphql, actions }) => {
       });
     }
 
-  if (edge.node.frontmatter.template === 'page') {
-    createPage({
-      path: edge.node.fields.slug,
-      component: pagePage,
-      context: {
-        slug: edge.node.fields.slug,
-      },
-    })
-  }
+    if (edge.node.frontmatter.template === 'page') {
+      createPage({
+        path: edge.node.fields.slug,
+        component: pagePage,
+        context: {
+          slug: edge.node.fields.slug,
+        },
+      })
+    }
 
     // // Create post pages
     // const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
