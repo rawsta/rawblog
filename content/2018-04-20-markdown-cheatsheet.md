@@ -1,12 +1,13 @@
 ---
-title: "Big Test"
-cover: "5.jpg"
-category: "test"
-date: "2019-01-03"
-slug: "Big-Sample_Test"
+title: "Markdown Cheatsheet"
+cover: /assets/markdown-title.jpg
+category: cheatsheet
+date: 2018-01-03
+template: post
+slug: markdown-cheatsheet
 tags:
-    - test
-    - huge
+    - markdown
+    - large
 ---
 
 # NOTE: This "post" is based on [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and is meant to test styling of Markdown generated documents.

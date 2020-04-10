@@ -1,7 +1,7 @@
 ---
 title: ServiceWorker und PWA
 date: 2019-11-05
-cover: assets/serviceworker-title.jpg
+cover: /assets/serviceworker-title.jpg
 category: javascript
 template: post
 slug: serviceworker-und-pwa

@@ -1,7 +1,7 @@
 ---
 title: PHP und OpCache
 date: 2019-04-17
-cover: assets/opcache-title.jpg
+cover: /assets/opcache-title.jpg
 category: server
 template: post
 slug: php-und-opcache

@@ -1,7 +1,7 @@
 ---
 title: Manifest zur PWA
 date: 2019-10-02
-cover: assets/manifest-title.jpg
+cover: /assets/manifest-title.jpg
 slug: manifest-zur-pwa
 category: javascript
 template: post
