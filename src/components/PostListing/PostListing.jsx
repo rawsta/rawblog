@@ -54,7 +54,7 @@ class PostListing extends React.Component {
                   alt={post.title}
                 />
               </div>
-              <div className="post-item-content">
+              <header className="post-item-content">
                 <span title={post.category}>
                   {CAT_ICON[post.category]}
                 </span>
@@ -70,7 +70,7 @@ class PostListing extends React.Component {
                     </span>
                   </span>
                 </div>
-              </div>
+              </header>
             </article>
           </Link>
         ))}

@@ -18,7 +18,7 @@
 
 /* Kopfzeile / Logo */
 
-    header {
+    header.navigation {
         display: flex;
         justify-content: center;
     }

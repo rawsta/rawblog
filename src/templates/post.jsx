@@ -62,13 +62,20 @@ export default class PostTemplate extends React.Component {
                 />
               </div>
             )}
-            <header className="post-header">
+            <header className="post-single-header">
               <span title={post.category}>
                 {CAT_ICON[post.category]}
               </span>
-              <h2>{post.title}</h2>
               <div className="post-info">
-                <p>{date}</p>
+                <h2>{post.title}</h2>
+                <span>
+                  {date}
+                </span>
+                <span>
+                  {` | Lesezeit: `}
+                  {postNode.timeToRead}
+                  {' Min.'}
+                </span>
               </div>
             </header>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />

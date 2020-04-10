@@ -1,7 +1,32 @@
 
 .post-single .page-cover-image {
   width: 100%;
+  margin-top: -20px;
+  padding-bottom: 40px;
+}
 
+header.post-single-header {
+  max-width: 70%;
+  position: absolute;
+  display: flex;
+  top: 350px;
+  margin-left: -25px;
+  align-items: center;
+  background-color: var(--bg-dark);
+  padding: 5px 10px;
+  border: 4px solid var(--medium-grey);
+  border-radius: 0 30px 30px 30px;
+  transition: all 350ms ease;
+}
+.post-single-header h2 {
+  margin: 0;
+}
+.post-single-header .post-info {
+  padding: 0 20px 0 0;
+}
+
+.post-info span {
+  color: var(--medium-grey);
 }
 
 .post-meta {

@@ -239,3 +239,44 @@ a:focus {
         text-decoration: none;
         color: var(--text-bg);
     }
+
+/* Post Info */
+header > span i {
+    font-size: 5rem;
+    line-height: 1;
+    padding: 0 10px;
+}
+
+/* Category Icon Colors */
+
+header > span i.fa-js-square {
+    color: #f7df1e;
+    text-shadow: 0 0 3px #000;
+}
+header > span i.fa-php {
+    color: #777bb3;
+}
+header > span i.fa-wordpress-simple {
+    color: #333;
+}
+header > span i.fa-typo3 {
+    color: #ff8700;
+}
+header > span i.fa-server {
+    color: var(--teal);
+}
+header > span i.fa-linux {
+    color: #000;
+}
+header > span i.fa-windows {
+    color: #0A7ED2;
+}
+header > span i.fa-receipt {
+    color: var(--primary);
+}
+header > span i.fa-diaspora {
+    color: var(--secondary);
+}
+header > span i.fa-test {
+    color: var(--ketchup);
+}
