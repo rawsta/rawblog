@@ -54,15 +54,6 @@ export default class PostTemplate extends React.Component {
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div className="post-wrap">
           <article className="post-single">
-            {cover && (
-              <div className="page-cover-image">
-                <img
-                  src={cover}
-                  className="title-img"
-                  alt={post.title}
-                />
-              </div>
-            )}
             <header className="post-single-header">
               <span title={post.category}>
                 {CAT_ICON[post.category]}
@@ -79,6 +70,15 @@ export default class PostTemplate extends React.Component {
                 </span>
               </div>
             </header>
+            {cover && (
+              <div className="page-cover-image">
+                <img
+                  src={cover}
+                  className="title-img"
+                  alt={post.title}
+                />
+              </div>
+            )}
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <span className="post-meta">
               <PostTags tags={post.tags} />

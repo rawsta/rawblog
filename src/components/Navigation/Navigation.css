@@ -53,6 +53,15 @@
         filter: drop-shadow(0 0 3px rgba(0,0,0,0.5));
     }
 
+    .kopfzeile .logo-small ~ h2 {
+        opacity: 0;
+        transition: all 500ms ease;
+    }
+
+    .kopfzeile .logo-small:hover ~ h2 {
+        opacity: 1;
+    }
+
     .kopfzeile h2 {
         color: var(--bg-main);
         text-transform: lowercase;
@@ -84,15 +93,38 @@
     .sidebar nav a {
         color: var(--bg-main);
         font-family: var(--head-font);
+        display: flex;
         font-size: 3rem;
         margin-left: 30px;
-        transition: all 500ms ease;
+        position: relative;
+        transition: all 450ms ease;
     }
-
+    .sidebar nav a::before {
+        content: "";
+        font-size: 0.1rem;
+        /* content: "\f101"; */
+        font-family: 'Font Awesome 5 Free';
+        position: absolute;
+        vertical-align: middle;
+        transition: all 600ms ease;
+        top: 25px;
+        left: 0;
+    }
     .sidebar nav a.active,
     .sidebar nav a:hover {
         color: var(--secondary);
-        margin-left: 40px;
+        margin-left: 50px;
+    }
+
+    .sidebar nav a.active::before,
+    .sidebar nav a:hover::before {
+        font-family: 'Font Awesome 5 Free';
+        font-size: 2.6rem;
+        content: "\f101";
+        position: absolute;
+        vertical-align: middle;
+        left: -30px;
+        top: 5px;
     }
 
 /* Contact Footer */

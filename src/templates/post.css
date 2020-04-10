@@ -5,6 +5,27 @@
   padding-bottom: 40px;
 }
 
+.post-single p a,
+.post-single p a:link {
+    color: var(--primary);
+    text-decoration: none;
+    background-position-y: -0%;
+    background-image: linear-gradient( transparent 50%, var(--secondary) 50%);
+    transition: background 500ms ease;
+    background-size: 2px;
+    background-size: auto 175%;
+}
+
+.post-single p a:visited {
+    color: var(--font-color-alt);
+}
+
+.post-single p a:hover,
+.post-single p a:active {
+    color: var(--font-color);
+    background-position-y: 115%;
+}
+
 header.post-single-header {
   max-width: 70%;
   position: absolute;
