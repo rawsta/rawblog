@@ -1,19 +1,3 @@
-<div align="center" style="margin-bottom:30px">
-    <a href='https://github.com/vagr9k/gatsby-advanced-starter/blob/master/LICENSE'>
-    <img src="https://img.shields.io/github/license/vagr9k/gatsby-advanced-starter.svg" alt="Logo" />
-    </a>
-    <a href='https://github.com/vagr9k/gatsby-advanced-starter'>
-    <img src="https://img.shields.io/github/tag/vagr9k/gatsby-advanced-starter.svg" alt="Logo" />
-    </a>
-        <a href='https://github.com/vagr9k/gatsby-advanced-starter/stargazers'>
-    <img src="https://img.shields.io/github/stars/vagr9k/gatsby-advanced-starter.svg" alt="Logo" />
-    </a>
-        <a href="https://twitter.com/intent/tweet?text=A%20cool%20%40gatsbyjs%20starter%3A&url=https%3A%2F%2Fgithub.com%2FVagr9K%2Fgatsby-advanced-starter">
-    <img src="https://img.shields.io/twitter/url/https/github.com/vagr9k/gatsby-advanced-starter.svg?style=social" alt="Logo" />
-    </a>
-</div>
-
-
 
 <div align="center"  style="margin-bottom:30px">
     <img src="static/logos/logo-1024.png" alt="Logo" width='200px' height='200px'/>
@@ -35,12 +19,17 @@
     </a>
 </div>
 
-# rawBlog | home of rawsta
+# rawBlog | rawsta's playground
 
-Der Plan ist eine neue Webseite mit React/Gatsby aufzubauen und dabei endlich auch mehr JavaScript und React zu lernen.  
+Der Plan ist eine neue Webseite mit React/Gatsby aufzubauen und dabei endlich auch mehr JavaScript und React zu lernen.
 Um den Start etwas zu vereinfachen habe ich mit dem Gatsby Advanced Starter angefangen.
-A starter skeleton with advanced features for [Gatsby](https://github.com/gatsbyjs/gatsby/).
-[`Vagr9K/gatsby-advanced-starter`](https://github.com/Vagr9K/gatsby-advanced-starter/) 
+
+> A starter skeleton with advanced features for [Gatsby](https://github.com/gatsbyjs/gatsby/).
+[`Vagr9K/gatsby-advanced-starter`](https://github.com/Vagr9K/gatsby-advanced-starter/)
+
+Aktueller Status: [![Netlify Status](https://api.netlify.com/api/v1/badges/bfc49937-8f96-4817-a493-6ceba1541296/deploy-status)](https://app.netlify.com/sites/rawblog/deploys)
+
+...und hier die [Demo website.](https://rawblog.netlify.com)
 
 ## Lighthouse Audit Score
 
@@ -50,23 +39,17 @@ A starter skeleton with advanced features for [Gatsby](https://github.com/gatsby
     </a>
 </div>
 
-Check out the [Features](#features) to read about all [Progressive Web App](https://developers.google.com/web/progressive-web-apps) capabilities of this starter in detail.
+Der Score bevor ich mich dran gesetzt habe.
 
 ## Why?
 
-This project aims to provide a minimal base for building advanced GatsbyJS powered websites.
-
-It doesn't define any UI limitations in any way and only gives you the basic components for SEO/Social Media/etc while creating a comfortable development environment to get started.
-
-You are free to use any UI framework/styling options.
+Y not?
 
 ## How can I use this?
 
 If you are a newcomer to Gatsby who's interested in the implementations of most needed features, this is a great place to start.
 
-If you are interested in a foundation for building ultra-fast websites, you can use this project as a "minimal" starter.
-
-[Demo website.](https://gatsby-advanced-starter-demo.netlify.com)
+[Demo website.](https://rawblog.netlify.com)
 
 ## Features
 
@@ -82,8 +65,6 @@ If you are interested in a foundation for building ultra-fast websites, you can 
   - Separate page for posts under each tag
 - Categories
   - Separate page for posts under each category
-- [Disqus](https://disqus.com/) support
-  - Notifications about new disqus comments
 - `/static/` and content folders are available to use with [gatsby-image](https://www.gatsbyjs.org/docs/gatsby-image/) out of the box for optimized image generation
 - High configurability
 - Separate components for everything:
