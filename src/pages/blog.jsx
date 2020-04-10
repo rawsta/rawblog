@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
-
 import Layout from '../layout'
 import PostListing from '../components/PostListing/PostListing'
 import SEO from '../components/SEO/SEO'
@@ -37,15 +36,26 @@ export default class BlogPage extends Component {
 
     return (
       <Layout>
-        <Helmet title={`Articles – ${config.siteTitle}`} />
+        <Helmet title={`Beiträge – ${config.siteTitle}`} />
         <SEO />
         <div className="container">
-          <h1 className="articles-title">Articles</h1>
+          <h1 className="articles-title">{filterCount}{` Beiträge`}</h1>
+          <div className="search-container">
+            <input
+              className="search"
+              type="text"
+              name="searchTerm"
+              value={searchTerm}
+              placeholder="Beiträge filtern..."
+              onChange={this.handleChange}
+            />
+            <i class="fas fa-search"></i>
+          </div>
           <div className="category-container">
             {categories.map(category => {
               return (
                 <Link
-                  to={`categories/${category.fieldValue.toLowerCase()}`}
+                  to={`/categories/${category.fieldValue.toLowerCase()}`}
                   className="category-filter"
                   key={category.fieldValue}
                 >
@@ -54,17 +64,7 @@ export default class BlogPage extends Component {
               )
             })}
           </div>
-          <div className="search-container">
-            <input
-              className="search"
-              type="text"
-              name="searchTerm"
-              value={searchTerm}
-              placeholder="Type here to filter posts..."
-              onChange={this.handleChange}
-            />
-            <div className="filter-count">{filterCount}</div>
-          </div>
+
           <PostListing postEdges={filteredPosts} />
         </div>
       </Layout>
@@ -78,6 +78,7 @@ export const pageQuery = graphql`
     posts: allMarkdownRemark(
       limit: 2000
       sort: { fields: [fields___date], order: DESC }
+      filter: { frontmatter: { template: { eq: "post" } } }
     ) {
       edges {
         node {

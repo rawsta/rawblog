@@ -20,6 +20,18 @@ export default class PostTemplate extends React.Component {
     const postNode = data.markdownRemark;
     const post = postNode.frontmatter;
     const date = formatDate(post.date);
+    const CAT_ICON = {
+      javascript: <i className="fab fa-js-square"></i>,
+      php: <i className="fab fa-php"></i>,
+      css3: <i className="fab fa-css3-alt"></i>,
+      wordpress: <i className="fab fa-wordpress-simple"></i>,
+      typo3: <i className="fab fa-typo3"></i>,
+      server: <i className="fas fa-server"></i>,
+      linux: <i className="fab fa-linux"></i>,
+      windows: <i className="fab fa-windows"></i>,
+      cheatsheet: <i className="fas fa-receipt"></i>,
+      test: <i className="fab fa-diaspora"></i>,
+    };
     let cover;
 
     if (!post.id) {
@@ -50,11 +62,15 @@ export default class PostTemplate extends React.Component {
                 />
               </div>
             )}
-            <h2>{post.title}</h2>
-            <div className="post-info">
-              <p>{date}</p>
-              <p>{post.category}</p>
-            </div>
+            <header className="post-header">
+              <span title={post.category}>
+                {CAT_ICON[post.category]}
+              </span>
+              <h2>{post.title}</h2>
+              <div className="post-info">
+                <p>{date}</p>
+              </div>
+            </header>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <span className="post-meta">
               <PostTags

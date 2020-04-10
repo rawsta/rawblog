@@ -2,7 +2,7 @@ const config = {
   siteTitle: "rawBlog - rawsta's playground", // Site title.
   siteTitleShort: "rawBlog", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "rawblog - the playground", // Alternative site title for SEO.
-  siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
+  siteLogo: "/logos/logo-512.png", // Logo used for SEO and manifest.
   siteUrl: "https://rawblog.netlify.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "Playground and maybe-blog of Sebastian Fiele.", // Website description used for RSS feeds/meta description tag.
@@ -42,7 +42,7 @@ const config = {
     },
     {
       label: "Twitter",
-      url: "https://twitter.com/rawsta",
+      url: "https://twitter.com/rawsta/",
       iconClassName: "fab fa-twitter"
     },
     {

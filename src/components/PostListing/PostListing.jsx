@@ -36,7 +36,8 @@ class PostListing extends React.Component {
       server: <i className="fas fa-server"></i>,
       linux: <i className="fab fa-linux"></i>,
       windows: <i className="fab fa-windows"></i>,
-      test: <i className="fab fa-diaspora"></i>
+      cheatsheet: <i className="fas fa-receipt"></i>,
+      test: <i className="fab fa-diaspora"></i>,
     };
 
 
@@ -54,8 +55,8 @@ class PostListing extends React.Component {
                 />
               </div>
               <div className="post-item-content">
-                <span>
-                {CAT_ICON[post.category]}
+                <span title={post.category}>
+                  {CAT_ICON[post.category]}
                 </span>
                 <div className="post-header">
                   <h2 className="post-title">{post.title}</h2>
