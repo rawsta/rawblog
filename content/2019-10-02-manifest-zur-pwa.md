@@ -6,9 +6,9 @@ slug: manifest-zur-pwa
 category: javascript
 template: post
 tags:
-  - pwa
-  - info
-  - wip
+-   pwa
+-   info
+-   wip
 ---
 # WebManifest
 
@@ -69,11 +69,11 @@ _._
 };
 ```
 
- - "fullscreen" verbirgt steuerelemente des browsers und des OS. ...halt FULLscreen
- - "standalone" ist eher normales Appverhalten.
+-   "fullscreen" verbirgt steuerelemente des browsers und des OS. ...halt FULLscreen
+-   "standalone" ist eher normales Appverhalten.
     Kein Browser aber Systemelemente (navbar/notifications, etc)
- - "minimal-ui" browser mit reduzierter ui
- - "browser" _normale_ Browserdarstellung.
+-   "minimal-ui" browser mit reduzierter ui
+-   "browser" _normale_ Browserdarstellung.
 
 
 kann im CSS mit ``@media all and (display-mode:standalone)`` angesprochen werden.
@@ -88,11 +88,11 @@ _._
 };
 ```
 
- - "any" beliebige Ausrichtung
- - "natural" natürliche Ausrichtung des Devices (mobil meist portrait)
- - "landscape", "portrait" quer oder hochkant (pri/sec automatisch)
- - "landscape-primary", "landscape-secondary" primary _normale_ ausrichtung
- - "portrait-primary", "portrait-secondary" secondary _auf-dem-kopf_ ausrichtung
+-   "any" beliebige Ausrichtung
+-   "natural" natürliche Ausrichtung des Devices (mobil meist portrait)
+-   "landscape", "portrait" quer oder hochkant (pri/sec automatisch)
+-   "landscape-primary", "landscape-secondary" primary _normale_ ausrichtung
+-   "portrait-primary", "portrait-secondary" secondary _auf-dem-kopf_ ausrichtung
 
 kann auch über die ``Screen-Orientation API`` angesprochen werden.
 ```js

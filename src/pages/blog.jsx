@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
-import Helmet from 'react-helmet'
-import { graphql, Link } from 'gatsby'
-import Layout from '../layout'
-import PostListing from '../components/PostListing/PostListing'
-import SEO from '../components/SEO/SEO'
-import config from '../../data/SiteConfig'
+import React, { Component } from 'react';
+import Helmet from 'react-helmet';
+import { graphql, Link } from 'gatsby';
+import Layout from '../layout';
+import PostListing from '../components/PostListing/PostListing';
+import SEO from '../components/SEO/SEO';
+import config from '../../data/SiteConfig';
 
 export default class BlogPage extends Component {
-  state = {
+  const state = {
     searchTerm: '',
     posts: this.props.data.posts.edges,
     filteredPosts: this.props.data.posts.edges,

@@ -44,7 +44,7 @@ Controls how many PHP files, at most, can be held in memory at once. It's import
 Standart ist 64MB und dürfte für kleinere Sachen reichen.
 Ich empfehle da 128MB _(bei sehr großen/gierigen Projekten 192MB)_
 
-Mit der Funktion `opcachegetstatus()` könnt Ihr überprüfen wieviel opcache verbraucht und den Wert ggfs. anpassen. [evtl. link zu steve erklärung]
+Mit der Funktion `opcachegetstatus()` könnt Ihr überprüfen wieviel opcache verbraucht und den Wert ggfs. anpassen. _(evtl. link zu steve erklärung)_
 
 
 
@@ -76,5 +76,5 @@ in die php.ini einfach folgendes eintragen:
     opcache.fast_shutdown=1
 ```
 
-Diese Einstellungen sind natürlich nur ein Vorschlag. Wer z.B. Nextcloud betreibt, sollte `opcache.revalidate_freq` auf 1 setzen. [link zum hinweis von nc]
+Diese Einstellungen sind natürlich nur ein Vorschlag. Wer z.B. Nextcloud betreibt, sollte `opcache.revalidate_freq` auf 1 setzen. _(link zum hinweis von nc)_
 

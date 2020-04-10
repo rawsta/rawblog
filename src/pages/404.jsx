@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import Helmet from 'react-helmet'
-import Layout from '../layout'
-import SEO from '../components/SEO/SEO'
-import config from '../../data/SiteConfig'
+import React, { Component } from 'react';
+import Helmet from 'react-helmet';
+import Layout from '../layout';
+import SEO from '../components/SEO/SEO';
+import config from '../../data/SiteConfig';
 
 export default class NotFoundPage extends Component {
 

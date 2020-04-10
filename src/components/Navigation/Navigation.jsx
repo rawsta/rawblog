@@ -21,7 +21,8 @@ class Navigation extends Component {
           <span className="kopfzeile">
             <a
               href={url}
-              title={title}>
+              title={title}
+            >
               {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232 207">
                 <path fill="#830000" d="M9.3 153.9V50.8c0-23.1 19.2-41.5 42.6-41.5h58.9c41.3 0 74.7 33.4 74.7 74.7 0 25.8-12.1 48.4-32.1 62.3-1.3.8 0 3.4 1.6 2.6 8.7-3.9 16.8-9.5 23.7-17.3 11.8 16.8 9.7 38.9-5.3 53.9s-43.4 17.9-57.6-1.3l-22.6-26.8c-1.3 22.1-19.2 39.2-42.1 39.2-22.6-.1-41.8-19.3-41.8-42.7z"/>
                 <path fill="#F08300" d="M184.1 169.8c-7.6 21.6-30.7 32.7-52.3 25.2-21.3-7.5-32.7-30.7-25.2-52.3 5.8-16.6 21.8-27.2 39.2-27.5.2.1.9-.2.8-1.4.1-.2 0-.8-1-1.2-8.4-1.5-17.8-.1-25.9 4-.8-5.6.2-11.6 2.1-17.1l20.1-57.3c7.6-21.6 30.9-32.6 52.3-25.2 21.6 7.6 33.2 30.8 25.7 52.4l-20.1 57.3c-2.8 7.9-8.1 14.4-14.6 19.4 2 7.6 1.6 15.8-1.1 23.7z"/>
@@ -89,8 +90,10 @@ class Navigation extends Component {
           </section>
 
           <div className="copyright">
-            &copy;{new Date().getFullYear()}
-            &nbsp;{config.userName}
+            &copy;
+            {new Date().getFullYear()}
+            &nbsp;
+            {config.userName}
           </div>
 
         </footer>

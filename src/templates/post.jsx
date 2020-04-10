@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
-import Img from 'gatsby-image';
+// import Img from 'gatsby-image';
 import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
 import PostTags from "../components/PostTags/PostTags";
@@ -21,16 +21,16 @@ export default class PostTemplate extends React.Component {
     const post = postNode.frontmatter;
     const date = formatDate(post.date);
     const CAT_ICON = {
-      javascript: <i className="fab fa-js-square"></i>,
-      php: <i className="fab fa-php"></i>,
-      css3: <i className="fab fa-css3-alt"></i>,
-      wordpress: <i className="fab fa-wordpress-simple"></i>,
-      typo3: <i className="fab fa-typo3"></i>,
-      server: <i className="fas fa-server"></i>,
-      linux: <i className="fab fa-linux"></i>,
-      windows: <i className="fab fa-windows"></i>,
-      cheatsheet: <i className="fas fa-receipt"></i>,
-      test: <i className="fab fa-diaspora"></i>,
+      javascript: <i className="fab fa-js-square" />,
+      php: <i className="fab fa-php" />,
+      css3: <i className="fab fa-css3-alt" />,
+      wordpress: <i className="fab fa-wordpress-simple" />,
+      typo3: <i className="fab fa-typo3" />,
+      server: <i className="fas fa-server" />,
+      linux: <i className="fab fa-linux" />,
+      windows: <i className="fab fa-windows" />,
+      cheatsheet: <i className="fas fa-receipt" />,
+      test: <i className="fab fa-diaspora" />,
     };
     let cover;
 
