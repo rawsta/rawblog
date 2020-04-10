@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
-import Img from 'gatsby-image'
+import Img from 'gatsby-image';
 import moment from 'moment';
 
 import { formatDate } from '../../utils/global';
 
 class PostListing extends React.Component {
-
 
   getPostList() {
     const {postEdges} = this.props;
@@ -66,8 +65,7 @@ class PostListing extends React.Component {
                     <span>
                       {`Lesezeit: `}
                       {post.timeToRead}
-                      {' '}
-                      Min.
+                      {' Min.'}
                     </span>
                   </span>
                 </div>

@@ -9,7 +9,7 @@ const config = {
   siteRss: "/rss.xml", // Path to the RSS file.
   postDefaultCategoryID: "Ramblings", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
-  dateFormat: "DD/MM/YYYY", // Date format for display.
+  dateFormat: "DD.MM.YYYY", // Date format for display.
   postsPerPage: 6, // Amount of posts displayed per listing page.
   menuLinks: [
     {

@@ -39,6 +39,7 @@ class Listing extends React.Component {
     const thisProps = this.props;
     const propsData = thisProps.data;
     const postEdges = propsData.allMarkdownRemark.edges;
+    const { category } = thisProps.pageContext;
 
     return (
       <Layout>
@@ -56,9 +57,10 @@ class Listing extends React.Component {
 export default Listing;
 
 /* eslint no-undef: "off" */
+// GatsbyImageSharpFluid
 export const listingQuery = graphql`
   query ListingQuery($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(
+    allMarkdownRemark (
       sort: { fields: [fields___date], order: DESC }
       limit: $limit
       skip: $skip
@@ -72,11 +74,12 @@ export const listingQuery = graphql`
           excerpt
           timeToRead
           frontmatter {
-            title
-            tags
+            template
             cover
+            title
             date
             category
+            tags
           }
         }
       }
