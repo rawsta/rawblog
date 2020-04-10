@@ -8,7 +8,8 @@ import PostTags from "../components/PostTags/PostTags";
 import SEO from "../components/SEO/SEO";
 import Footer from "../components/Footer/Footer";
 import config from "../../data/SiteConfig";
-import "./b16-tomorrow-dark.css";
+import "./solarized-dark.css";
+// import "./b16-tomorrow-dark.css";
 import "./post.css";
 
 import { formatDate } from '../utils/global';
@@ -80,12 +81,8 @@ export default class PostTemplate extends React.Component {
             </header>
             <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <span className="post-meta">
-              <PostTags
-                tags={post.tags}
-              />
-              <UserInfo
-                config={config}
-              />
+              <PostTags tags={post.tags} />
+              <UserInfo config={config} />
             </span>
             <Footer config={config} />
           </article>
