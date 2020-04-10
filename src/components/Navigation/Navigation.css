@@ -16,6 +16,19 @@
     /* box-shadow: 0 3px 5px 7px rgba(0, 0, 0, 0.15); */
 }
 
+.sidebar header,
+.sidebar footer {
+    display: flex;
+    flex-grow: 0;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-grow: 1;
+}
+
 /* Kopfzeile / Logo */
 
     header.navigation {
@@ -85,14 +98,14 @@
 /* Contact Footer */
 
     footer.copyright {
-        font-size: 14px;
+        font-size: 1.2rem;
         text-align: center;
-        margin: 0;
+        margin: 0 auto;
     }
 
     .contact-title {
         position: relative;
-        color: var(--font-color);
+        color: var(--bg-dark);
         font-weight: 400;
         font-size: 1.6rem;
         margin: 0 0 5px;
@@ -100,6 +113,7 @@
         text-align: center;
     }
 
+    .contact-title::after,
     .contact-title::before {
             content: "";
             display: block;
@@ -108,11 +122,18 @@
             transform: translateY(-50%);
             position: absolute;
             top: 50%;
-            left: 0;
+            /* left: 0; */
             background-color: var(--bg-main);
     }
 
+    .contact-title::before {
+        left: 0;
+    }
     .contact-title::after {
+        right: 0;
+    }
+
+    /* .contact-title::after {
             content: "";
             display: block;
             height: 2px;
@@ -122,7 +143,7 @@
             top: 50%;
             right: 0;
             background-color: var(--bg-main);
-    }
+    } */
 
     .contact ul {
         list-style-type: none;

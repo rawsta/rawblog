@@ -89,10 +89,8 @@ class Navigation extends Component {
           </section>
 
           <div className="copyright">
-              &copy;
-              {new Date().getFullYear()}
-&nbsp;
-              {config.userName}
+            &copy;{new Date().getFullYear()}
+            &nbsp;{config.userName}
           </div>
 
         </footer>

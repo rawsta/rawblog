@@ -49,7 +49,7 @@ export default class BlogPage extends Component {
               placeholder="Beiträge filtern..."
               onChange={this.handleChange}
             />
-            <i class="fas fa-search"></i>
+            <i className="fas fa-search"></i>
           </div>
           <div className="category-container">
             {categories.map(category => {

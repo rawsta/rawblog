@@ -6,15 +6,15 @@ import config from '../../data/SiteConfig'
 
 export default class NotFoundPage extends Component {
 
-// componentDidMount() {
-//     const { setNotFound } = this.context
-//     setNotFound()
-// }
+componentDidMount() {
+    const { setNotFound } = this.context;
+    setNotFound();
+}
 
-// componentWillUnmount() {
-//     const { setFound } = this.context
-//     setFound()
-// }
+componentWillUnmount() {
+    const { setFound } = this.context;
+    setFound();
+}
 
 render() {
     return (
@@ -26,7 +26,7 @@ render() {
             <h1>404</h1>
           </div>
           <p>
-            A fatal exception 0E has occurred at 
+            A fatal exception 0E has occurred at
             {' '}
             <span className="link">0x74616e6961</span>
             {' '}

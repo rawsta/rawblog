@@ -17,12 +17,6 @@ class Footer extends Component {
         <UserLinks config={config} labeled />
 
         <div className="notice-container">
-          <p>{copyright}</p>
-
-          <Link to={url}>
-            <span>RSS</span>
-          </Link>
-
           <p>
             Handcrafted by
             {" "}
@@ -31,6 +25,12 @@ class Footer extends Component {
             </a>
             .
           </p>
+
+          <Link to={url}>
+            <span>RSS</span>
+          </Link>
+
+          <p>{copyright}</p>
         </div>
       </footer>
     );
