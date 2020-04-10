@@ -7,7 +7,7 @@ import SEO from '../components/SEO/SEO';
 import config from '../../data/SiteConfig';
 
 export default class BlogPage extends Component {
-  const state = {
+  state = {
     searchTerm: '',
     posts: this.props.data.posts.edges,
     filteredPosts: this.props.data.posts.edges,
