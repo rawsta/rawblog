@@ -1,13 +1,13 @@
 const config = {
   siteTitle: "rawBlog - rawsta's playground", // Site title.
   siteTitleShort: "rawBlog", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: "rawblog - the playground", // Alternative site title for SEO.
+  siteTitleAlt: "rawBlog - the playground", // Alternative site title for SEO.
   siteLogo: "/logos/logo-512.png", // Logo used for SEO and manifest.
   siteUrl: "https://rawblog.netlify.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "Playground and maybe-blog of Sebastian Fiele.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
-  postDefaultCategoryID: "Ramblings", // Default category for posts.
+  postDefaultCategoryID: "test", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD.MM.YYYY", // Date format for display.
   postsPerPage: 6, // Amount of posts displayed per listing page.
@@ -17,7 +17,7 @@ const config = {
       link: '/about/',
     },
     {
-      name: 'Articles',
+      name: 'Beiträge',
       link: '/blog/',
     },
     {
@@ -29,7 +29,7 @@ const config = {
   userEmail: "rawsta@rawsta.de", // Email used for RSS feed's author segment
   userTwitter: "rawsta", // Optionally renders "Follow Me" in the UserInfo segment.
   userGithub: "rawsta", // Optionally renders "Follow Me" in the UserInfo segment.
-  userLocation: "Muenster, Germany", // User location to display in the author segment.
+  userLocation: "Münster, Germany", // User location to display in the author segment.
   userAvatar: "https://avatars3.githubusercontent.com/u/1809314?s=460&v=4", // User avatar to display in the author segment.
   userDescription:
     "Developer with far too many Interests.", // User description to display in the author segment.
@@ -46,12 +46,12 @@ const config = {
       iconClassName: "fab fa-twitter"
     },
     {
-      label: "Email",
+      label: "E-Mail",
       url: "mailto:rawsta@rawsta.de",
       iconClassName: "far fa-envelope"
     }
   ],
-  copyright: "Copyright ©2020 -rawsta", // Copyright string for the footer of the website and RSS feed.
+  copyright: "©2020 -rawsta", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#830000", // Used for setting manifest and progress theme colors.
   backgroundColor: "#363636" // Used for setting manifest background color.
 };

@@ -48,3 +48,7 @@ header.post-single-header {
   font-size: 1.6rem;
   margin-left: 10px;
 }
+
+.single-tag::before {
+  content: "#";
+}

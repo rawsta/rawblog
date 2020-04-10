@@ -240,43 +240,62 @@ a:focus {
         color: var(--text-bg);
     }
 
-/* Post Info */
-header > span i {
-    font-size: 5rem;
-    line-height: 1;
-    padding: 0 10px;
-}
+/* prismjs syntax highlighting */
+
+    .gatsby-highlight pre[class*="language-"] {
+        border-radius: 3px 40px 4px 9px;
+    }
+
+    .gatsby-highlight code[class*="language-"],
+    .post-single :not(pre) > code[class*="language-"],
+    .post-single p > code[class*="language-"] {
+        font-size: 0.9em;
+    }
+
+    .post-single :not(pre) > code[class*="language-"],
+    .post-single p > code[class*="language-"] {
+        border-radius: 1px 6px 3px 5px;
+        padding: 2px 4px;
+        margin: 0 3px;
+    }
+
 
 /* Category Icon Colors */
 
-header > span i.fa-js-square {
-    color: #f7df1e;
-    text-shadow: 0 0 3px #000;
-}
-header > span i.fa-php {
-    color: #777bb3;
-}
-header > span i.fa-wordpress-simple {
-    color: #333;
-}
-header > span i.fa-typo3 {
-    color: #ff8700;
-}
-header > span i.fa-server {
-    color: var(--teal);
-}
-header > span i.fa-linux {
-    color: #000;
-}
-header > span i.fa-windows {
-    color: #0A7ED2;
-}
-header > span i.fa-receipt {
-    color: var(--primary);
-}
-header > span i.fa-diaspora {
-    color: var(--secondary);
-}
-header > span i.fa-test {
-    color: var(--ketchup);
-}
+    header > span i {
+        font-size: 5rem;
+        line-height: 1;
+        padding: 0 10px;
+    }
+
+    header > span i.fa-js-square {
+        color: #f7df1e;
+        text-shadow: 0 0 3px #000;
+    }
+    header > span i.fa-php {
+        color: #777bb3;
+    }
+    header > span i.fa-wordpress-simple {
+        color: #333;
+    }
+    header > span i.fa-typo3 {
+        color: #ff8700;
+    }
+    header > span i.fa-server {
+        color: var(--teal);
+    }
+    header > span i.fa-linux {
+        color: #000;
+    }
+    header > span i.fa-windows {
+        color: #0A7ED2;
+    }
+    header > span i.fa-receipt {
+        color: var(--primary);
+    }
+    header > span i.fa-diaspora {
+        color: var(--secondary);
+    }
+    header > span i.fa-test {
+        color: var(--ketchup);
+    }
