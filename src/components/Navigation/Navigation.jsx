@@ -91,8 +91,9 @@ class Navigation extends Component {
             </div>
           </section>
 
-          <div className="copyright">
+          <div className="rechtliches">
             <Link to="/imprint">Impressum</Link>
+            <Link to="/privacy">Datenschutz</Link>
           </div>
 
         </footer>

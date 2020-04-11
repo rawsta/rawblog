@@ -1,6 +1,10 @@
 import React, { Component } from "react";
-import { Link } from "gatsby";
-import UserLinks from "../UserLinks/UserLinks";
+// import { Link } from "gatsby";
+// import UserLinks from "../UserLinks/UserLinks";
+import netlify from '../../../static/logos/netlify.png'
+import gatsby from '../../../static/logos/gatsby.png'
+import github from '../../../static/logos/github.png'
+
 import "./Footer.css";
 
 class Footer extends Component {
@@ -14,23 +18,47 @@ class Footer extends Component {
     return (
       <footer className="footer">
 
-        <UserLinks config={config} labeled />
+        {/* <UserLinks config={config} labeled /> */}
 
         <div className="notice-container">
           <p>
-            Handcrafted by
-            {" "}
-            <a href="https://github.com/rawsta">
-              rawsta
-            </a>
-            .
+            Handcrafted
+            {copyright}
           </p>
 
-          <Link to={url}>
+          {/* <Link to={url}>
             <span>RSS</span>
-          </Link>
+          </Link> */}
 
-          <p>{copyright}</p>
+          <p>
+          <a href="https://www.gatsbyjs.org/" title="Built with Gatsby">
+            <img
+              src={gatsby}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-img"
+              alt="GatsbyJS"
+            />
+          </a>
+          <a href="https://github.com/rawsta" title="Open-source on GitHub">
+            <img
+              src={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-img"
+              alt="GitHub"
+            />
+          </a>
+          <a href="https://www.netlify.com/" title="Hosted by Netlify">
+            <img
+              src={netlify}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-img"
+              alt="Netlify"
+            />
+          </a>
+          </p>
         </div>
       </footer>
     );

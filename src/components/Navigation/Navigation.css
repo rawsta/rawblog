@@ -127,25 +127,94 @@
         top: 5px;
     }
 
-
-/* Notice-block */
-
-    .notice-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-content: center;
-        align-items: center;
-        margin-top: 25px;
-    }
-
-    @media (max-width: 640px - 1px) {
-        .notice-container {
-            justify-content: space-around;
-        }
-    }
-
-    .notice-container h4 {
+    .sidebar .rechtliches {
+        color: var(--bg-main);
+        font-size: 1.4rem;
         text-align: center;
-        margin: 0;
     }
+    .sidebar .rechtliches a {
+        color: var(--bg-main);
+        font-size: 1.4rem;
+    }
+    .sidebar .rechtliches a + a {
+        margin: 20px 10px 0;
+    }
+
+
+    .contact-title {
+        position: relative;
+        color: var(--bg-dark);
+        font-weight: 400;
+        font-size: 1.6rem;
+        margin: 0 0 5px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .contact-title::after,
+    .contact-title::before {
+        content: "";
+        display: block;
+        height: 2px;
+        width: calc(50% - 48px);
+        transform: translateY(-50%);
+        position: absolute;
+        top: 50%;
+        background-color: var(--bg-dark);
+    }
+
+    .contact-title::before {
+        left: 0;
+    }
+    .contact-title::after {
+        right: 0;
+    }
+
+    .contact {
+        margin-bottom: 20px;
+    }
+
+    .contact ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        line-height: 1;
+        justify-content: space-around;
+    }
+
+    .contact ul li {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .contact ul li:first-child {
+        margin-left: 0;
+    }
+
+    .contact  ul li a {
+        color: var(--bg-dark);
+        display: block;
+        padding: 5px;
+        font-size: 2rem;
+        background: none;
+        transition: all 500ms ease;
+    }
+
+    .contact  ul li a:hover {
+        color: var(--secondary);
+        transform: scale(1.2);
+    }
+
+    footer .contact {
+        display: flex;
+        flex-direction: row;
+    }
+
+    footer .user-pic {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
