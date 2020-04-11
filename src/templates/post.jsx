@@ -56,7 +56,6 @@ export default class PostTemplate extends React.Component {
         <div className="post-wrap">
           <article className="post-single">
           <PostHeader>
-            {/* <header className="post-single-header"> */}
               <span title={post.category}>
                 {CAT_ICON[post.category]}
               </span>
@@ -72,7 +71,6 @@ export default class PostTemplate extends React.Component {
                 </span>
               </div>
             </PostHeader>
-            {/* </header> */}
             {cover && (
               <div className="page-cover-image">
                 <img

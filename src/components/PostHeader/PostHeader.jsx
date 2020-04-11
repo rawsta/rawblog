@@ -8,22 +8,22 @@ const Header = ({children}) => {
     // change state on scroll
     useEffect(() => {
         const handleScroll = () => {
-        const isScrolled = window.scrollY > 400;
-        if (isScrolled !== scrolled) {
-            setScrolled(!scrolled);
+            const isScrolled = window.scrollY > 400;
+            if (isScrolled !== scrolled) {
+                setScrolled(!scrolled);
+            }
         }
-    };
 
-    document.addEventListener('scroll', handleScroll, { passive: true });
+        document.addEventListener('scroll', handleScroll, { passive: true });
 
-    return () => {
-        // clean up the event handler when the component unmounts
-        document.removeEventListener('scroll', handleScroll);
+        return () => {
+            // clean up the event handler when the component unmounts
+            document.removeEventListener('scroll', handleScroll);
         };
     }, [scrolled]);
 
     return (
-        <header className="post-single-header" data-active={scrolled}>
+        <header id="post-head" className="post-single-header" data-active={scrolled}>
         {children}
         </header>
     );

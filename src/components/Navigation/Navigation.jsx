@@ -50,43 +50,51 @@ class Navigation extends Component {
         </nav>
 
         <footer>
-          <section className="contact">
             <h3 className="contact-title">Kontakt</h3>
-            <ul>
-              {config.userTwitter && (
-                <li>
-                  <a
-                    href={`https://twitter.com/${config.userTwitter}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-twitter" aria-hidden="true" />
-                  </a>
-                </li>
-                  )}
-              {config.userGithub && (
-                <li>
-                  <a
-                    href={`https://github.com/${config.userGithub}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="fab fa-github" aria-hidden="true" />
-                  </a>
-                </li>
-                  )}
-              {config.userEmail && (
-                <li>
-                  <a
-                    href={`mailto:${config.userEmail}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="far fa-envelope" aria-hidden="true" />
-                  </a>
-                </li>
-                  )}
-            </ul>
+          <section className="contact">
+            <img
+              src={config.userAvatar}
+              className="user-pic"
+              alt={config.userName}
+            />
+            <div className="contact-details">
+              <span>Sebastian Fiele</span>
+              <ul>
+                {config.userTwitter && (
+                  <li>
+                    <a
+                      href={`https://twitter.com/${config.userTwitter}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="fab fa-twitter" aria-hidden="true" />
+                    </a>
+                  </li>
+                    )}
+                {config.userGithub && (
+                  <li>
+                    <a
+                      href={`https://github.com/${config.userGithub}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="fab fa-github" aria-hidden="true" />
+                    </a>
+                  </li>
+                    )}
+                {config.userEmail && (
+                  <li>
+                    <a
+                      href={`mailto:${config.userEmail}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="far fa-envelope" aria-hidden="true" />
+                    </a>
+                  </li>
+                    )}
+              </ul>
+            </div>
           </section>
 
           <div className="copyright">

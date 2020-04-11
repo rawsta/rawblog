@@ -6,12 +6,12 @@ import Footer from "../components/Footer/Footer";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 
-export default class PostTemplate extends React.Component {
+export default class PageTemplate extends React.Component {
+
   render() {
-    const { data } = this.props;
-    const { slug } = data.pageContext;
-    const postNode = data.markdownRemark;
-    const page = postNode.frontmatter;
+    const { slug } = this.props.pageContext
+    const postNode = this.props.data.markdownRemark
+    const page = postNode.frontmatter
 
     if (!page.id) {
       page.id = slug;
@@ -46,6 +46,7 @@ export const pageQuery = graphql`
       excerpt
       frontmatter {
         title
+        cover
         template
       }
       fields {
