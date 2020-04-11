@@ -9,8 +9,9 @@ import config from "../../data/SiteConfig";
 export default class PageTemplate extends React.Component {
 
   render() {
-    const { slug } = this.props.pageContext
-    const postNode = this.props.data.markdownRemark
+    const thisProps = this.props;
+    const { slug } = thisProps.pageContext
+    const postNode = thisProps.data.markdownRemark
     const page = postNode.frontmatter
 
     if (!page.id) {

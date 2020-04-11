@@ -17,25 +17,25 @@ export default class Index extends React.Component {
         const latestPostEdges = data.latest.edges
 
         return (
-            <Layout>
-                <Helmet>
-                    <title>{`${config.siteTitle} | Sebastian Fiele`}</title>
-                </Helmet>
-                <SEO />
-                <div className="page-wrap">
-                    <section className="frontpage">
-                        <header className="welcome-header">
-                            <h1>Sebastian |rawsta| Fiele</h1>
-                        </header>
-                            <div className="frontpage-main-contentarea-above-postlisting">
-                            Super Fancy Content
-                            </div>
-                        <PostListing postEdges={latestPostEdges} />
-                        <hr />
-                        <Footer config={config} />
-                    </section>
+          <Layout>
+            <Helmet>
+              <title>{`${config.siteTitle} | Sebastian Fiele`}</title>
+            </Helmet>
+            <SEO />
+            <div className="page-wrap">
+              <section className="frontpage">
+                <header className="welcome-header">
+                  <h1>Sebastian |rawsta| Fiele</h1>
+                </header>
+                <div className="frontpage-main-contentarea-above-postlisting">
+                  Super Fancy Content
                 </div>
-            </Layout>
+                <PostListing postEdges={latestPostEdges} />
+                <hr />
+                <Footer config={config} />
+              </section>
+            </div>
+          </Layout>
         );
     }
 }
@@ -44,7 +44,7 @@ export default class Index extends React.Component {
 export const indexQuery = graphql`
 query FrontQuery {
     latest: allMarkdownRemark(
-        limit: 5
+        limit: 3
         sort: { fields: [fields___date], order: DESC }
         filter: { frontmatter: { template: { eq: "post" } } }
     ) {

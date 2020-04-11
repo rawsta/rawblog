@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 // import Img from 'gatsby-image';
@@ -55,7 +55,7 @@ export default class PostTemplate extends React.Component {
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div className="post-wrap">
           <article className="post-single">
-          <PostHeader>
+            <PostHeader>
               <span title={post.category}>
                 {CAT_ICON[post.category]}
               </span>
