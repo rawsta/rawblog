@@ -27,7 +27,7 @@
 }
 
 header.post-single-header {
-  max-width: 70%;
+  /* max-width: 70%; */
   position: absolute;
   display: flex;
   top: 350px;
@@ -39,9 +39,31 @@ header.post-single-header {
   border-radius: 0 30px 30px 30px;
   transition: all 350ms ease;
 }
-.post-single-header h2 {
+
+header.post-single-header[data-active="true"] {
+  position: sticky;
+  top: 0;
+  margin: -20px 0 0 -45px;
+  padding: 5px 25px;
+  width: 100vw;
+  border-radius: 0;
+  background: var(--medium-grey);
+  z-index: 13;
+  transition: all 350ms ease;
+}
+
+header.post-single-header[data-active="true"] .post-info span {
+  color: var(--bg-dark);
+}
+
+header.post-single-header h2 {
   margin: 0;
 }
+
+header.post-single-header[data-active="true"] h2 {
+  color: var(--bg-main);
+}
+
 .post-single-header .post-info {
   padding: 0 20px 0 0;
 }

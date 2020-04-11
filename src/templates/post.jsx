@@ -1,20 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 // import Img from 'gatsby-image';
 import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
 import PostTags from "../components/PostTags/PostTags";
+import PostHeader from "../components/PostHeader/PostHeader";
 import SEO from "../components/SEO/SEO";
 import Footer from "../components/Footer/Footer";
 import config from "../../data/SiteConfig";
+import { formatDate } from '../utils/global';
 import "./solarized-dark.css";
-// import "./b16-tomorrow-dark.css";
 import "./post.css";
 
-import { formatDate } from '../utils/global';
 
 export default class PostTemplate extends React.Component {
+
   render() {
     const { data, pageContext } = this.props;
     const { slug } = pageContext;
@@ -37,14 +38,14 @@ export default class PostTemplate extends React.Component {
 
     if (!post.id) {
       post.id = slug;
-    }
+    };
     if (!post.category_id) {
       post.category_id = config.postDefaultCategoryID;
-    }
+    };
 
     if (post.cover) {
       cover = post.cover;
-    }
+    };
 
     return (
       <Layout>
@@ -54,7 +55,8 @@ export default class PostTemplate extends React.Component {
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div className="post-wrap">
           <article className="post-single">
-            <header className="post-single-header">
+          <PostHeader>
+            {/* <header className="post-single-header"> */}
               <span title={post.category}>
                 {CAT_ICON[post.category]}
               </span>
@@ -69,7 +71,8 @@ export default class PostTemplate extends React.Component {
                   {' Min.'}
                 </span>
               </div>
-            </header>
+            </PostHeader>
+            {/* </header> */}
             {cover && (
               <div className="page-cover-image">
                 <img
