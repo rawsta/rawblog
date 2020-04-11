@@ -13,16 +13,16 @@ const config = {
   postsPerPage: 6, // Amount of posts displayed per listing page.
   menuLinks: [
     {
-      name: 'About',
-      link: '/about/',
+      name: 'Über mich',
+      link: '/about-rawsta/',
     },
     {
       name: 'Beiträge',
       link: '/blog/',
     },
     {
-      name: 'Contact',
-      link: '/contact/',
+      name: 'Kontakt',
+      link: '/kontakt/',
     },
   ],
   userName: "Sebastian Fiele", // Username to display in the author segment.
