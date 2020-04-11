@@ -20,25 +20,40 @@ export default class Imprint extends React.Component {
                 <header className="page-header">
                   <h1>Impressum</h1>
                 </header>
+                <hr />
                 <div className="page-content">
+                  <h3>Angaben gemäß § 5 TMG:</h3>
                   <div className="one-half first">
                     <p>
-                      <h3>Angaben gemäß § 5 TMG:</h3>
                       Sebastian Fiele
                       <br />
                       Von-Kluck-Str. 6
                       <br />
                       48151 Münster
                     </p>
+                  </div>
+                  <div className="one-half">
                     <p>
-                      <h4>Kontakt</h4>
-                      E-Mail: _rawsta__(at)__rawsta_._de_
-                      GitHub: (at)_rawsta_
-                      Twitter: (at)_rawsta_
+                      E-Mail: rawsta(at)rawsta.de
+                      <br />
+                      GitHub: (at)rawsta
+                      <br />
+                      Twitter: (at)rawsta
+                    </p>
+                  </div>
+                  <hr class="clearfix"/>
+                  <div>
+                    <p>
+                      <h4>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h4>
+                      Sebastian Fiele
+                      <br />
+                      Von-Kluck-Str. 6
+                      <br />
+                      48151 Münster
                     </p>
                   </div>
                 </div>
-                <hr />
+                <hr/>
                 <Footer config={config} />
               </section>
             </div>
