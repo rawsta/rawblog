@@ -20,7 +20,7 @@ class Footer extends Component {
 
         {/* <UserLinks config={config} labeled /> */}
 
-        <div className="notice-container">
+        {/* <div className="notice-container"> */}
           <p>
             Handcrafted
             {copyright}
@@ -59,7 +59,7 @@ class Footer extends Component {
             />
           </a>
           </p>
-        </div>
+        {/* </div> */}
       </footer>
     );
   }

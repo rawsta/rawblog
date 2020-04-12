@@ -17,9 +17,10 @@ export default class MainLayout extends React.Component {
           <meta name="description" content={config.siteDescription} />
           {/* <link rel="shortcut icon" type="image/png" href={favicon} /> */}
           <link
-            href="https://fonts.googleapis.com/css?family=Exo+2&family=Lato:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css?family=Exo+2:wght@300;400;700;900&family=Lato:wght@400;700&display=swap"
             rel="stylesheet"
           />
+          <base href="/" />
         </Helmet>
         <Navigation menuLinks={config.menuLinks} />
         <main id="main-content">{children}</main>

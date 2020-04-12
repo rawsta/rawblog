@@ -88,8 +88,8 @@ export default class PostTemplate extends React.Component {
               <PostTags tags={post.tags} />
               <UserInfo config={config} />
             </span>
-            <Footer config={config} />
           </article>
+            <Footer config={config} />
         </div>
       </Layout>
     );

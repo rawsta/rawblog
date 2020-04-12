@@ -91,7 +91,7 @@ class Navigation extends Component {
             </div>
           </section>
 
-          <h5 className="contact-title"> § </h5>
+          <h5 className="legal-title"> § </h5>
           <div className="rechtliches">
             <Link to="/imprint">Impressum</Link>
             <Link to="/privacy">Datenschutz</Link>

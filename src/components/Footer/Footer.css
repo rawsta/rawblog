@@ -4,10 +4,13 @@ footer {
   padding: 10px 5px 5px;
 }
 
+.page-wrap .footer ,
 .post-wrap .footer {
   background-color: var(--bg-dark);
   padding: 5px 20px 0;
 }
+.page-wrap .footer > div,
+.page-wrap .footer ,
 .post-wrap .footer > div,
 .post-wrap .footer {
   display: flex;

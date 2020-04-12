@@ -42,11 +42,11 @@ export default class BlogPage extends Component {
           <h1 className="articles-title">rawsta's Beiträge</h1>
 
           <section className="blog-header">
-            <p>
+            {/* <p>
               {`Es gibt aktuell `}
               {filterCount}
               {` Beiträge`}
-            </p>
+            </p> */}
             <div className="search-container">
               <input
                 className="search"
@@ -61,6 +61,7 @@ export default class BlogPage extends Component {
           </section>
 
           <section className="category-container">
+            <div className="cat-pills five-sixths first">
             {categories.map(category => {
               return (
                 <Link
@@ -72,6 +73,15 @@ export default class BlogPage extends Component {
                 </Link>
               )
             })}
+            </div>
+            <div className="one-sixth">
+              <span className="post-count">
+                <span>
+                  {filterCount}
+                </span>
+                {`Beiträge`}
+              </span>
+            </div>
           </section>
 
           <PostListing postEdges={filteredPosts} />
@@ -81,7 +91,6 @@ export default class BlogPage extends Component {
   }
 }
 
-    //   filter: { frontmatter: { template: { eq: "post" } } }
 export const pageQuery = graphql`
   query BlogQuery {
     posts: allMarkdownRemark(
