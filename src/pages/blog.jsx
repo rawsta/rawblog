@@ -39,19 +39,28 @@ export default class BlogPage extends Component {
         <Helmet title={`Beiträge – ${config.siteTitle}`} />
         <SEO />
         <div className="container">
-          <h1 className="articles-title">{filterCount}{` Beiträge`}</h1>
-          <div className="search-container">
-            <input
-              className="search"
-              type="text"
-              name="searchTerm"
-              value={searchTerm}
-              placeholder="Beiträge filtern..."
-              onChange={this.handleChange}
-            />
-            <i className="fas fa-search"></i>
-          </div>
-          <div className="category-container">
+          <h1 className="articles-title">rawsta's Beiträge</h1>
+
+          <section className="blog-header">
+            <p>
+              {`Es gibt aktuell `}
+              {filterCount}
+              {` Beiträge`}
+            </p>
+            <div className="search-container">
+              <input
+                className="search"
+                type="text"
+                name="searchTerm"
+                value={searchTerm}
+                placeholder="Beiträge filtern..."
+                onChange={this.handleChange}
+              />
+              <i className="fas fa-search"></i>
+            </div>
+          </section>
+
+          <section className="category-container">
             {categories.map(category => {
               return (
                 <Link
@@ -63,7 +72,7 @@ export default class BlogPage extends Component {
                 </Link>
               )
             })}
-          </div>
+          </section>
 
           <PostListing postEdges={filteredPosts} />
         </div>

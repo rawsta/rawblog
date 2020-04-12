@@ -60,18 +60,18 @@ class PostListing extends React.Component {
                 </span>
                 <div className="post-header">
                   <h2 className="post-title">{post.title}</h2>
-                  <span className="post-info">
-                    <span>
-                      {formatDate(post.date)}
-                      {' '}
-                    </span>
-                    {` | `}
-                    <span>
-                      {`Lesezeit: `}
-                      {post.timeToRead}
-                      {' Min.'}
-                    </span>
-                  </span>
+                  <span title="Beitragsdatum">
+                  <i className="far fa-calendar-alt"></i>
+                  {` `}
+                  {formatDate(post.date)}
+                </span>
+                <span title="Grob geschätzte Lesezeit">
+                  {` | `}
+                  <i className="fas fa-glasses"></i>
+                  {` `}
+                  {post.timeToRead}
+                  {' Min.'}
+                </span>
                 </div>
               </header>
             </article>

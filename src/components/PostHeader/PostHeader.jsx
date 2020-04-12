@@ -23,9 +23,10 @@ const Header = ({children}) => {
     }, [scrolled]);
 
     return (
-      <header id="post-head" className="post-single-header" data-active={scrolled}>
-        {children}
-      </header>
+        <header id="post-head" className="post-single-header" data-active={scrolled}>
+            <p className="stripe"></p>
+            {children}
+        </header>
     );
 };
 

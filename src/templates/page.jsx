@@ -29,7 +29,7 @@ export default class PageTemplate extends React.Component {
             <header className="page-header">
               <h1>{page.title}</h1>
             </header>
-            <div className="page" dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            <div className="page-content" dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <Footer config={config} />
           </article>
         </div>

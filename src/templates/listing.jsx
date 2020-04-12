@@ -62,6 +62,7 @@ export const listingQuery = graphql`
   query ListingQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark (
       sort: { fields: [fields___date], order: DESC }
+      filter: { frontmatter: { template: { eq: "post" } } }
       limit: $limit
       skip: $skip
     ) {

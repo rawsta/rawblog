@@ -4,6 +4,19 @@ footer {
   padding: 10px 5px 5px;
 }
 
+.post-wrap .footer {
+  background-color: var(--bg-dark);
+  padding: 5px 20px 0;
+}
+.post-wrap .footer > div,
+.post-wrap .footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+}
+
 .footer .footer-img {
   height: 30px;
   width: 30px;
@@ -18,7 +31,7 @@ footer {
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  margin-top: 25px;
+  /* margin-top: 25px; */
 }
 
 @media (max-width: 640px - 1px) {

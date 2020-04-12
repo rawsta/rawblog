@@ -43,14 +43,12 @@ export default class Imprint extends React.Component {
                   </div>
                   <hr class="clearfix"/>
                   <div>
-                    <p>
                       <h4>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h4>
                       Sebastian Fiele
                       <br />
                       Von-Kluck-Str. 6
                       <br />
                       48151 Münster
-                    </p>
                   </div>
                 </div>
                 <hr/>

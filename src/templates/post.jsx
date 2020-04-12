@@ -55,24 +55,8 @@ export default class PostTemplate extends React.Component {
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div className="post-wrap">
           <article className="post-single">
-            <PostHeader>
-              <span title={post.category}>
-                {CAT_ICON[post.category]}
-              </span>
-              <div className="post-info">
-                <h2>{post.title}</h2>
-                <span>
-                  {date}
-                </span>
-                <span>
-                  {` | Lesezeit: `}
-                  {postNode.timeToRead}
-                  {' Min.'}
-                </span>
-              </div>
-            </PostHeader>
             {cover && (
-              <div className="page-cover-image">
+              <div className="post-cover-image">
                 <img
                   src={cover}
                   className="title-img"
@@ -80,7 +64,26 @@ export default class PostTemplate extends React.Component {
                 />
               </div>
             )}
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+            <PostHeader>
+              <span title={post.category}>
+                {CAT_ICON[post.category]}
+              </span>
+              <div className="post-info">
+                <h2>{post.title}</h2>
+                <span title="Beitragsdatum">
+                  <i className="far fa-calendar-alt"></i>
+                  {date}
+                </span>
+                <span title="Grob geschätzte Lesezeit">
+                  {` | `}
+                  <i className="fas fa-glasses"></i>
+                  {` `}
+                  {postNode.timeToRead}
+                  {' Min.'}
+                </span>
+              </div>
+            </PostHeader>
+            <div className="post-content" dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <span className="post-meta">
               <PostTags tags={post.tags} />
               <UserInfo config={config} />

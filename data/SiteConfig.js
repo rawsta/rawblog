@@ -10,7 +10,7 @@ const config = {
   postDefaultCategoryID: "test", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD.MM.YYYY", // Date format for display.
-  postsPerPage: 6, // Amount of posts displayed per listing page.
+  postsPerPage: 4, // Amount of posts displayed per listing page.
   menuLinks: [
     {
       name: 'Über mich',

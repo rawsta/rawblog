@@ -44,7 +44,7 @@ class Navigation extends Component {
         </nav>
 
         <footer>
-          <h3 className="contact-title">Kontakt</h3>
+          <h3 className="contact-title">Rawsta</h3>
           <section className="contact">
             <img
               src={config.userAvatar}
@@ -91,6 +91,7 @@ class Navigation extends Component {
             </div>
           </section>
 
+          <h5 className="contact-title"> § </h5>
           <div className="rechtliches">
             <Link to="/imprint">Impressum</Link>
             <Link to="/privacy">Datenschutz</Link>
