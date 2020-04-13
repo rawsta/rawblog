@@ -6,6 +6,7 @@ html {
     font-size: 62.5%;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: var(--primary) var(--bg-dark);
 }
@@ -14,11 +15,11 @@ html {
     width: 7px;
 }
 *::-webkit-scrollbar-track {
-    background: transparent;
+    background: var(--black25);
 }
 *::-webkit-scrollbar-thumb {
     background-color: var(--teal);
-    border-radius: 20px 0 20px 0;
+    border-radius: 10px;
     /* border: 1px solid var(--medium-grey); */
 }
 
@@ -42,8 +43,8 @@ html {
     --light-grey: #aebabe;
     --medium-grey: #81939b;
 
-    --primary: #830000;
-    --secondary: #ff8300;
+    --primary: #ff8300;
+    --secondary: #830000;
 
     --ketchup: #dd2c06;
     --teal: #0c6667;
@@ -56,12 +57,41 @@ html {
     --border-radius: 5px 15px 5px 25px;
 }
 
+/* aka solarized */
+[data-theme="dark"] {
+    --head-font: 'Exo 2', sans-serif;
+    --main-font: 'Lato', sans-serif;
+
+    --bg-light: #268bd2;
+    --bg-main: #073642;
+    --bg-dark: #002b36;
+    --font-color: #657b83;
+    --font-color-alt: #b58900;
+
+    --text-bg: #fdf6e3;
+    --light-grey: #93a1a1;
+    --medium-grey: #839496;
+
+    --primary: #830000;
+    --secondary: #ff8300;
+
+    --ketchup: #dc322f;
+    --teal: #586e75;
+
+    --black75: rgba(0, 0, 0, 0.75);
+    --black50: rgba(0, 0, 0, 0.5);
+    --black25: rgba(0, 0, 0, 0.25);
+
+    --border: 3px solid #ccc;
+    --border-radius: 5px 15px 5px 25px;
+}
+
 body {
     margin: 0;
     padding: 0;
     min-height: 100%;
     min-width: 100%;
-    background: var(--bg-dark);
+    background-color: var(--bg-dark);
     color: var(--font-color);
     font-family: var(--main-font);
     font-size: 2rem;
@@ -78,12 +108,15 @@ body {
 .layout_container {
     min-height: 100vh;
     min-width: 100vw;
-    /* width: 1250px; */
     margin: 0 auto;
     display: flex;
-    /* padding: 20px; */
-    border: solid var(--medium-grey);
-    border-width: 0 5px;
+    background: var(--bg-dark);
+    color: var(--font-color);
+}
+
+.dark.layout_container{
+    color: var(--bg-dark);
+    background-color: var(--font-color);
 }
 
 /* Animations */
@@ -457,32 +490,6 @@ body {
         color: var(--text-bg);
     }
 
-/* prismjs syntax highlighting */
-
-    .gatsby-highlight {
-        background: var(--medium-grey);
-        /* border-top: 3px solid var(--bg-dark); */
-    }
-
-    .gatsby-highlight pre[class*="language-"] {
-        padding:20px 40px;
-        border-radius: 0 0 60px 0;
-        border: solid var(--medium-grey);
-        border-width: 0 3px 4px 0;
-    }
-
-    .gatsby-highlight code[class*="language-"],
-    .post-single :not(pre) > code[class*="language-"],
-    .post-single p > code[class*="language-"] {
-        font-size: 0.9em;
-    }
-
-    .post-single :not(pre) > code[class*="language-"],
-    .post-single p > code[class*="language-"] {
-        border-radius: 4px 0 7px 0;
-        padding: 2px 4px;
-        margin: 0 3px;
-    }
 
 
 /* Category Icon Colors */

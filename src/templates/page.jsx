@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
 import Footer from "../components/Footer/Footer";
+import ThemeContext from "../context/ThemeContext";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import "./page.css";

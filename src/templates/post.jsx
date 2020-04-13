@@ -11,6 +11,7 @@ import Footer from "../components/Footer/Footer";
 import config from "../../data/SiteConfig";
 import { formatDate } from '../utils/global';
 import "./solarized-dark.css";
+import 'gatsby-remark-vscode/styles.css';
 import "./post.css";
 
 
@@ -102,6 +103,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       timeToRead
+      tableOfContents
       excerpt
       frontmatter {
         title

@@ -1,6 +1,7 @@
 import React, { Component, useState, useEffect } from "react";
 import { Link } from "gatsby";
 import config from "../../../data/SiteConfig";
+import ThemeContext from "../../context/ThemeContext";
 import rawLogo from "../../../static/logos/logo-rawsta.svg";
 import "./Navigation.css";
 
@@ -13,7 +14,7 @@ class Navigation extends Component {
     isThicc: global.localStorage && global.localStorage.getItem('sidebar') === 'thicc',
   };
 
-  handleClick = () => {
+  handleSide = () => {
     const { isThicc } = this.state;
 
     if (isThicc) {
@@ -41,99 +42,106 @@ class Navigation extends Component {
 
     const menuClass = classNames({
       sidebar: true,
-      thicc: this.state.isThicc
+      thicc: this.state.isThicc,
     });
 
     return (
-      <aside className={menuClass}>
-        <button onClick={this.handleClick}>
-          <i className="fas fa-angle-double-right"></i>
-        </button>
-        <header className="navigation">
-          <span className="kopfzeile">
-            <a
-              href={url}
-              title={title}
-            >
-              <img
-                src={rawLogo}
-                className="logo-small"
-                alt={title}
-              />
-              <h2>{titleShort}</h2>
-            </a>
-          </span>
-        </header>
+      <ThemeContext.Consumer>
+    {theme => (
+          <aside className={menuClass}>
+            <button onClick={this.handleSide}>
+              <i className="fas fa-angle-double-right"></i>
+            </button>
+            <header className="navigation">
+              <span className="kopfzeile">
+                <a
+                  href={url}
+                  title={title}
+                >
+                  <img
+                    src={rawLogo}
+                    className="logo-small"
+                    alt={title}
+                  />
+                  <h2>{titleShort}</h2>
+                </a>
+              </span>
+            </header>
 
-        <nav className="main-nav">
-          <ul>
-            {menuLinks.map(link => (
-              <Link key={link.name} to={link.link} activeClassName="active">
-                <li>
-                  <i className={link.iconClassName}></i>
-                  <span>{link.name}</span>
-                </li>
-              </Link>
-            ))}
-          </ul>
-        </nav>
-
-        <footer>
-          <h3 className="contact-title">Rawsta</h3>
-          <section className="contact">
-            <img
-              src={config.userAvatar}
-              className="user-pic"
-              alt={config.userName}
-            />
-            <div className="contact-details">
-              <span>{config.userName}</span>
+            <nav>
               <ul>
-                {config.userTwitter && (
-                  <li>
-                    <a
-                      href={`https://twitter.com/${config.userTwitter}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i className="fab fa-twitter" aria-hidden="true" />
-                    </a>
-                  </li>
-                    )}
-                {config.userGithub && (
-                  <li>
-                    <a
-                      href={`https://github.com/${config.userGithub}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i className="fab fa-github" aria-hidden="true" />
-                    </a>
-                  </li>
-                    )}
-                {config.userEmail && (
-                  <li>
-                    <a
-                      href={`mailto:${config.userEmail}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <i className="far fa-envelope" aria-hidden="true" />
-                    </a>
-                  </li>
-                    )}
+                {menuLinks.map(link => (
+                  <Link key={link.name} to={link.link} activeClassName="active">
+                    <li>
+                      <i className={link.iconClassName}></i>
+                      <span>{link.name}</span>
+                    </li>
+                  </Link>
+                ))}
               </ul>
-            </div>
-          </section>
+            </nav>
 
-          <h5 className="legal-title">§</h5>
-          <div className="rechtliches">
-            <Link to="/privacy">Datenschutz</Link>
-            <Link to="/imprint">Impressum</Link>
-          </div>
+            <footer>
+          <button className="dark-switcher" onClick={theme.toggleDark}>
+            {theme.dark ? <span>Light mode ☀</span> : <span>Dark mode ☾</span>}
+          </button>
+              <h3 className="contact-title">Rawsta</h3>
+              <section className="contact">
+                <img
+                  src={config.userAvatar}
+                  className="user-pic"
+                  alt={config.userName}
+                />
+                <div className="contact-details">
+                  <span>{config.userName}</span>
+                  <ul>
+                    {config.userTwitter && (
+                      <li>
+                        <a
+                          href={`https://twitter.com/${config.userTwitter}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <i className="fab fa-twitter" aria-hidden="true" />
+                        </a>
+                      </li>
+                        )}
+                    {config.userGithub && (
+                      <li>
+                        <a
+                          href={`https://github.com/${config.userGithub}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <i className="fab fa-github" aria-hidden="true" />
+                        </a>
+                      </li>
+                        )}
+                    {config.userEmail && (
+                      <li>
+                        <a
+                          href={`mailto:${config.userEmail}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <i className="far fa-envelope" aria-hidden="true" />
+                        </a>
+                      </li>
+                        )}
+                  </ul>
+                </div>
+              </section>
 
-        </footer>
-      </aside>
+              <h5 className="legal-title">§</h5>
+              <div className="rechtliches">
+                <Link to="/privacy">Datenschutz</Link>
+                <Link to="/imprint">Impressum</Link>
+              </div>
+
+            </footer>
+          </aside>
+      )}
+  </ThemeContext.Consumer>
     );
   }
 }

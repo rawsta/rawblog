@@ -10,7 +10,14 @@ tags:
 -   info
 -   wip
 ---
+
+
 # WebManifest
+
+## Table of Contents
+```toc
+# This code block gets replaced with the TOC
+```
 
 Das Manifest regelt wie mit der "PWA/App" umgegangen werden soll.
 Regelt Rahmen, teils Darstellung und besonders die behandlung als "app".

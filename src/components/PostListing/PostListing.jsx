@@ -67,7 +67,7 @@ class PostListing extends React.Component {
                   </span>
                   <span title="Grob geschätzte Lesezeit">
                     {` | `}
-                    <i className="fas fa-glasses" />
+                    <i className="far fa-clock" />
                     {` `}
                     {post.timeToRead}
                     {' Min.'}
