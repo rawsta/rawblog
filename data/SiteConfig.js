@@ -15,14 +15,17 @@ const config = {
     {
       name: 'Über mich',
       link: '/about-rawsta/',
+      iconClassName: "far fa-laugh-wink"
     },
     {
       name: 'Beiträge',
       link: '/blog/',
+      iconClassName: "far fa-newspaper"
     },
     {
       name: 'Kontakt',
       link: '/kontakt/',
+      iconClassName: "fas fa-pager"
     },
   ],
   userName: "Sebastian Fiele", // Username to display in the author segment.
@@ -32,7 +35,7 @@ const config = {
   userLocation: "Münster, Germany", // User location to display in the author segment.
   userAvatar: "https://avatars3.githubusercontent.com/u/1809314?s=460&v=4", // User avatar to display in the author segment.
   userDescription:
-    "Developer with far too many Interests.", // User description to display in the author segment.
+    "Just a Developer with far too many Interests.", // User description to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   userLinks: [
     {
@@ -51,7 +54,7 @@ const config = {
       iconClassName: "far fa-envelope"
     }
   ],
-  copyright: "©2020 -rawsta", // Copyright string for the footer of the website and RSS feed.
+  copyright: "©2020 - rawsta", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#830000", // Used for setting manifest and progress theme colors.
   backgroundColor: "#363636" // Used for setting manifest background color.
 };

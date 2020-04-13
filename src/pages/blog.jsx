@@ -76,7 +76,7 @@ export default class BlogPage extends Component {
             </div>
             <div className="one-sixth">
               <span className="post-count">
-                <span>
+                <span title="Anzahl der Beiträge">
                   {filterCount}
                 </span>
                 {`Beiträge`}

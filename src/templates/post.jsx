@@ -71,12 +71,12 @@ export default class PostTemplate extends React.Component {
               <div className="post-info">
                 <h2>{post.title}</h2>
                 <span title="Beitragsdatum">
-                  <i className="far fa-calendar-alt"></i>
+                  <i className="far fa-calendar-alt" />
                   {date}
                 </span>
                 <span title="Grob geschätzte Lesezeit">
                   {` | `}
-                  <i className="fas fa-glasses"></i>
+                  <i className="fas fa-glasses" />
                   {` `}
                   {postNode.timeToRead}
                   {' Min.'}
@@ -89,7 +89,7 @@ export default class PostTemplate extends React.Component {
               <UserInfo config={config} />
             </span>
           </article>
-            <Footer config={config} />
+          <Footer config={config} />
         </div>
       </Layout>
     );

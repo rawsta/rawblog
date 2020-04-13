@@ -3,20 +3,28 @@ backend:
   branch: master # Branch to update
   repo: rawsta/rawblog # Repo for pushing new commits. Make sure to replace with your repo!
 
+locale: 'de'
+
 media_folder: static/assets
 public_folder: assets
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "_"
 
 collections:
   - name: blog
     label: "Post"
-    folder: "content"
+    folder: "content/posts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}.md"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "md"
     fields:
-      - { label: "Titel", name: "title", widget: "string" }
-      - { label: "Publish Datum", name: "date", widget: "datetime" }
-      - { label: "Cover Bild", name: "cover", widget: "image" }
+      - { label: "Titel", name: "title", widget: "string", tagname: 'h1' }
+      - { label: "Datum", name: "date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "false" }
+      - { label: "Coverbild", name: "cover", widget: "image" }
       - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Kategorie", name: "category", widget: "string" }
       - { label: "HashTags", name: "tags", widget: "list" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { editorComponents: ['youtube'], label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }

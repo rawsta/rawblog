@@ -41,17 +41,17 @@ export default class Imprint extends React.Component {
                       Twitter: (at)rawsta
                     </p>
                   </div>
-                  <hr class="clearfix"/>
+                  <hr className="clearfix" />
                   <div>
-                      <h4>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h4>
-                      Sebastian Fiele
-                      <br />
-                      Von-Kluck-Str. 6
-                      <br />
-                      48151 Münster
+                    <h4>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h4>
+                    Sebastian Fiele
+                    <br />
+                    Von-Kluck-Str. 6
+                    <br />
+                    48151 Münster
                   </div>
                 </div>
-                <hr/>
+                <hr />
                 <Footer config={config} />
               </section>
             </div>

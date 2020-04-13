@@ -21,16 +21,16 @@ class Footer extends Component {
         {/* <UserLinks config={config} labeled /> */}
 
         {/* <div className="notice-container"> */}
-          <p>
-            Handcrafted
-            {copyright}
-          </p>
+        <p>
+          Handcrafted
+          {copyright}
+        </p>
 
-          {/* <Link to={url}>
+        {/* <Link to={url}>
             <span>RSS</span>
           </Link> */}
 
-          <p>
+        <p>
           <a href="https://www.gatsbyjs.org/" title="Built with Gatsby">
             <img
               src={gatsby}
@@ -58,7 +58,7 @@ class Footer extends Component {
               alt="Netlify"
             />
           </a>
-          </p>
+        </p>
         {/* </div> */}
       </footer>
     );
