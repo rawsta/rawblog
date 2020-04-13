@@ -15,7 +15,7 @@ const config = {
     {
       name: 'Über mich',
       link: '/about-rawsta/',
-      iconClassName: "far fa-laugh-wink"
+      iconClassName: "far fa-address-card"
     },
     {
       name: 'Beiträge',
