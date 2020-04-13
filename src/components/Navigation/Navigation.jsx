@@ -1,22 +1,54 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import { Link } from "gatsby";
 import config from "../../../data/SiteConfig";
 import rawLogo from "../../../static/logos/logo-rawsta.svg";
-// import rawLogo from "../../../static/logos/logo-192.png";
 import "./Navigation.css";
 
+
+var classNames = require('classnames');
+
 class Navigation extends Component {
+
+  state = {
+    isThicc: global.localStorage && global.localStorage.getItem('sidebar') === 'thicc',
+  };
+
+  handleClick = () => {
+    const { isThicc } = this.state;
+
+    if (isThicc) {
+      if (global.localStorage) {
+        global.localStorage.setItem('sidebar', 'skinny');
+      }
+    } else {
+      if (global.localStorage) {
+        global.localStorage.setItem('sidebar', 'thicc');
+      }
+    }
+
+    this.setState({
+      isThicc: !isThicc,
+    });
+  };
+
   render() {
-    // const { config } = this.props;
-    // const { menuLinks } = this.props;
+
     const {menuLinks} = config;
     const title = config.siteTitle;
     const titleShort = config.siteTitleShort;
     const url = config.siteUrl;
+    const { isThicc } = this.state;
+
+    const menuClass = classNames({
+      sidebar: true,
+      thicc: this.state.isThicc
+    });
 
     return (
-      <aside className="sidebar">
-
+      <aside className={menuClass}>
+        <button onClick={this.handleClick}>
+          <i className="fas fa-angle-double-right"></i>
+        </button>
         <header className="navigation">
           <span className="kopfzeile">
             <a
@@ -37,7 +69,10 @@ class Navigation extends Component {
           <ul>
             {menuLinks.map(link => (
               <Link key={link.name} to={link.link} activeClassName="active">
-                <li>{link.name}</li>
+                <li>
+                  <i className={link.iconClassName}></i>
+                  <span>{link.name}</span>
+                </li>
               </Link>
             ))}
           </ul>
@@ -91,10 +126,10 @@ class Navigation extends Component {
             </div>
           </section>
 
-          <h5 className="legal-title"> § </h5>
+          <h5 className="legal-title">§</h5>
           <div className="rechtliches">
-            <Link to="/imprint">Impressum</Link>
             <Link to="/privacy">Datenschutz</Link>
+            <Link to="/imprint">Impressum</Link>
           </div>
 
         </footer>

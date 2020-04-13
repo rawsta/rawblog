@@ -11,9 +11,6 @@ export default class Index extends React.Component {
 
     render() {
         const { data } = this.props;
-        // const postNode = data.markdownRemark;
-        // const post = postNode.frontmatter;
-        // const date = formatDate(post.date);
         const latestPostEdges = data.latest.edges
 
         return (
@@ -25,10 +22,10 @@ export default class Index extends React.Component {
             <div className="page-wrap">
               <section className="frontpage">
                 <header className="welcome-header">
-                  <h1>Sebastian |rawsta| Fiele</h1>
+                  <h1>Sebastian rawsta Fiele</h1>
                 </header>
                 <div className="frontpage-main-contentarea-above-postlisting">
-                  Super Fancy Content
+                  Hier kommt noch richtiger Inhalt hin.
                 </div>
                 <PostListing postEdges={latestPostEdges} />
                 <hr />
