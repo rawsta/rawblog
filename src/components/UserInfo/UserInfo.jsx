@@ -1,16 +1,11 @@
 import React, { Component } from "react";
-import { Follow } from "react-twitter-widgets";
+import { Link } from 'gatsby';
 
 class UserInfo extends Component {
   render() {
-    const thisProps = this.props;
-    const { userTwitter } = thisProps.config;
-    const { expanded } = thisProps;
+    // const thisProps = this.props;
     return (
-      <Follow
-        username={userTwitter}
-        options={{ count: expanded ? true : "none" }}
-      />
+      <Link to="/about-rawsta">Rawsta</Link>
     );
   }
 }
