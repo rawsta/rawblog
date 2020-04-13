@@ -48,6 +48,9 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-embedder`,
+          },
+          {
             resolve: "gatsby-remark-images",
             options: {
               maxWidth: 1920,
@@ -57,17 +60,36 @@ module.exports = {
             resolve: "gatsby-remark-responsive-iframe"
           },
           {
-            // https://www.gatsbyjs.org/packages/gatsby-remark-prismjs
-            resolve: `gatsby-remark-prismjs`,
+            resolve: `gatsby-remark-vscode`,
             options: {
-              classPrefix: 'language-',
-              showLineNumbers: true,
-              // If setting this to true, the parser won't handle and highlight inline
-              // code used in markdown i.e. single backtick code like `this`.
-              noInlineHighlight: false,
-            },
+              theme: {
+                      default: 'Solarized Light',
+                      dark: 'Solarized Dark'
+                    },
+              wrapperClassName: '',   // Additional class put on 'pre' tag. Also accepts function to set the class dynamically.
+              injectStyles: true,     // Injects (minimal) additional CSS for layout and scrolling
+              extensions: [],         // Third-party extensions providing additional themes and languages
+              languageAliases: {},    // Map of custom/unknown language codes to standard/known language codes
+              replaceColor: x => x,   // Function allowing replacement of a theme color with another. Useful for replacing hex colors with CSS variables.
+              getLineClassName: ({    // Function allowing dynamic setting of additional class names on individual lines
+                content,              //   - the string content of the line
+                index,                //   - the zero-based index of the line within the code fence
+                language,             //   - the language specified for the code fence
+                meta                  //   - any options set on the code fence alongside the language (more on this later)
+              }) => '',
+              logLevel: 'warn'       // Set to 'info' to debug if something looks wrong
+            }
           },
           "gatsby-remark-copy-linked-files",
+          {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: "Table of Contents",
+              tight: false,
+              fromHeading: 2,
+              toHeading: 6
+            },
+          },
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
