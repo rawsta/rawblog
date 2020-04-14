@@ -13,12 +13,17 @@ const config = {
   postsPerPage: 4, // Amount of posts displayed per listing page.
   menuLinks: [
     {
-      name: 'Über mich',
+      name: 'rawsta',
       link: '/about-rawsta/',
       iconClassName: "far fa-address-card"
     },
     {
-      name: 'Beiträge',
+      name: 'Snippets',
+      link: '/snippets/',
+      iconClassName: "fas fa-code"
+    },
+    {
+      name: 'Blog',
       link: '/blog/',
       iconClassName: "far fa-newspaper"
     },
