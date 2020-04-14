@@ -66,7 +66,7 @@ module.exports = {
                       default: 'Solarized Light',
                       dark: 'Solarized Dark',
                       parentSelector: {
-                          'body[data-theme=dark]': 'Solarized Dark',
+                          'html[data-theme=dark]': 'Solarized Dark',
                         }
                     },
               wrapperClassName: '',   // Additional class put on 'pre' tag. Also accepts function to set the class dynamically.
