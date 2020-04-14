@@ -73,6 +73,7 @@ export default class PostTemplate extends React.Component {
                 <h2>{post.title}</h2>
                 <span title="Beitragsdatum">
                   <i className="far fa-calendar-alt" />
+                  {` `}
                   {date}
                 </span>
                 <span title="Grob geschätzte Lesezeit">
@@ -86,7 +87,7 @@ export default class PostTemplate extends React.Component {
             </PostHeader>
             <div className="post-content" dangerouslySetInnerHTML={{ __html: postNode.html }} />
             <span className="post-meta">
-              <PostTags tags={post.tags} />
+              {/* <PostTags tags={post.tags} /> */}
               <UserInfo config={config} />
             </span>
           </article>
@@ -98,7 +99,7 @@ export default class PostTemplate extends React.Component {
 }
 
 /* eslint no-undef: "off" */
-export const pageQuery = graphql`
+export const postQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html

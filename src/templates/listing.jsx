@@ -39,7 +39,6 @@ class Listing extends React.Component {
     const thisProps = this.props;
     const propsData = thisProps.data;
     const postEdges = propsData.allMarkdownRemark.edges;
-    // const { category } = thisProps.pageContext;
 
     return (
       <Layout>
