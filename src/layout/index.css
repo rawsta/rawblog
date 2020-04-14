@@ -43,8 +43,8 @@ html {
     --light-grey: #aebabe;
     --medium-grey: #81939b;
 
-    --primary: #ff8300;
-    --secondary: #830000;
+    --primary: #830000;
+    --secondary: #ff8300;
 
     --ketchup: #dd2c06;
     --teal: #0c6667;
@@ -55,6 +55,10 @@ html {
 
     --border: 3px solid #fff;
     --border-radius: 5px 15px 5px 25px;
+
+    --grvsc-line-highlighted-background-color: rgba(255, 255, 255, 0.2); /* default: transparent */
+    --grvsc-line-highlighted-border-color: rgba(255, 255, 255, 0.5); /* default: transparent */
+    --grvsc-line-highlighted-border-width: 2px; /* default: 4px */
 }
 
 /* aka solarized */
@@ -72,11 +76,11 @@ html {
     --light-grey: #93a1a1;
     --medium-grey: #839496;
 
-    --primary: #830000;
-    --secondary: #ff8300;
+    --primary: #ff8300;
+    --secondary: #830000;
 
     --ketchup: #dc322f;
-    --teal: #586e75;
+    --teal: #eee8d5;
 
     --black75: rgba(0, 0, 0, 0.75);
     --black50: rgba(0, 0, 0, 0.5);
@@ -84,6 +88,10 @@ html {
 
     --border: 3px solid #ccc;
     --border-radius: 5px 15px 5px 25px;
+
+    --grvsc-line-highlighted-background-color: rgba(255, 255, 255, 0.2); /* default: transparent */
+    --grvsc-line-highlighted-border-color: rgba(255, 255, 255, 0.5); /* default: transparent */
+    --grvsc-line-highlighted-border-width: 2px; /* default: 4px */
 }
 
 body {
@@ -544,4 +552,43 @@ body {
     }
     header > span i.fa-test {
         color: var(--ketchup);
+    }
+
+/* User Info - Post Footer */
+
+    /* .contact {
+        margin-bottom: 0;
+    } */
+
+    .contact ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .contact ul li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .contact ul li:last-child {
+        margin-right: 0;
+    }
+
+    .contact  ul li a {
+        color: var(--font-color-alt);
+        display: block;
+        padding: 5px;
+        font-size: 2rem;
+        background: none;
+        transition: all 500ms ease;
+    }
+
+    .contact  ul li a:hover {
+        color: var(--secondary);
+        transform: scale(1.2);
     }

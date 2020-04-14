@@ -19,13 +19,7 @@ class Footer extends Component {
       <footer className="footer">
 
         {/* <UserLinks config={config} labeled /> */}
-
         {/* <div className="notice-container"> */}
-        <p>
-          Handcrafted
-          {copyright}
-        </p>
-
         {/* <Link to={url}>
             <span>RSS</span>
           </Link> */}
@@ -58,6 +52,11 @@ class Footer extends Component {
               alt="Netlify"
             />
           </a>
+        </p>
+
+        <p>
+          Handcrafted
+          {copyright}
         </p>
         {/* </div> */}
       </footer>

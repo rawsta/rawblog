@@ -17,8 +17,7 @@ export default class MainLayout extends React.Component {
           <div className="layout_container">
 
             <Helmet>
-              <html lang="de" />
-              <body data-theme={theme.dark ? 'dark' : 'light'} />
+              <html lang="de" data-theme={theme.dark ? 'dark' : 'light'}/>
               <meta name="description" content={config.siteDescription} />
               {/* <link rel="shortcut icon" type="image/png" href={favicon} /> */}
               <link
