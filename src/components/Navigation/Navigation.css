@@ -222,7 +222,36 @@
     }
 
 
+
 /* sidebar footer */
+
+/* Dark Switch Button Thingy */
+
+    footer .lightswitch {
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+        margin: 0 auto 10px;
+        background-color:transparent;
+        border: solid transparent;
+        border-width: 0 2px;
+        border-radius: 30px;
+        transition: all 450ms ease;
+    }
+
+    footer .lightswitch:hover {
+        width: 60%;
+        background-color:transparent;
+        border: solid var(--light-grey);
+        border-width: 0 2px;
+    }
+
+    footer .lightswitch i {
+        color: var(--primary);
+        font-size: 2.6rem;
+    }
+
+/* Footer Content */
 
     .sidebar .rechtliches {
         display: flex;
@@ -295,80 +324,4 @@
         right: 0;
     }
 
-    .sidebar .contact {
-        margin-bottom: 10px;
-    }
-
-    .sidebar.thicc .contact {
-        margin-bottom: 0;
-    }
-
-    .contact ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        line-height: 1;
-        justify-content: space-around;
-    }
-
-    .sidebar .contact ul,
-    .sidebar .contact-details {
-        width: 0;
-        height: 0;
-        visibility: hidden;
-        opacity: 0;
-        transition: all 250ms ease;
-    }
-    .sidebar.thicc .contact ul,
-    .sidebar.thicc .contact-details {
-        width: auto;
-        height: auto;
-        visibility: visible;
-        opacity: 1;
-        transition: all 450ms ease;
-    }
-
-    .contact ul li {
-        display: inline-block;
-        margin-left: 10px;
-    }
-
-    .contact ul li:first-child {
-        margin-left: 0;
-    }
-
-    .contact  ul li a {
-        color: var(--bg-dark);
-        display: block;
-        padding: 5px;
-        font-size: 2rem;
-        background: none;
-        transition: all 500ms ease;
-    }
-
-    .contact  ul li a:hover {
-        color: var(--secondary);
-        transform: scale(1.2);
-    }
-
-    footer .contact {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .sidebar footer .user-pic {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin-right: 1px;
-        transition: all 350ms ease;
-    }
-
-    .sidebar.thicc footer .user-pic {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        margin-right: 10px;
-    }
 

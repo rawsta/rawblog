@@ -82,55 +82,9 @@ class Navigation extends Component {
             </nav>
 
             <footer>
-          <button className="dark-switcher" onClick={theme.toggleDark}>
-            {theme.dark ? <span>Light mode ☀</span> : <span>Dark mode ☾</span>}
+          <button className="lightswitch" onClick={theme.toggleDark}>
+            {theme.dark ? <i className="fas fa-sun"></i> : <i className="fas fa-moon"></i>}
           </button>
-              <h3 className="contact-title">Rawsta</h3>
-              <section className="contact">
-                <img
-                  src={config.userAvatar}
-                  className="user-pic"
-                  alt={config.userName}
-                />
-                <div className="contact-details">
-                  <span>{config.userName}</span>
-                  <ul>
-                    {config.userTwitter && (
-                      <li>
-                        <a
-                          href={`https://twitter.com/${config.userTwitter}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <i className="fab fa-twitter" aria-hidden="true" />
-                        </a>
-                      </li>
-                        )}
-                    {config.userGithub && (
-                      <li>
-                        <a
-                          href={`https://github.com/${config.userGithub}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <i className="fab fa-github" aria-hidden="true" />
-                        </a>
-                      </li>
-                        )}
-                    {config.userEmail && (
-                      <li>
-                        <a
-                          href={`mailto:${config.userEmail}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <i className="far fa-envelope" aria-hidden="true" />
-                        </a>
-                      </li>
-                        )}
-                  </ul>
-                </div>
-              </section>
 
               <h5 className="legal-title">§</h5>
               <div className="rechtliches">

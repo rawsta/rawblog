@@ -40,7 +40,7 @@
         border-radius: 0;
         transition: all 350ms 200ms ease;
         border-top: 4px solid var(--medium-grey);
-        background: linear-gradient(167deg, #81939b, #dfd3c7 70%, #e8ded2);
+        background: linear-gradient(167deg, rgba(0,0,0,0.5), transparent);
     }
 
     .post-item:hover {
