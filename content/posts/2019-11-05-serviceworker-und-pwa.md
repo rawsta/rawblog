@@ -23,20 +23,20 @@ tags:
 - [Funktionsweise](#funktionsweise)
 - [Was ist ein ServiceWorker?](#was-ist-ein-serviceworker?)
 - [skipWaiting() / clients.claim()](#skipwaiting--clientsclaim)
-- [Registrierung / Status](http://localhost:8000/#registrierung--status)
-- [Fetch API](http://localhost:8000/#fetch-api)
-- [Headers](http://localhost:8000/#headers)
-- [Request](http://localhost:8000/#request)
-- [Response](http://localhost:8000/#response)
-- [Cache API](http://localhost:8000/#cache-api)
-- [Push API](http://localhost:8000/#push-api)
-- [IndexedDB API](http://localhost:8000/#indexeddb-api)
-- [Warum Workbox?](http://localhost:8000/#warum-workbox)
-- [Precaching](http://localhost:8000/#precaching)
-- [Runtime caching](http://localhost:8000/#runtime-caching)
-- [Die verschiedenen Strategien](http://localhost:8000/#die-verschiedenen-strategien)
-- [Workbox Plugins](http://localhost:8000/#workbox-plugins)
-- [Tipps und Tricks](http://localhost:8000/#tipps-und-tricks)
+- [Registrierung / Status](#registrierung--status)
+- [Fetch API](#fetch-api)
+- [Headers](#headers)
+- [Request](#request)
+- [Response](#response)
+- [Cache API](#cache-api)
+- [Push API](#push-api)
+- [IndexedDB API](#indexeddb-api)
+- [Warum Workbox?](#warum-workbox)
+- [Precaching](#precaching)
+- [Runtime caching](#runtime-caching)
+- [Die verschiedenen Strategien](#die-verschiedenen-strategien)
+- [Workbox Plugins](#workbox-plugins)
+- [Tipps und Tricks](#tipps-und-tricks)
 
 ## Was ist ein ServiceWorker?
 Technisch gesehen ist ein Service Worker ein spezieller Web Worker, bietet also eine Möglichkeit, JavaScript unabhängig vom Hauptthread auszuführen.
@@ -51,7 +51,7 @@ Um einen Missbrauch als _Man-in-the-Middle_ zu verhindern, sind Service Worker n
 
 Beim Initialisieren des Service Workers (dem einzigen Zeitpunkt, zu dem eine Internetverbindung notwendig ist) werden alle benötigten Ressourcen heruntergeladen und gespeichert.
 
-Hierzu kann prinzipiell jeder verfügbare Speicher genutzt werden, etwa die IndexedDB API, in der Regel kommt aber die [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache) zum Einsatz, die Ressourcen anhand ihrer URL speichern kann.
+Hierzu kann prinzipiell jeder verfügbare Speicher genutzt werden, etwa die [IndexedDB API](#indexeddb-api), in der Regel wird meistens eher die [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache) bevorzugt da sie Ressourcen anhand ihrer URL speichern kann.
 
 Anschließend muss der Service Worker nur auf `fetch()` Events reagieren. Dieses Event wird immer dann ausgelöst, wenn eine vom Service Worker überwachte Seite eine neue Ressource anfordert.
 Dies kann durch die Navigation des Benutzers auftreten, dadurch, dass eine aufgerufene Seite weitere Elemente wie Bilder oder Stylesheets einbindet, oder weil mittels AJAX dynamisch Daten geladen werden sollen. Ist die angeforderte Ressource im Cache des Service Workers vorhanden, so kann er sie einfach übergeben, eine Internetverbindung ist nicht notwendig.
@@ -101,6 +101,9 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
+---
+
+
 ### skipWaiting() / clients.claim()
 
 Es gibt die [`ServiceWorker.skipWaiting()`](https://w3c.github.io/ServiceWorker/#service-worker-global-scope-skipwaiting) methode, womit der neue Serviceworker direkt die Kontrolle über den Scope übernimmt. <br />
@@ -144,12 +147,14 @@ navigator.serviceWorker.addEventListener('controllerchange', () => {
 });
 ```
 
+---
+
 
 ## Fetch API
 
 Die [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) ist eine neue Alternative zum bekannten [XMLHttp​Request(XHR)](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest), bietet jedoch einen mächtigeren und flexibleren Funktionsumfang. Fetch bietet ein allgemeines Interface mit `Request` und `Response` Objekten und kann von Service Workern, Cache API, etc angesprochen werden. Die Fetch API bietet eine `.fetch()` Methode mit der man auf einfachem Weg asynchrone Netzwerkanfragen senden kann.
 
-> Leider ist der Internet Explorer wieder ein Spielverderber und kennt fetch nicht wirklich.
+> Leider ist der Internet Explorer wieder ein Spielverderber und kennt fetch nicht wirklich.  <br>
 > [Github hat dafür einen guten Polyfill](https://github.com/github/fetch)
 
 ### .fetch()
@@ -196,8 +201,11 @@ fetch('https://rawsta.de/data.json', {
 ```
 
 Weitere Parameter für credentials sind:
- credentials: 'same-origin'  // credentials werden nur für den gleichen Origin genommen
- credentials: 'omit' // credentials werden explizit weg gelassen
+ * credentials: 'same-origin'  // credentials werden nur für den gleichen Origin genommen
+ * credentials: 'omit' // credentials werden explizit weg gelassen
+
+---
+
 
 ## Headers
 
@@ -205,28 +213,31 @@ Was die Flexibilität erhöht, ist die Möglichkeit die Header anzupassen.
 Hier eine einfache Übersicht über die Verwendung:
 
 ```js
-// Eine neue Headers Instanz
-var headers = new Headers();
+  // Eine neue Headers Instanz
+  var headers = new Headers();
 
-// Weitere Header hinzufügen
-headers.append('Content-Type', 'text/plain');
-headers.append('X-My-Little-Header', 'Fabulous');
+  // Weitere Header hinzufügen
+  headers.append('Content-Type', 'text/plain');
+  headers.append('X-My-Little-Header', 'Fabulous');
 
-// Check, get, and set header values
-headers.has('Content-Type'); // true
-headers.get('Content-Type'); // "text/plain"
-headers.set('Content-Type', 'application/json');
+  // Check, get, and set header values
+  headers.has('Content-Type'); // true
+  headers.get('Content-Type'); // "text/plain"
+  headers.set('Content-Type', 'application/json');
 
-// Header löschen
-headers.delete('X-My-Custom-Header');
+  // Header löschen
+  headers.delete('X-My-Custom-Header');
 
-// Um die Header zu nutzen, muss eine neue Request Instanz erzeugt werden.
-var request = new Request('https://rawsta.de/api', {
-	headers: new Headers({
+  // Um die Header zu nutzen, muss eine neue Request Instanz erzeugt werden.
+  var request = new Request('https://rawsta.de/api', {
+    headers: new Headers({
 		'Content-Type': 'text/plain'
 	})
 });
 ```
+
+---
+
 
 ### Request
 
@@ -244,64 +255,66 @@ Durch das Request-Objekt kann man die Anfrage sehr gut anpassen. Hier eine klein
 
 Ein Beispiel für ein Request sieht folgend aus:
 ```js
-var request = new Request('https://rawsta.de/kontakte.json', {
-	method: 'POST',
-	mode: 'cors',
-	redirect: 'follow',
-	headers: new Headers({
-		'Content-Type': 'text/plain'
-	})
-});
-fetch(request).then(function() {
+  var request = new Request('https://rawsta.de/kontakte.json', {
+    method: 'POST',
+    mode: 'cors',
+    redirect: 'follow',
+    headers: new Headers({
+      'Content-Type': 'text/plain'
+    })
+  });
+  fetch(request).then(function() {
     /* response kommt hier */
 });
 ```
-
 
 Wie beim .fetch() ist nur der erste Paramter wichtig. Sobald das Request Objekt instanziert wurde, können die Properties nicht mehr angepasst werden. <br />
 Das Request hat auch eine praktische `clone` Methode. Da ein Request ein Stream ist, muss er geklont werden um gleichzeitig bspw. gecacht zu werden.
 
 Ein Request Objekt muss nicht unbedingt gesondert erzeugt werden. Für einfachere Einbindungen kann man die Parameter auch direkt übergeben:
 ```js
-fetch('https://rawsta.de/kontakte.json', {
-	method: 'POST',
-	mode: 'cors',
-	redirect: 'follow',
-	headers: new Headers({
-		'Content-Type': 'text/plain'
-	})
-}).then(function() {
+  fetch('https://rawsta.de/kontakte.json', {
+    method: 'POST',
+    mode: 'cors',
+    redirect: 'follow',
+    headers: new Headers({
+      'Content-Type': 'text/plain'
+    })
+  }).then(function() {
     /* response */
 });
 ```
 
+---
+
+
 ### Response
 
-Auf den Request folgt natürlich die Response. Wie beim Request, gibt es ein Response Objekt mit Möglichkeiten zur Anpassung.
+Auf den `Request` folgt natürlich die `Response`. Wie beim `Request`, gibt es ein `Response` Objekt mit Möglichkeiten zur Anpassung.
 
 Hier eine kleine Liste verfügbaren Parameter:
-* **type** - _basic_, _cors_
-* **url**
-* **useFinalURL** - Boolean falls url bereits die finalURL ist
-* **status** - HTTPstatus code (bspw: 200, 404, 418, etc.)
-* **ok** - Boolean für erfolgreiche Response (status 200-299)
-* **statusText** - status code (bspw: OK)
-* **headers** - Headers verbunden mit der Response.
+* `type` - _basic_, _cors_
+* `url` - die URL
+* `useFinalURL` - Boolean falls url bereits die finalURL ist - die URL
+* `status` - HTTPstatus code _(bspw: 200, - die URL 404, 418, etc.)_
+* `ok` - Boolean für erfolgreiche Response _(status 200-299)_
+* `statusText` - status code _(bspw: OK)_
+* `headers` - Headers verbunden mit der Response.
 
 Eine eigene Response zu erstellen kann vorallem während der Entwicklung zum testen sehr praktisch sein.
 
 Aufbau ist ähnlich wie beim Request:
 ```js
-var response = new Response('.....', {
-	ok: false,
-	status: 418,
-	url: '/'
-});
+  var response = new Response('.....', {
+    ok: false,
+    status: 418,
+    url: '/'
+  });
 
-// The fetch's `then` gets a Response instance back
-fetch('https://rawsta.de/')
-	.then(function(responseObj) {
-		console.log('status: ', responseObj.status);
+  // The fetch's `then` gets a Response instance back
+  fetch('https://rawsta.de/')
+    .then(function(responseObj) {
+      console.log('status: ', responseObj.status);
 	});
 ```
 
@@ -317,11 +330,18 @@ Das Response Objekt verfügt über folgende Methoden:
 
 Sachen wie `response.json()` machen nichts anderes wie `JSON.parse(jsonString)`, sind aber praktischer für den Alltag.
 
+---
+
 
 ## Cache API
 
-Die [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache) bietet einen einfachen Zugang zum `Cache Storage`. _(nicht verwechseln mit [WebStorage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API), [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) oder AppCache)_<br />
+Die [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache) bietet einen einfachen Zugang zum `Cache Storage`.
 Den Cache kann man sich wie ein Array von `Request` Objekten vorstellen, welche wie _keys_ für die `Response` funktionieren.
+
+_Nicht zu verwechseln mit:_
+ - [WebStorage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
+ - [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+ - oder `AppCache`
 
 
 ### Caches
@@ -483,11 +503,14 @@ self.addEventListener('fetch', function(event) {
 });
 ```
 
+---
+
 
 ## Push API
 
 Mit der [Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) ist es möglich Benachrichtigungen und Updates asynchron an den User zu schicken, selbst wenn die App nicht aktiv ist. Dafür muss ein User jedoch explizit dem zustimmen.
 
+---
 
 ## IndexedDB API
 
@@ -495,6 +518,9 @@ Die [IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_A
 Da der Umgang mit der IndexedDB etwas kompliziert werden kann, wird allgemein die Nutzung eine einfacheren API empfohlen.
 
 Gute Optionen sind [localForage](https://localforage.github.io/localForage/), [Dexie.js](https://dexie.org/)
+
+
+---
 
 
 ## Warum Workbox?
@@ -579,6 +605,8 @@ Um veraltete Caches wieder aufzuräumen hat Workbox auch eine eigene Methode:
  workbox.precaching.cleanupOutdatedCaches();
 
 > [Mehr zu Workbox Precaching](https://developers.google.com/web/tools/workbox/modules/workbox-precaching)
+
+
 
 ### Runtime caching
 

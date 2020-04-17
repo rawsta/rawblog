@@ -6,9 +6,9 @@ slug: kontakt
 template: page
 ---
 
-# Kontakt
+### Bei Fragen
 
-Bei Fragen oder ähnlichem:
+oder ähnlichem:
 
 **Sebastian Fiele**
  - **Mail**: rawsta(ät)rawsta de
