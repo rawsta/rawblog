@@ -10,8 +10,8 @@ tags:
     - large
 ---
 
-# NOTE: This "post" is based on [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and is meant to test styling of Markdown generated documents.
-
+# Markdown Cheatsheet
+_basiert auf []_
 
 This is intended as a quick reference and showcase. For more complete info, see [John Gruber's original spec](http://daringfireball.net/projects/markdown/) and the [Github-flavored Markdown info page](http://github.github.com/github-flavored-markdown/).
 
@@ -22,18 +22,18 @@ You can play around with Markdown on our [live demo page](http://www.markdown-he
 
 ##### Table of Contents
 
-[Headers](#headers)
-[Emphasis](#emphasis)
-[Lists](#lists)
-[Links](#links)
-[Images](#images)
-[Code and Syntax Highlighting](#code)
-[Tables](#tables)
-[Blockquotes](#blockquotes)
-[Inline HTML](#html)
-[Horizontal Rule](#hr)
-[Line Breaks](#lines)
-[YouTube Videos](#videos)
+ - [Headers](#headers)
+ - [Emphasis](#emphasis)
+ - [Lists](#lists)
+ - [Links](#links)
+ - [Images](#images)
+ - [Code and Syntax Highlighting](#code)
+ - [Tables](#tables)
+ - [Blockquotes](#blockquotes)
+ - [Inline HTML](#html)
+ - [Horizontal Rule](#hr)
+ - [Line Breaks](#lines)
+ - [YouTube Videos](#videos)
 
 <a name="headers"/>
 
@@ -70,6 +70,22 @@ Alt-H1
 
 Alt-H2
 ------
+
+## Foldable text:
+
+<details>
+  <summary>Title 1</summary>
+  <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
+</details>
+<details>
+  <summary>Title 2</summary>
+  <p>Content 2 Content 2 Content 2 Content 2 Content 2</p>
+</details>
+
+    Markup : <details>
+               <summary>Title 1</summary>
+               <p>Content 1 Content 1 Content 1 Content 1 Content 1</p>
+             </details>
 
 <a name="emphasis"/>
 
@@ -130,6 +146,23 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 -   Or minuses
 +   Or pluses
 
+- [ ] An uncompleted task
+- [x] A completed task
+
+```no-highlight
+ - [ ] An uncompleted task
+ - [x] A completed task
+```
+```no-highlight
+- [ ] An uncompleted task
+    - [ ] A subtask
+```
+ - [ ] An uncompleted task
+    - [ ] A subtask
+
+
+
+
 <a name="links"/>
 
 ## Links
@@ -174,6 +207,9 @@ Some text to show that the reference links can follow later.
 [1]: http://slashdot.org
 [link text itself]: http://www.reddit.com
 
+
+
+
 <a name="images"/>
 
 ## Images
@@ -200,6 +236,8 @@ Reference-style:
 
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
+
+
 <a name="code"/>
 
 ## Code and Syntax Highlighting
@@ -214,7 +252,8 @@ Inline `code` has `back-ticks around` it.
 
 Blocks of code are either fenced by lines with three back-ticks <code>```</code>, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.
 
-<pre lang="no-highlight"><code>```javascript
+<pre lang="no-highlight"><code>
+```javascript
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
@@ -248,6 +287,46 @@ But let's throw in a <b>tag</b>.
 ```
 
 Again, to see what languages are available for highlighting, and how to write those language names, see the [highlight.js demo page](http://softwaremaniacs.org/media/soft/highlight/test.html).
+
+
+
+## Hotkeys
+
+<kbd>⌘F</kbd>
+
+<kbd>⇧⌘F</kbd>
+
+    Markup : <kbd>⌘F</kbd>
+
+
+### Hotkey list:
+
+| Key | Symbol |
+| --- | --- |
+| Option | ⌥ |
+| Control | ⌃ |
+| Command | ⌘ |
+| Shift | ⇧ |
+| Caps Lock | ⇪ |
+| Tab | ⇥ |
+| Esc | ⎋ |
+| Power | ⌽ |
+| Return | ↩ |
+| Delete | ⌫ |
+| Up | ↑ |
+| Down | ↓ |
+| Left | ← |
+| Right | → |
+
+
+
+## Emojis
+
+:exclamation: Use emoji icons to enhance text. :+1:  Look up emoji codes at [emoji-cheat-sheet.com](http://emoji-cheat-sheet.com/)
+
+    Markup : Code appears between colons :EMOJICODE:
+
+
 
 <a name="tables"/>
 
@@ -287,6 +366,9 @@ The outer pipes (|) are optional, and you don't need to make the raw Markdown li
 | *Still*  | `renders` | **nicely** |
 | 1        | 2         | 3          |
 
+
+
+
 <a name="blockquotes"/>
 
 ## Blockquotes
@@ -307,11 +389,21 @@ Quote break.
 
 > This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
 
+```no-highlight
+> Blockquote
+>> Nested blockquote
+```
+> Blockquote
+>> Nested blockquote
+
+
+
+
 <a name="html"/>
 
 ## Inline HTML
 
-You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
+Man kann auch einfach direkt HTML innerhalb von Markdown benutzen.
 
 ```no-highlight
 <dl>
@@ -331,16 +423,18 @@ You can also use raw HTML in your Markdown, and it'll mostly work pretty well.
   <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
 </dl>
 
+
+
 <a name="hr"/>
 
 ## Horizontal Rule
 
 ```
-Three or more...
+Drei oder mehr...
 
 ---
 
-Hyphens
+Bindestriche
 
 ***
 
@@ -348,14 +442,14 @@ Asterisks
 
 ___
 
-Underscores
+Unterstriche
 ```
 
-Three or more...
+Drei oder mehr...
 
 ---
 
-Hyphens
+Bindestriche
 
 ***
 
@@ -363,13 +457,15 @@ Asterisks
 
 ___
 
-Underscores
+Unterstriche
+
+
 
 <a name="lines"/>
 
 ## Line Breaks
 
-My basic recommendation for learning how line breaks work is to experiment and discover -- hit &lt;Enter&gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. "Markdown Toggle" is your friend.
+My basic recommendation for learning how line breaks work is to experiment and discover -- hit <kbd>Enter</kbd> once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. "Markdown Toggle" is your friend.
 
 Here are some things to try out:
 
@@ -390,6 +486,8 @@ This line is also begins a separate paragraph, but...
 This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
 
 (Technical note: *Markdown Here* uses GFM line breaks, so there's no need to use MD's two-space line breaks.)
+
+
 
 <a name="videos"/>
 
