@@ -63,10 +63,9 @@ class CodeListing extends React.Component {
                   </span>
                   <span title="Grob geschätzte Lesezeit">
                     {` | `}
-                    <i className="far fa-clock" />
+                    <i className="fas fa-code" />
                     {` `}
-                    {code.timeToRead}
-                    {' Min.'}
+                    {code.tags}
                   </span>
                 </div>
               </header>

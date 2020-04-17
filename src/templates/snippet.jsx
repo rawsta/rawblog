@@ -69,13 +69,6 @@ export default class SnippetTemplate extends React.Component {
                   {` `}
                   {date}
                 </span>
-                <span title="Grob geschätzte Lesezeit">
-                  {` | `}
-                  <i className="fas fa-code" />
-                  {` `}
-                  {postNode.timeToRead}
-                  {' Min.'}
-                </span>
               </div>
             </section>
             <span className="post-meta">
