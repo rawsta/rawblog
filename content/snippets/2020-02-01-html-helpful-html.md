@@ -1,7 +1,7 @@
 ---
 title: "Helpful HTML"
 date: 2020-02-01
-cover: /assets/bla-title.jpg
+cover: /assets/sample1-title.jpg
 template: snippet
 slug: helpful-html
 tags:

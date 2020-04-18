@@ -1,7 +1,7 @@
 ---
 title: "Pro TriCSS"
 date: 2020-02-01
-cover: /assets/bla.jpg
+cover: /assets/sample2-title.jpg
 template: snippet
 slug: pro-tricss
 tags:
@@ -10,6 +10,11 @@ tags:
 ---
 
 # Pro TriCSS
+
+```toc
+# This code block gets replaced with the TOC
+```
+
 
 Bad puns for all
 
