@@ -55,16 +55,28 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-embedder`,
-          },
-          {
             resolve: "gatsby-remark-images",
             options: {
               maxWidth: 1920,
             }
           },
+          "gatsby-remark-copy-linked-files",
           {
-            resolve: "gatsby-remark-responsive-iframe"
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offsetY: `100`,
+              maintainCase: false,
+              removeAccents: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: "Table of Contents",
+              tight: false,
+              fromHeading: 2,
+              toHeading: 6
+            },
           },
           {
             resolve: `gatsby-remark-vscode`,
@@ -90,23 +102,11 @@ module.exports = {
               logLevel: 'warn'       // Set to 'info' to debug if something looks wrong
             }
           },
-          "gatsby-remark-copy-linked-files",
           {
-            resolve: `gatsby-remark-table-of-contents`,
-            options: {
-              exclude: "Table of Contents",
-              tight: false,
-              fromHeading: 2,
-              toHeading: 6
-            },
+            resolve: `gatsby-remark-embedder`,
           },
           {
-            resolve: `gatsby-remark-autolink-headers`,
-            options: {
-              offsetY: `100`,
-              maintainCase: false,
-              removeAccents: true,
-            },
+            resolve: "gatsby-remark-responsive-iframe"
           },
         ]
       }
