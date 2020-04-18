@@ -1,22 +1,36 @@
 .post-single p a,
+.post-single p a:visited,
 .post-single p a:link {
     color: var(--primary);
     text-decoration: none;
-    background-position-y: -0%;
-    background-image: linear-gradient( transparent 50%, var(--secondary) 50%);
-    transition: background 500ms ease;
-    background-size: 2px;
-    background-size: auto 175%;
+    position: relative;
+    z-index: 1;
 }
 
-.post-single p a:visited {
-    color: var(--font-color-alt);
+.post-single p a::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: -0.25em;
+    right: -0.25em;
+    background-color: var(--secondary);
+    transform-origin: bottom center;
+    transform: scaleY(0.1);
+    transition: all 0.1s ease-in-out;
+}
+
+.post-single p a:hover::before {
+    transform: scaleY(1);
+    background-color: var(--secondary);
+
 }
 
 .post-single p a:hover,
 .post-single p a:active {
     color: var(--font-color);
-    background-position-y: 115%;
+    /* background-position-y: 115%; */
 }
 
 
@@ -24,8 +38,8 @@
   background-color: var(--bg-dark);
 } */
 .post-single .post-cover-image img {
-  /* width: 100%; */
-  max-width: 980px;
+  width: 100%;
+  /* max-width: 980px; */
   border: solid var(--medium-grey);
   border-width: 0 4px 4px 0;
   border-radius: 0 0 123px 0;
@@ -58,7 +72,7 @@ header.post-single-header[data-active="true"] {
   top: 0;
   margin: 0;
   /* padding: 5px 25px; */
-  border-radius: 0;
+  border-radius: 0 0 10px 10px;
   background: var(--medium-grey);
   transition: all 300ms 200ms ease;
 }
@@ -131,6 +145,20 @@ span.post-info {
     /* margin-left: 10px; */
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .post-content ul {
+    list-style-type: none;
+  }
+
+  .post-content ul li::before {
+    font-family: "Font Awesome 5 Free";
+    font-size: 1.60rem;
+    font-style: normal;
+    font-weight: 900;
+    content: "\f531";
+    margin: 0 10px 0 0;
+    color: currentColor;
   }
 
 /* Post Meta und Tags */

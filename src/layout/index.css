@@ -52,6 +52,7 @@ html {
     --black75: rgba(0, 0, 0, 0.75);
     --black50: rgba(0, 0, 0, 0.5);
     --black25: rgba(0, 0, 0, 0.25);
+    --black05: rgba(0, 0, 0, 0.05);
 
     --border: 3px solid #fff;
     --border-radius: 5px 15px 5px 25px;
@@ -161,6 +162,63 @@ body {
         text-decoration: underline;
     }
 
+/* Linktarget Icons */
+
+    a[href$=".pdf"]:before { /* PDF Dateien */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f1c1";
+        margin-right: 5px;
+    }
+
+    a[href$=".rtf"]:before,
+    a[href$=".txt"]:before { /* Text Dateien */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f15c";
+        margin-right: 5px;
+    }
+
+
+    a[href$=".doc"]:before,
+    a[href$=".docx"]:before { /* Word Dateien */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f1c2";
+        margin-right: 5px;
+    }
+
+    a[href$=".xlsx"]:before { /* Excel Dateien */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f1c3";
+        margin-right: 5px;
+    }
+
+    a[href$=".tar"]:before,
+    a[href$=".tar.gz"]:before,
+    a[href$=".rar"]:before,
+    a[href$=".zip"]:before,
+    a[href$=".7z"]:before { /* Archiv Dateien */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f1c6";
+        margin-right: 5px;
+    }
+
+    a[href^="mailto:"]:before { /* emails *somewhere in it */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f2b6";
+        margin-right: 5px;
+    }
+
+    a[href^="http://"]:after { /* external links ^starts with*/
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f2f5";
+        margin-left: 5px;
+    }
 
 
 /* Headings */
@@ -232,8 +290,63 @@ body {
     hr {
         height: 0;
         background-color: var(--medium-grey);
-        border-top: 3px solid var(--medium-grey);
+        border: 2px solid var(--font-color-alt);
         width: 100%;
+    }
+
+
+    blockquote,
+    cite,
+    dfn,
+    em,
+    i {
+        font-style: italic;
+    }
+
+    code,
+    kbd,
+    samp {
+        padding: 0.05em 0.5em;
+        font-size: 90%;
+    }
+
+    code,
+    kbd,
+    pre,
+    samp {
+        border-radius: 3px;
+        background-color: var(--bg-dark);
+        font-family: Consolas, monaco, monospace;
+        color: var(--font-color-alt);
+    }
+
+    pre {
+        overflow-x: scroll;
+        padding: 1.6rem;
+    }
+
+    pre code,
+    pre kbd,
+    pre samp {
+        padding: 0;
+        background-color: transparent;
+        font-size: 90%;
+    }
+
+    mark,
+    ins {
+        background: var(--font-color-alt);
+        color: var(--bg-light);
+    }
+
+    abbr,
+    acronym {
+        border-bottom: 2px dashed var(--medium-grey);
+        cursor: help;
+    }
+
+    big {
+        font-size: 125%;
     }
 
     :focus {
@@ -249,6 +362,51 @@ body {
     [hidden] {
         display: none;
     }
+
+
+/* SVG Icons base styles */
+    .icon {
+        display: inline-block;
+        fill: currentColor;
+        height: 1em;
+        position: relative;
+        vertical-align: middle;
+        width: 1em;
+    }
+
+
+/* Blockquote */
+
+    blockquote {
+        border-left: 5px solid var(--secondary);
+        margin: 1.8rem auto;
+        padding: 2.4rem;
+        background-color: var(--black05);
+        color: var(--font-color-alt);
+        display: flex;
+    }
+
+    blockquote:before {
+        font-family: "Font Awesome 5 Free";
+        font-size: 3.20rem;
+        font-style: normal;
+        font-weight: 900;
+        content: "\f069";
+        margin: 15px 0 5px 0;
+        color: var(--primary);
+    }
+
+    .post-content blockquote p,
+    blockquote p {
+        margin: 0 10px 20px;
+    padding: 10px 20px;
+}
+
+    blockquote p:last-of-type {
+        margin-bottom: 0;
+    }
+
+
 
 /* Tables
 --------------------------------------- */
