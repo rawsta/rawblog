@@ -42,7 +42,15 @@ render() {
             <p>
               <span className="bullet">*</span>
               {' '}
-              Press <kbd>ALT</kbd> + <kbd>F4</kbd> again to restart your browser. You
+              Press 
+              {' '}
+              <kbd>ALT</kbd>
+              {' '}
+              + 
+              {' '}
+              <kbd>F4</kbd>
+              {' '}
+              again to restart your browser. You
               will lose any unsaved information in all tabs.
             </p>
           </div>

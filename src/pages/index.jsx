@@ -26,7 +26,9 @@ export default class Index extends React.Component {
                   <span>playground and incoherent ramblings</span>
                 </header>
                 <div className="frontpage-main-contentarea-above-postlisting">
-                  Diese Seite ist momentan ein Baustelle aus der sich evtl. irgendwann eine richtige Seite entwickelt. <br />
+                  Diese Seite ist momentan ein Baustelle aus der sich evtl. irgendwann eine richtige Seite entwickelt. 
+                  {' '}
+                  <br />
                   Und mit etwas Glück, folgt sogar in unregelmäßigen Abständen etwas Inhalt.
                 </div>
                 <PostListing postEdges={latestPostEdges} />
