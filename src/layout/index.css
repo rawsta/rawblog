@@ -229,7 +229,7 @@ body {
         color: var(--font-color-alt);
         font-weight: 900;
         line-height: 1.25;
-        margin: 0 0 20px;
+        margin: 20px 0;
     }
 
     h1 {
