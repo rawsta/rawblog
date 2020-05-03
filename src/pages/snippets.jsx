@@ -69,7 +69,7 @@ export default class SnippetPage extends Component {
                   type="text"
                   name="searchTerm"
                   value={searchTerm}
-                  placeholder="Beiträge filtern..."
+                  placeholder="Snippets filtern..."
                   onChange={this.handleChange}
                 />
                 <i className="fas fa-search"></i>
