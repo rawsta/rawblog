@@ -70,6 +70,8 @@ Tools die das Entwickler Leben leichter, schöner, interessanter machen.
 ### DesignRelated
 -   [Instant Color Picker](http://www.youngsmarts.com/) // Solider ColorPicker für den Desktop
 -   [SageThumbs](https://sourceforge.net/projects/sagethumbs/) // Ermöglicht PSD, AI, etc Vorschau im Explorer
+-   [ImageGlass](https://imageglass.org/) // Schneller und einfacher Bildbetrachter
+-   [IrfanView](https://irfanview.com/) // Mächtiger Bildbetrachter mit vielen Funktionen
 
 ### Fonts
 -   [Fontbase](https://fontba.se/) // Kann Google Fonts und Fonts aus Ordnern bedarfsweise laden.
@@ -85,7 +87,8 @@ Tools die allgemein praktisch sind.
 
 ### Explorer Enhancements
 -   [TeraCopy](https://www.codesector.com/teracopy) // Erweitert den Kopier-Dialog
--   [QTTabBar](http://qttabbar.wikidot.com/qttabbar) // Erweitert den Windows Explorer um Tabs und mehr...
+-   [QTTabBar](http://qttabbar.wikidot.com/qttabbar) // Erweitert den Windows Explorer um Tabs und mehr.
+-   [QuickLook](https://github.com/QL-Win/QuickLook) // Mit Spacebar schnell eine Preview der Datei bekommen.
 -   [Dual Monitor Taskbar](https://sourceforge.net/projects/dualmonitortb/) // zusätzliche Taskleiste für zusätzliche Monitore
 
 ### E-Mail
@@ -94,12 +97,12 @@ Tools die allgemein praktisch sind.
 -   [Mailspring](https://getmailspring.com) // Electron-based GMail-clone
 
 ### Various
--   [ShareX](https://getsharex.com/) // Umfangreicher, sehr konfigurierbarer ScreenCapture Tool/Uploader/automatisierungstool
+-   [ShareX](https://getsharex.com/) // Umfangreiches, sehr konfigurierbares ScreenCapture Tool/Uploader/automatisierungstool
 -   [iNFekt](https://infekt.ws/) // Solide NFOviewer
 -   [AllDup](http://www.alldup.de/) // Freeware zum Suchen und Löschen von Dateiduplikaten
 
 ### Netzwerk
- - NetSpeedMonitor // Up/Download in der Taskleiste anzeigen
+ - NetSpeedMonitor // Up/Download in der Taskleiste anzeigen (leider nicht mehr offiziell verfügbar)
 -   [Telerik Fiddler](https://www.telerik.com/fiddler) // Web Debugging Proxy
 -   [Wireshark](https://www.wireshark.org/download.html) // Netzwerk Monitor
 -   [WinPCap](https://www.winpcap.org/) // Window Packet capture library
@@ -110,10 +113,6 @@ Tools die allgemein praktisch sind.
 -   [Resonic Player](https://resonic.at/) // Sehr umfangreicher Player (DarkTheme nur in Pro)
 -   [Mp3tag](https://www.mp3tag.de/) // Einfacher Audio Tag Editor
 -   [MusicBee](https://getmusicbee.com/) // Musiklibrary Player
-
-### CloudStuff
--   [Dropbox](https://www.dropbox.com/) // Solide CloudSync Plattform
--   [Google Drive](https://drive.google.com) // Googles CloudSync Plattform
 
 ### Security
 -   [KeePass Password Safe](https://keepass.info/) // Solider PasswordManager der fast überall läuft
