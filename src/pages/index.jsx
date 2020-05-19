@@ -22,10 +22,14 @@ export default class Index extends React.Component {
             <div className="page-wrap">
               <section className="frontpage">
                 <header className="welcome-header">
-                  <h1>Sebastian rawsta Fiele</h1>
+                  <h1>Sebastian _rawsta_ Fiele</h1>
+                  <span>playground and incoherent ramblings</span>
                 </header>
                 <div className="frontpage-main-contentarea-above-postlisting">
-                  Hier kommt noch richtiger Inhalt hin.
+                  Diese Seite ist momentan ein Baustelle aus der sich evtl. irgendwann eine richtige Seite entwickelt. 
+                  {' '}
+                  <br />
+                  Und mit etwas Glück, folgt sogar in unregelmäßigen Abständen etwas Inhalt.
                 </div>
                 <PostListing postEdges={latestPostEdges} />
                 <hr />

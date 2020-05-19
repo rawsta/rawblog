@@ -1,5 +1,5 @@
 ---
-title: "Random project 4 With Super Long Title Phase One"
+title: "Random project 4 With Super Long filler Title Phase One"
 cover: "4.jpg"
 category: test
 template: post
