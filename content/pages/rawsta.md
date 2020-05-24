@@ -7,23 +7,23 @@ template: page
 ---
 
 # Ich bin rawsta
-Der Name _rawsta_ stammt noch aus meinen ersten Jahren in Münster. Als ich damals in die Stadt zog, habe ich angefangen in dem [lokalen Reggae Forum](https://www.reggae-party.de) zu engagieren.
+Der Name _rawsta_ stammt noch aus meinen ersten Jahren in Münster. Als ich damals in die Stadt zog, habe ich angefangen mich in dem [lokalen Reggae Forum](https://www.reggae-party.de) zu engagieren hatte allerdings noch keinen Benutzernamen, der mir auch gefiel.
 
-## Die jungen Jahre
-Nach dem ich schon ein Bild ausversehen statt _"rasta"_ als _"rawsta"_ abspeicherte, blieb mir der Tippfehler etwas im Kopf hängen und ich beschloß mich dort als **rawsta** anzumelden.
+Nach dem ich ein Bild versehentlich statt _"rasta"_ als _"rawsta"_ abspeicherte, blieb mir der Tippfehler etwas im Kopf hängen. Also beschloß ich, mich dort als **rawsta** anzumelden und der Name hat sich etabliert.
 
-In der Zeit kam ich auch verstärkt in den Kontakt von Musikern, Veranstaltern und anderen Leuten aus der Reggaeszene. Dadurch entwickelten sich viele langährige Kontakte, die nicht immer nur geschäftlich blieben.
+## Die _jungen_ Jahre
+Damals habe ich mich primär mit der Gestaltung beschäftigt. Über mein Interesse an Graffiti kam ich relativ früh zum Grafikdesign, was meiner Dipl.Des. Tante natürlich gefallen hat. Da ich meine Ideen mit Blatt und Papier nicht wirklich gut umsetzen konnte, interessierte mich die Gestaltung am Computer. Die extrem vielseitigen Möglichkeiten der digitalen Gestaltung und vorallem <kbd>STRG</kbd>+<kbd>Z</kbd> waren unschlagbare Vorteile für mich.
 
-Mit vielen Menschen aus der Zeit verbindet mich auch heute noch viel und man trifft sich auch fern der Arbeit auf Parties und Festivals.
+Ich war schon immer sehr interessiert an Elektronik, Technik und Computer allgemein. Seit meinen ersten Tag mit einem **Amiga 500** war meine Begeisterung geweckt. Da ich erst relativ spät einen Zugang zur Programmierung fand, konzentrierte ich mich auf meine bestehenden Interessen und Fähigkeiten und begann Flyer, CD Cover und weiteres zu gestalten. Das Arbeiten, Gestalten und Experimentieren in Photoshop &  Co. hat mir schon immer Spaß gmeacht. Nach kleinen Ausflügen in Flash, Cinema 4D, Premiere Pro und After Effects blieb ich dann doch beim Printdesign mit kleinen Webdesign Jobs nebenbei.
+Was anfing als Hobby für Freunde und Bekannte am heimischen Computer wurde mit der Zeit eine kleine Selbstständigkeit mit Büroräumen an der [Hafenstr.64](https://www.google.de/maps/place/Hafenstra%C3%9Fe+64,+48153+M%C3%BCnster/@51.9507555,7.6342769,20z/data=!4m5!3m4!1s0x47b9bad40391c933:0x5d5fa653a89ccc34!8m2!3d51.9486957!4d7.6335883?hl=de).
 
-## Das Umdenken
-Auch wenn ich damals mich fast ausschließlich mit der Gestaltung von Flyern, Schallplatten und ähnlichem beschäftigt habe, dreht sich meine Welt mittlerweile mehr abstraktere Sachen.
+Ich war mein eigener Chef und konnte mir über die Jahre einen kleinen, aber feinen Kundenstamm aufbauen. Den einen Tag habe ich ein Poster für eine Asien-Tour einer bekannten Reggaeband aus Jamaika gemacht und am nächsten habe ich mich mit Musikern getroffen und besprach das Cover des kommenden Albums. Durch meine Fotoarbeit fand ich mich auch öfters im Fotograben oder Backstage von Festivals und Konzerten wieder. Aus vielen Kunden und Kollegen aus der Zeit sind Freunde und gute Bekannte geworden.
 
-Ich war schon immer sehr interessiert an Elektronik, Technik und Compouter allgemein. Seit meinen ersten Tag mit einem **Amiga 500** war meine Begeisterung geweckt. Wie schon erwähnt, äußerte sich diese Begeisterung in der Gestaltung am Computer.
+## Der Umstieg
+Durch das stetige Arbeitsaufkommen, blieb wenig Zeit zur Weiterentwicklung und das Gefühl der Stagnation kam auf. Ich fühlte mich ausgebrannt und wusste, dass sich was ändern muss. Im Bereich der Gestaltung, sah ich nur ein Studium als wirklichen Fortschritt an um mich wirklich weiterzuentwickeln. Vielleicht geschürt durch das Gefühl des ausgebrannt-sein, beschloß ich mich auf ein neues Feld zu stürzen.
+Ich bin weit entfernt ein Topdesigner zu sein und wahrscheinlich würde ich in einer regulären Agentur auch nicht weit kommen, weswegen ich beschlossen habe, komplett neu anzufangen. Mit einer Ausbildung.
 
-Über die Jahre habe ich mich immer besser in Photoshop, Illustrator zu recht gefunden. Zwischendurch kleine Ausflüge in Flash, Cinema 4D, Premiere Pro und After Effects stand jedoch fest, das es mir zwar Spaß macht aber nicht wirklich zufrieden stellte.
+Ich fing an meinen Kunden Bescheid zu geben und, falls möglich, an einen neuen Gestalter zu vermitteln. Ich fing an Bewerbungen zu schreiben und war anfangs nicht besonders optimistisch. Mit 30+ bin ich eher im Ausbilder als Azubialter, aber ich wollte es wenigstens versuchen.
 
-## Der Neuanfang
-
-...und jetzt bin ich _(fast)_ Fachinformatiker Anwendungsentwicklung. :)
-
+Nach den ersten Absagen kamen bald erste Vorstellungsgespräche zustande.
+Ein paar Probearbeitstage und Praktika später hatte ich den Luxus, gleich aus mehreren Angeboten auswählen zu können und hatte noch nichtmal auf alle Bewerbungen eine Antwort erhalten. Es dauerte nicht allzu lange mich für ein Angebot zu entscheiden und ich habe es keinen Tag bereut. Ich gehe jeden Tag mit einem Lächeln zur Arbeit.
