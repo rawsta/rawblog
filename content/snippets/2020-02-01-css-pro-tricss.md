@@ -12,7 +12,7 @@ tags:
 # Pro TriCSS
 
 ```toc
-# This code block gets replaced with the TOC
+# Here comes the TOC
 ```
 
 

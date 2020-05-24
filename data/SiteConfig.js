@@ -1,16 +1,16 @@
 const config = {
   siteTitle: "rawBlog - rawsta's playground", // Site title.
   siteTitleShort: "rawBlog", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  siteTitleAlt: "rawBlog - the playground", // Alternative site title for SEO.
+  siteTitleAlt: "rawBlog - playground", // Alternative site title for SEO.
   siteLogo: "/logos/logo-512.png", // Logo used for SEO and manifest.
-  siteUrl: "https://rawblog.netlify.com", // Domain of your website without pathPrefix.
+  siteUrl: "https://rawblog.netlify.app", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "Playground and maybe-blog of Sebastian Fiele.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   postDefaultCategoryID: "test", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD.MM.YYYY", // Date format for display.
-  postsPerPage: 4, // Amount of posts displayed per listing page.
+  postsPerPage: 5, // Amount of posts displayed per listing page.
   menuLinks: [
     {
       name: 'rawsta',
@@ -59,7 +59,7 @@ const config = {
       iconClassName: "far fa-envelope"
     }
   ],
-  copyright: "©2020 - rawsta", // Copyright string for the footer of the website and RSS feed.
+  copyright: "©2020 Sebastian Fiele", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#830000", // Used for setting manifest and progress theme colors.
   backgroundColor: "#363636" // Used for setting manifest background color.
 };
