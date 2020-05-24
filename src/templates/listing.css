@@ -73,7 +73,7 @@
     }
 
     img.title-img {
-        padding-left: 100px;
+        padding-left: 70px;
     }
 
     .post-item .post-header {
@@ -109,7 +109,7 @@
 
 
     .post-item .post-item-content {
-        margin: 20px auto auto 0;
+        margin: 20px auto auto -60px;
         /* margin: 33px auto auto -4px; */
         position: absolute;
         display: flex;

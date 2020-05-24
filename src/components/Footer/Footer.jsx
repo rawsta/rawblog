@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
-import UserLinks from "../UserLinks/UserLinks";
+// import UserLinks from "../UserLinks/UserLinks";
 import netlify from '../../../static/logos/netlify.png'
 import gatsby from '../../../static/logos/gatsby.png'
 import github from '../../../static/logos/github.png'
@@ -18,8 +18,8 @@ class Footer extends Component {
     return (
       <footer className="footer">
 
-        <UserLinks config={config} labeled />
-        {/* <div className="notice-container"> */}
+        {/* <UserLinks config={config} labeled /> */}
+        <div className="notice-container">
         {/* <Link to={url}>
             <span>RSS</span>
           </Link> */}
@@ -34,7 +34,8 @@ class Footer extends Component {
               alt="GatsbyJS"
             />
           </a>
-          <a href="https://github.com/rawsta" title="Open-source on GitHub">
+          <i class="fas fa-plus"></i>
+          <a href="https://github.com/rawsta" title="Open-Source on GitHub">
             <img
               src={github}
               target="_blank"
@@ -43,6 +44,7 @@ class Footer extends Component {
               alt="GitHub"
             />
           </a>
+          <i class="fas fa-plus"></i>
           <a href="https://www.netlify.com/" title="Hosted by Netlify">
             <img
               src={netlify}
@@ -58,7 +60,7 @@ class Footer extends Component {
           Handcrafted
           {copyright}
         </p>
-        {/* </div> */}
+        </div>
       </footer>
     );
   }

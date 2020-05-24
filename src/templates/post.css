@@ -191,3 +191,11 @@ span.post-info {
   .single-tag::before {
     content: "#";
   }
+
+/* Table Of Contents */
+
+  .toc p {
+    margin: 0;
+    padding: 0;
+    display: inline;
+  }
