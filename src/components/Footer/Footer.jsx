@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-// import { Link } from "gatsby";
-// import UserLinks from "../UserLinks/UserLinks";
+import { Link } from "gatsby";
+import UserLinks from "../UserLinks/UserLinks";
 import netlify from '../../../static/logos/netlify.png'
 import gatsby from '../../../static/logos/gatsby.png'
 import github from '../../../static/logos/github.png'
@@ -18,7 +18,7 @@ class Footer extends Component {
     return (
       <footer className="footer">
 
-        {/* <UserLinks config={config} labeled /> */}
+        <UserLinks config={config} labeled />
         {/* <div className="notice-container"> */}
         {/* <Link to={url}>
             <span>RSS</span>

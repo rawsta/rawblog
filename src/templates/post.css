@@ -1,3 +1,7 @@
+.post-single {
+  margin-bottom: 40px;
+}
+
 .post-single p a,
 .post-single p a:visited,
 .post-single p a:link {
@@ -24,7 +28,6 @@
 .post-single p a:hover::before {
     transform: scaleY(1);
     background-color: var(--secondary);
-
 }
 
 .post-single p a:hover,
