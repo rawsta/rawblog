@@ -56,12 +56,12 @@ class CodeListing extends React.Component {
               <header className="post-item-content">
                 <div className="post-header">
                   <h2 className="post-title">{code.title}</h2>
-                  <span title="Beitragsdatum">
+                  <span title="angebliches Beitragsdatum">
                     <i className="far fa-calendar-alt" />
                     {` `}
                     {formatDate(code.date)}
                   </span>
-                  <span title="Grob geschätzte Lesezeit">
+                  <span title="Grob überschätzte Lesezeit">
                     {` | `}
                     <i className="fas fa-code" />
                     {` `}

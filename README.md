@@ -5,9 +5,7 @@
 
 
 <div align="center">
-    <a href="https://codeclimate.com/github/rawsta/rawblog">
-      <img src="https://codeclimate.com/github/rawsta/rawblog/badges/gpa.svg" alt="Logo" />
-    </a>
+    <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/rawsta/rawblog?style=flat-square">
     <a href="https://codeclimate.com/github/rawsta/rawblog/maintainability">
       <img src="https://api.codeclimate.com/v1/badges/e2d2e8a85434d5686fcc/maintainability" />
     </a>
@@ -20,6 +18,7 @@
     <a href='https://github.com/prettier/prettier'>
       <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="Logo" />
     </a>
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/rawsta/rawblog?style=flat-square">
 </div>
 
 # rawBlog | rawsta's playground
@@ -50,7 +49,7 @@ Y not?
 - Gatsby v2 support
 - Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
 - Posts in Markdown
-  - Code syntax highlighting (via vs-code)
+  - Code syntax highlighting *(via vs-code)*
   - Embed YouTube videos
   - Embed Tweets
 - Pagination
@@ -64,11 +63,11 @@ Y not?
 - Separate components for everything:
   - User social profiles
   - Copyright information
-  - Unicorns
-  - More!
+  - Maybe Unicorns
+  - Probably more!
 - [NetlifyCMS](https://www.netlifycms.org) support out of the box
 - PWA features
-  - Offline support
+  - Offline support *hopefully*
   - Web App Manifest support
   - Loading progress for slow networks
 - SEO
@@ -92,10 +91,10 @@ Y not?
 
 ## Getting Started
 
-Install this starter (assuming [Gatsby](https://github.com/gatsbyjs/gatsby/) is installed and updated) by running from your CLI:
+Install my website (assuming [Gatsby](https://github.com/gatsbyjs/gatsby/) is installed and updated) by running from your CLI:
 
 ```sh
-gatsby new YourProjectName https://github.com/rawsta/rawblog
+gatsby new YourAwesomeProject https://github.com/rawsta/rawblog
 npm run develop # or gatsby develop
 ```
 
@@ -104,12 +103,14 @@ Or you can fork the project, make your changes there and merge new features when
 Alternatively:
 
 ```sh
-git clone https://github.com/rawsta/rawblog YourProjectName # Clone the project
-cd YourProjectname
+git clone https://github.com/rawsta/rawblog YourAwesomeProject # Clone the project
+cd YourAwesomeProject
 rm -rf .git # So you can have your own changes stored in VCS.
-npm install # or yarn install
-npm run develop # or gatsby develop
+npm install # or yarn install or npx install or voodoo
+npm run develop # or gatsby develop or yarn run develop or ...you get it.
 ```
+
+Please don't forget to remove my content if just clone everything.
 
 ## Configuration
 
@@ -185,15 +186,23 @@ module.exports = {
 
 WARNING: Make sure to edit `static/robots.txt` to include your domain for the sitemap!
 
+# More Badges!
+![GitHub repo size](https://img.shields.io/github/repo-size/rawsta/rawblog?style=for-the-badge)
+![Netlify](https://img.shields.io/netlify/bfc49937-8f96-4817-a493-6ceba1541296?style=for-the-badge)
+![Issues](https://img.shields.io/badge/issues-a%20lot-orange?style=for-the-badge)
+![forthebadge](https://forthebadge.com/images/badges/approved-by-veridian-dynamics.svg)
+![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
+![GitHub](https://img.shields.io/github/license/rawsta/rawblog?style=for-the-badge)
+![forthebadge](https://forthebadge.com/images/badges/reading-6th-grade-level.svg)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/rawsta/rawblog?style=for-the-badge)
+![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)
+![forthebadge](https://forthebadge.com/images/badges/compatibility-betamax.svg)
+![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)
+![forthebadge](https://forthebadge.com/images/badges/fuck-it-ship-it.svg)]
+
 # Authors
 
 Ruben Harutyunyan ([@Vagr9K](https://twitter.com/Vagr9K))
+
 Sebastian Fiele ([@rawsta](https://twitter.com/rawsta))
 
-# Badges
-
-[![forthebadge](https://forthebadge.com/images/badges/fuck-it-ship-it.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/approved-by-veridian-dynamics.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/reading-6th-grade-level.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](https://forthebadge.com)
