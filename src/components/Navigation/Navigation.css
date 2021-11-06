@@ -146,6 +146,7 @@
     }
 
     .sidebar nav a.active,
+    .sidebar nav li a.active,
     .sidebar nav li:hover {
         /* border-color: var(--medium-grey); */
         background-color: var(--teal);
@@ -174,14 +175,14 @@
     }
 
     .sidebar nav li i,
-    .sidebar nav a.active li > span,
-    .sidebar nav li:hover > span,
+    .sidebar nav li a.active > span,
+    .sidebar nav li:hover a > span,
     .sidebar.thicc nav li span {
         opacity: 1;
         visibility: visible;
     }
 
-    .sidebar nav li:hover > span,
+    .sidebar nav li:hover a > span,
     .sidebar.thicc nav li span {
         display: block;
         width: 150px;
@@ -352,7 +353,32 @@
         bottom: auto;
     }
 
+    .sidebar.thicc {
+        width: 15vw;
+        overflow: hidden;
+        border-radius: 0 0 60px 0;
+    }
+
+    /* .sidebar > button {
+        display: none;
+    } */
+
     .sidebar nav {
+        justify-content: end;
+        align-items: center;
+    }
+
+    .sidebar nav ul {
         flex-direction: row;
+        margin-top: 0;
+    }
+
+    .sidebar nav li span {
+        opacity: 1;
+    }
+
+    .kopfzeile {
+        max-width: 10vw;
+        max-height: 10vw;
     }
 }

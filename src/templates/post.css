@@ -22,7 +22,7 @@
     background-color: var(--secondary);
     transform-origin: bottom center;
     transform: scaleY(0.1);
-    transition: all 0.1s ease-in-out;
+    transition: var(--transition);
 }
 
 .post-single p a:hover::before {
@@ -43,8 +43,8 @@
 .post-single .post-cover-image img {
   width: 100%;
   /* max-width: 980px; */
-  border: solid var(--medium-grey);
-  border-width: 0 4px 4px 0;
+  border: solid var(--teal);
+  border-width: 0 2px 3px 4px;
   border-radius: 0 0 123px 0;
   height: auto;
 }
@@ -63,8 +63,9 @@ header.post-single-header {
   align-items: center;
   background-color: var(--bg-dark);
   padding: 5px 10px;
-  border: 4px solid var(--medium-grey);
-  border-radius: 0 4px 60px 0;
+  border: solid var(--teal);
+  border-width: 2px 2px 3px 2px;
+  border-radius: 2px 4px 60px 2px;
   transition: all 300ms 100ms ease;
   z-index: 7;
 }
@@ -76,7 +77,9 @@ header.post-single-header[data-active="true"] {
   margin: 0;
   /* padding: 5px 25px; */
   border-radius: 0 0 10px 10px;
-  background: var(--medium-grey);
+  border-color: transparent;
+  background-color: transparent;
+  /* background: var(--medium-grey); */
   transition: all 300ms 200ms ease;
 }
 
@@ -102,7 +105,9 @@ header.post-single-header[data-active="true"] > .stripe {
   margin: 0;
   padding: 5px 25px;
   border-radius: 0;
-  background: var(--medium-grey);
+  /* background: var(--medium-grey); */
+  background-color: rgba(115,115,115,0.6);
+  backdrop-filter: blur(4px);
   z-index: -4;
   opacity: 1;
 }

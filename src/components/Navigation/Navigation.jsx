@@ -49,10 +49,10 @@ class Navigation extends Component {
       <ThemeContext.Consumer>
     {theme => (
           <aside className={menuClass}>
-            <button onClick={this.handleSide}>
-              <i className="fas fa-angle-double-right"></i>
-            </button>
             <header className="navigation">
+              <button onClick={this.handleSide}>
+                <i className="fas fa-angle-double-right"></i>
+              </button>
               <span className="kopfzeile">
                 <a
                   href={url}
@@ -66,25 +66,25 @@ class Navigation extends Component {
                   <h2>{titleShort}</h2>
                 </a>
               </span>
-            </header>
 
             <nav>
               <ul>
                 {menuLinks.map(link => (
+                  <li>
                   <Link key={link.name} to={link.link} activeClassName="active">
-                    <li>
                       <i className={link.iconClassName}></i>
                       <span>{link.name}</span>
-                    </li>
                   </Link>
+                  </li>
                 ))}
               </ul>
             </nav>
+          </header>
 
-            <footer>
-          <button className="lightswitch" onClick={theme.toggleDark}>
-            {theme.dark ? <i className="fas fa-sun"></i> : <i className="fas fa-moon"></i>}
-          </button>
+          <footer>
+            <button className="lightswitch" onClick={theme.toggleDark}>
+              {theme.dark ? <i className="fas fa-sun"></i> : <i className="fas fa-moon"></i>}
+            </button>
 
               <h5 className="legal-title">§</h5>
               <div className="rechtliches">
