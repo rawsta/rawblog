@@ -40,7 +40,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "posts",
-        path: `${__dirname}/content/`
+        path: `${__dirname}/content/posts`
       }
     },
     {
@@ -99,7 +99,7 @@ module.exports = {
                 language,             //   - the language specified for the code fence
                 meta                  //   - any options set on the code fence alongside the language (more on this later)
               }) => '',
-              logLevel: 'warn'       // Set to 'info' to debug if something looks wrong
+              logLevel: 'info'       // Set to 'info' to debug if something looks wrong, otherwise is 'warn' just fine
             }
           },
           {
@@ -177,7 +177,7 @@ module.exports = {
         setup(ref) {
           const ret = ref.query.site.siteMetadata.rssMetadata;
           ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-          ret.generator = "rawBlog - Sebastian Fiele";
+          ret.generator = "RawBlogMachine";
           return ret;
         },
         query: `

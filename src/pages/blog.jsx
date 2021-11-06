@@ -39,26 +39,18 @@ export default class BlogPage extends Component {
         <Helmet title={`Beiträge – ${config.siteTitle}`} />
         <SEO />
         <div className="container">
-          <h1 className="articles-title">rawsta's Beiträge</h1>
-
-          <section className="blog-header">
-            {/* <p>
-              {`Es gibt aktuell `}
-              {filterCount}
-              {` Beiträge`}
-            </p> */}
-            <div className="search-container">
-              <input
-                className="search"
-                type="text"
-                name="searchTerm"
-                value={searchTerm}
-                placeholder="Beiträge filtern..."
-                onChange={this.handleChange}
-              />
-              <i className="fas fa-search"></i>
+          <div className="title-wrap">
+            <h1 className="articles-title">Blogposts</h1>
+              <span className="count">
+                {filterCount}
+              </span>
+              <span className="count-text">
+                {` Beiträge`}
+              </span>
             </div>
-          </section>
+          {/* <section className="blog-header">
+
+          </section> */}
 
           <section className="category-container">
             <div className="cat-pills five-sixths first">
@@ -74,13 +66,22 @@ export default class BlogPage extends Component {
               )
             })}
             </div>
-            <div className="one-sixth">
-              <span className="post-count">
+            <div className="one-sixth search-container">
+                <input
+                  className="search"
+                  type="text"
+                  name="searchTerm"
+                  value={searchTerm}
+                  placeholder="Beiträge filtern..."
+                  onChange={this.handleChange}
+                />
+                <i className="fas fa-search"></i>
+              {/* <span className="post-count">
                 <span title="Anzahl der Beiträge">
                   {filterCount}
                 </span>
                 {`Beiträge`}
-              </span>
+              </span> */}
             </div>
           </section>
 

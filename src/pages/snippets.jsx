@@ -39,41 +39,43 @@ export default class SnippetPage extends Component {
         <Helmet title={`Snippets – ${config.siteTitle}`} />
         <SEO />
         <div className="container">
-
-          <section className="blog-header">
-          <h1 className="articles-title">Snippets</h1>
-
-            <div className="search-container">
-              <input
-                className="search"
-                type="text"
-                name="searchTerm"
-                value={searchTerm}
-                placeholder="Snippets filtern..."
-                onChange={this.handleChange}
-              />
-              <i className="fas fa-search"></i>
+          <div className="title-wrap">
+            <h1 className="articles-title">Snippets</h1>
+              <span className="count">
+                {filterCount}
+              </span>
+              <span className="count-text">
+                {` Snippets`}
+              </span>
             </div>
-            <p>
-              {`Es gibt aktuell `}
-              {filterCount}
-              {` Snippets`}
-            </p>
-          </section>
 
           <section className="category-container">
             <div className="cat-pills five-sixths first">
-
+            {/* {categories.map(category => {
+              return (
+                <Link
+                  to={`/categories/${category.fieldValue.toLowerCase()}`}
+                  className="category-filter"
+                  key={category.fieldValue}
+                >
+                  {category.fieldValue}
+                </Link>
+              )
+            })} */}
             </div>
-            <div className="one-sixth">
-              <span className="post-count">
-                <span title="Anzahl der Snippets">
-                  {filterCount}
-                </span>
-                {`Snippets`}
-              </span>
+            <div className="one-sixth search-container">
+                <input
+                  className="search"
+                  type="text"
+                  name="searchTerm"
+                  value={searchTerm}
+                  placeholder="Snippets filtern..."
+                  onChange={this.handleChange}
+                />
+                <i className="fas fa-search"></i>
             </div>
           </section>
+
 
           <CodeListing codeEdges={filteredSnippets} />
         </div>
