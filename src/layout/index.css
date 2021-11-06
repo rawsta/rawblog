@@ -551,7 +551,7 @@ body {
     }
 
     .post:hover {
-        transform: translate(0px, -2px);
+        transform: translate(0, -2px);
         box-shadow: 0 15px 45px -10px rgba(10, 16, 34, .2);
     }
 
@@ -579,7 +579,7 @@ body {
         display: flex;
         align-items: baseline;
         justify-content: space-between;
-        margin: 10px 20px 0px;
+        margin: 10px 20px 0;
     }
 
     p {
