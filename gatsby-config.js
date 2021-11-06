@@ -75,30 +75,6 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-vscode`,
-            options: {
-              theme: {
-                      default: 'Solarized Light',
-                      dark: 'Solarized Dark',
-                      parentSelector: {
-                          'html[data-theme=dark]': 'Solarized Dark',
-                        }
-                    },
-              wrapperClassName: '',   // Additional class put on 'pre' tag. Also accepts function to set the class dynamically.
-              injectStyles: true,     // Injects (minimal) additional CSS for layout and scrolling
-              extensions: [],         // Third-party extensions providing additional themes and languages
-              languageAliases: {},    // Map of custom/unknown language codes to standard/known language codes
-              replaceColor: x => x,   // Function allowing replacement of a theme color with another. Useful for replacing hex colors with CSS variables.
-              getLineClassName: ({    // Function allowing dynamic setting of additional class names on individual lines
-                content,              //   - the string content of the line
-                index,                //   - the zero-based index of the line within the code fence
-                language,             //   - the language specified for the code fence
-                meta                  //   - any options set on the code fence alongside the language (more on this later)
-              }) => '',
-              logLevel: 'info'       // Set to 'info' to debug if something looks wrong, otherwise is 'warn' just fine
-            }
-          },
-          {
             resolve: `gatsby-remark-embedder`,
           },
           {
@@ -123,7 +99,7 @@ module.exports = {
         name: config.siteTitle,
         short_name: config.siteTitleShort,
         description: config.siteDescription,
-        start_url: siteMetadata.siteUrl,
+        start_url: config.siteUrl,
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: "minimal-ui",

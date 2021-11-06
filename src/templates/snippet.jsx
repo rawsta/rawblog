@@ -11,7 +11,7 @@ import Footer from "../components/Footer/Footer";
 import config from "../../data/SiteConfig";
 import { formatDate } from '../utils/global';
 import "./solarized-dark.css";
-import 'gatsby-remark-vscode/styles.css';
+// import 'gatsby-remark-vscode/styles.css';
 import "./post.css";
 
 
