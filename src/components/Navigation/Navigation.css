@@ -75,31 +75,31 @@
 
     .kopfzeile .logo-small {
         max-width: 200px;
-        transition: transform 450ms;
+        transition: all 450ms ease;
         margin: 0 auto -10px;
         z-index: 2;
     }
 
     .kopfzeile .logo-small:hover {
-        transform: scale3d(1.05,1.05,0.9) rotate(-4deg) translate(8px, 12px);
+        /* transform: scale3d(1.05,1.05,0.9) rotate(-4deg) translate(8px, 12px); */
         filter: drop-shadow(0 0 6px rgba(0,0,0,0.25));
     }
 
     .kopfzeile .logo-small ~ h2 {
         opacity: 0;
         transform: scale(0.2) translateY(80px) rotate(0deg);
-        transition: all 500ms ease-in-out;
+        transition: var(--transition);
         color: var(--teal);
         z-index: 0;
     }
 
     .sidebar.thicc .kopfzeile .logo-small:hover ~ h2 {
-        transform: scale(1) translateY(-30px) rotate(-4deg);
+        transform: scale(1) translateY(-10px) rotate(-4deg);
         color: var(--bg-main);
-        text-shadow:
+        /* text-shadow:
             0 0 2px rgba(0,0,0,0.5),
             0 0 3px rgba(0,0,0,0.5),
-            0 0 5px rgba(0,0,0,0.5);
+            0 0 5px rgba(0,0,0,0.5); */
         opacity: 1;
         z-index: 3;
     }
@@ -109,7 +109,7 @@
         text-transform: lowercase;
         font-size: 4.20rem;
         font-weight: 600;
-        transition: all 500ms ease;
+        transition: all 450ms ease;
         letter-spacing: -0.2rem;
         margin: 0 auto;
         z-index: 2;
@@ -138,51 +138,55 @@
         align-items: center;
         background-color: transparent;
         border: solid transparent;
-        border-width: 2px 0 0 2px;
+        /* border-width: 2px 0 0 2px; */
         border-radius: 0;
-        transition: all 350ms 300ms ease;
+        transition: all 450ms ease;
         /* margin-bottom: 20px; */
         margin-bottom: 0;
     }
 
+    .sidebar nav a.active,
     .sidebar nav li:hover {
-        border-color: var(--medium-grey);
+        /* border-color: var(--medium-grey); */
         background-color: var(--teal);
-        border-radius: 30px 0 40px 30px;
+        border-radius: 10px 0 20px 15px;
     }
 
     .sidebar.thicc nav li {
         background-color: transparent;
     }
 
-    .sidebar.thicc nav li i,
+    /* .sidebar.thicc nav li i, */
     .sidebar nav li span {
-        display: none;
         opacity: 0;
         animation: fadein 1s;
-        visibility: hidden;
+        /* visibility: hidden; */
+        font-size: 90%;
+        padding: 0 10px 0 0;
+        transition: all 450ms ease;
     }
 
     .sidebar nav li i {
         margin:0 15px 0 10px;
         width: 30px;
         line-height: 1;
-        /* line-height: 1.625; */
         text-align: center;
     }
+
     .sidebar nav li i,
+    .sidebar nav a.active li > span,
     .sidebar nav li:hover > span,
     .sidebar.thicc nav li span {
         opacity: 1;
         visibility: visible;
     }
+
     .sidebar nav li:hover > span,
     .sidebar.thicc nav li span {
         display: block;
         width: 150px;
-        font-size: 5rem;
+        font-size: 3rem;
     }
-
 
     .sidebar nav a {
         color: var(--bg-main);

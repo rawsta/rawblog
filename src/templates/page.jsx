@@ -27,13 +27,13 @@ export default class PageTemplate extends React.Component {
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
         {/* <div className="page-wrap"> */}
-          <article className="page-single">
-            <header className="page-header">
-              <h1>{page.title}</h1>
-            </header>
-            <div className="page-content" dangerouslySetInnerHTML={{ __html: postNode.html }} />
-          </article>
-          <Footer config={config} />
+        <article className="page-single">
+          <header className="page-header">
+            <h1>{page.title}</h1>
+          </header>
+          <div className="page-content" dangerouslySetInnerHTML={{ __html: postNode.html }} />
+        </article>
+        <Footer config={config} />
         {/* </div> */}
       </Layout>
     );

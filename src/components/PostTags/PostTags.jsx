@@ -8,16 +8,15 @@ class PostTags extends Component {
     return (
       <div className="post-tag-container">
         <i className="fas fa-tags" />
-        {tags &&
-          tags.map(tag => (
-            <Link
-              key={tag}
-              style={{ textDecoration: "none" }}
-              to={`/tags/${_.kebabCase(tag)}`}
-            >
-              <span className="single-tag">{tag}</span>
-            </Link>
-          ))}
+        {tags?.map(tag => {
+          return <Link
+            key={tag}
+            style={{ textDecoration: "none" }}
+            to={`/tags/${_.kebabCase(tag)}`}
+          >
+            <span className="single-tag">{tag}</span>
+          </Link>;
+        })}
       </div>
     );
   }

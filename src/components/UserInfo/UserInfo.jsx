@@ -18,6 +18,7 @@ class UserInfo extends Component {
                 href={`https://twitter.com/${config.userTwitter}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                title={`${config.userTwitter} at Twitter.`}
               >
                 <i className="fab fa-twitter" aria-hidden="true" />
               </a>
@@ -29,6 +30,7 @@ class UserInfo extends Component {
                 href={`https://github.com/${config.userGithub}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                title={`${config.userGithub} at GitHub.`}
               >
                 <i className="fab fa-github" aria-hidden="true" />
               </a>
@@ -40,6 +42,7 @@ class UserInfo extends Component {
                 href={`mailto:${config.userEmail}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                title={`${config.userGithub}'s E-Mail.`}
               >
                 <i className="far fa-envelope" aria-hidden="true" />
               </a>

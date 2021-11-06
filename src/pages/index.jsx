@@ -22,7 +22,12 @@ export default class Index extends React.Component {
             <div className="page-wrap">
               <section className="frontpage">
                 <header className="welcome-header">
-                  <h1>Sebastian <em>rawsta</em> Fiele</h1>
+                  <h1>
+                    Sebastian
+                    <em>rawsta</em>
+                    {' '}
+                    Fiele
+                  </h1>
                   <span>playground and incoherent ramblings</span>
                 </header>
                 <div className="frontpage-main-contentarea-above-postlisting">

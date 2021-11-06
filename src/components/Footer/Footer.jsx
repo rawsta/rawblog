@@ -20,46 +20,46 @@ class Footer extends Component {
 
         {/* <UserLinks config={config} labeled /> */}
         <div className="notice-container">
-        {/* <Link to={url}>
+          {/* <Link to={url}>
             <span>RSS</span>
           </Link> */}
 
-        <p>
-          <a href="https://www.gatsbyjs.org/" title="Built with Gatsby">
-            <img
-              src={gatsby}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-img"
-              alt="GatsbyJS"
-            />
-          </a>
-          <i class="fas fa-plus"></i>
-          <a href="https://github.com/rawsta" title="Open-Source on GitHub">
-            <img
-              src={github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-img"
-              alt="GitHub"
-            />
-          </a>
-          <i class="fas fa-plus"></i>
-          <a href="https://www.netlify.com/" title="Hosted by Netlify">
-            <img
-              src={netlify}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footer-img"
-              alt="Netlify"
-            />
-          </a>
-        </p>
+          <p>
+            <a href="https://www.gatsbyjs.org/" title="Built with Gatsby">
+              <img
+                src={gatsby}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-img"
+                alt="GatsbyJS"
+              />
+            </a>
+            <i className="fas fa-plus" />
+            <a href="https://github.com/rawsta" title="Open-Source on GitHub">
+              <img
+                src={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-img"
+                alt="GitHub"
+              />
+            </a>
+            <i className="fas fa-plus" />
+            <a href="https://www.netlify.com/" title="Hosted by Netlify">
+              <img
+                src={netlify}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-img"
+                alt="Netlify"
+              />
+            </a>
+          </p>
 
-        <p>
-          Handcrafted
-          {copyright}
-        </p>
+          <p>
+            Made with love
+            {copyright}
+          </p>
         </div>
       </footer>
     );
