@@ -10,13 +10,13 @@
       <img src="https://api.codeclimate.com/v1/badges/e2d2e8a85434d5686fcc/maintainability" />
     </a>
     <a href='https://codeclimate.com/github/rawsta/rawblog'>
-      <img src="https://codeclimate.com/github/rawsta/rawblog/badges/issue_count.svg" alt="Logo" />
+      <img src="https://codeclimate.com/github/rawsta/rawblog/badges/issue_count.svg" alt="CodeClimate Logo" />
     </a>
     <a href='https://www.codacy.com/app/rawsta/rawblog?utm_source=github.com&utm_medium=referral&utm_content=rawsta/rawblog&utm_campaign=Badge_Grade'>
-      <img src="https://api.codacy.com/project/badge/Grade/990fb54ea8094f2aa0ed77f14e859820" alt="Logo" />
+      <img src="https://api.codacy.com/project/badge/Grade/990fb54ea8094f2aa0ed77f14e859820" alt="Codacy Logo" />
     </a>
     <a href='https://github.com/prettier/prettier'>
-      <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="Logo" />
+      <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="Prettier Logo" />
     </a>
     <img alt="GitHub issues" src="https://img.shields.io/github/issues/rawsta/rawblog?style=flat-square">
 </div>
@@ -205,4 +205,3 @@ WARNING: Make sure to edit `static/robots.txt` to include your domain for the si
 Ruben Harutyunyan ([@Vagr9K](https://twitter.com/Vagr9K))
 
 Sebastian Fiele ([@rawsta](https://twitter.com/rawsta))
-

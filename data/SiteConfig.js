@@ -14,7 +14,7 @@ const config = {
   menuLinks: [
     {
       name: 'rawsta',
-      link: '/about-rawsta/',
+      link: '/about/',
       iconClassName: "far fa-address-card"
     },
     {
@@ -59,7 +59,7 @@ const config = {
       iconClassName: "far fa-envelope"
     }
   ],
-  copyright: "©2020 Sebastian Fiele", // Copyright string for the footer of the website and RSS feed.
+  copyright: "©2021 Sebastian Fiele", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#830000", // Used for setting manifest and progress theme colors.
   backgroundColor: "#363636" // Used for setting manifest background color.
 };
