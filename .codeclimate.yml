@@ -19,13 +19,13 @@ checks:
     enabled: false
 
 ratings:
-   paths:
-    - "**.js"
-    - "**.jsx"
-    - "**.css"
-    - "**.less"
-    - "**.scss"
-    - "**.sss"
+    paths:
+      - "**.js"
+      - "**.jsx"
+      - "**.css"
+      - "**.less"
+      - "**.scss"
+      - "**.sss"
 
 exclude_paths:
 - static/**/*
