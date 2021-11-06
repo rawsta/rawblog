@@ -9,7 +9,7 @@
       "components": [ "Link" ],
       "specialLink": [ "hrefLeft", "hrefRight", "to" ],
       "aspects": [ "noHref", "invalidHref", "preferButton" ]
-    }]
+    } ]
   },
   "settings": {
     "import/core-modules": []
