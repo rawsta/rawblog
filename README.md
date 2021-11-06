@@ -3,7 +3,6 @@
     <img src="static/logos/logo-512.png" alt="Logo" width='256px' height='256px'/>
 </div>
 
-
 <div align="center">
     <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/rawsta/rawblog?style=flat-square">
     <a href="https://codeclimate.com/github/rawsta/rawblog/maintainability">
