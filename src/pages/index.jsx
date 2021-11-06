@@ -26,8 +26,7 @@ export default class Index extends React.Component {
                   <span>playground and incoherent ramblings</span>
                 </header>
                 <div className="frontpage-main-contentarea-above-postlisting">
-                  Diese Seite ist momentan ein Baustelle aus der sich evtl. irgendwann eine richtige Seite entwickelt.
-                  <br />Und mit etwas Glück, folgt sogar in unregelmäßigen Abständen etwas Inhalt.
+                  Diese Seite ist momentan ein Baustelle aus der sich eventuell irgendwann eine richtige Seite entwickelt. Und mit etwas Glück, folgt sogar in unregelmäßigen Abständen etwas Inhalt.
                 </div>
                 <PostListing postEdges={latestPostEdges} />
                 <Footer config={config} />
@@ -42,7 +41,7 @@ export default class Index extends React.Component {
 export const indexQuery = graphql`
 query FrontQuery {
     latest: allMarkdownRemark(
-        limit: 3
+        limit: 5
         sort: { fields: [fields___date], order: DESC }
         filter: { frontmatter: { template: { eq: "post" } } }
     ) {
