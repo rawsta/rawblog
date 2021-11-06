@@ -3,7 +3,7 @@ const config = {
   siteTitleShort: "rawBlog", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "rawBlog - playground", // Alternative site title for SEO.
   siteLogo: "/logos/logo-512.png", // Logo used for SEO and manifest.
-  siteUrl: "https://rawblog.netlify.app/", // Domain of your website without pathPrefix.
+  siteUrl: "https://rawblog.netlify.app", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "Playground and maybe-blog of Sebastian Fiele.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
