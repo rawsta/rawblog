@@ -43,8 +43,11 @@ export default class BlogPage extends Component {
             <h1 className="articles-title">Blogposts</h1>
               <span className="count">
                 {filterCount}
+<<<<<<< HEAD
               </span>
               <span className="count-text">
+=======
+>>>>>>> testing
                 {` Beiträge`}
               </span>
             </div>

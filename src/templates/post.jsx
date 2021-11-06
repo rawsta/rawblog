@@ -71,12 +71,12 @@ export default class PostTemplate extends React.Component {
               </span>
               <div className="post-info">
                 <h2>{post.title}</h2>
-                <span title="Beitragsdatum">
+                <span title="angebliches Beitragsdatum">
                   <i className="far fa-calendar-alt" />
                   {` `}
                   {date}
                 </span>
-                <span title="Grob geschätzte Lesezeit">
+                <span title="Großzügig geschätzte Lesezeit">
                   {` | `}
                   <i className="far fa-clock" />
                   {` `}

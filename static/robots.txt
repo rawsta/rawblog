@@ -2,4 +2,4 @@ User-agent: *
 Disallow: */tags/
 Disallow: */categories/
 
-sitemap: https://rawblog.netlify.com/sitemap.xml
+sitemap: https://rawblog.netlify.app/sitemap.xml

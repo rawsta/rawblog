@@ -1,35 +1,34 @@
 
 <div align="center"  style="margin-bottom:30px">
-    <img src="static/logos/logo-1024.png" alt="Logo" width='200px' height='200px'/>
+    <img src="static/logos/logo-512.png" alt="Logo" width='256px' height='256px'/>
 </div>
 
 
 <div align="center">
-    <a href="https://codeclimate.com/github/Vagr9K/gatsby-advanced-starter">
-      <img src="https://codeclimate.com/github/Vagr9K/gatsby-advanced-starter/badges/gpa.svg" alt="Logo" />
+    <img alt="GitHub package.json version" src="https://img.shields.io/github/package-json/v/rawsta/rawblog?style=flat-square">
+    <a href="https://codeclimate.com/github/rawsta/rawblog/maintainability">
+      <img src="https://api.codeclimate.com/v1/badges/e2d2e8a85434d5686fcc/maintainability" />
     </a>
-    <a href='https://codeclimate.com/github/Vagr9K/gatsby-advanced-starter'>
-      <img src="https://codeclimate.com/github/Vagr9K/gatsby-advanced-starter/badges/issue_count.svg" alt="Logo" />
+    <a href='https://codeclimate.com/github/rawsta/rawblog'>
+      <img src="https://codeclimate.com/github/rawsta/rawblog/badges/issue_count.svg" alt="CodeClimate Logo" />
     </a>
-    <a href='https://www.codacy.com/app/Vagr9K/gatsby-advanced-starter?utm_source=github.com&utm_medium=referral&utm_content=Vagr9K/gatsby-advanced-starter&utm_campaign=Badge_Grade'>
-      <img src="https://api.codacy.com/project/badge/Grade/990fb54ea8094f2aa0ed77f14e859820" alt="Logo" />
+    <a href='https://www.codacy.com/app/rawsta/rawblog?utm_source=github.com&utm_medium=referral&utm_content=rawsta/rawblog&utm_campaign=Badge_Grade'>
+      <img src="https://api.codacy.com/project/badge/Grade/990fb54ea8094f2aa0ed77f14e859820" alt="Codacy Logo" />
     </a>
     <a href='https://github.com/prettier/prettier'>
-      <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="Logo" />
+      <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square" alt="Prettier Logo" />
     </a>
+    <img alt="GitHub issues" src="https://img.shields.io/github/issues/rawsta/rawblog?style=flat-square">
 </div>
 
 # rawBlog | rawsta's playground
 
 Der Plan ist eine neue Webseite mit React/Gatsby aufzubauen und dabei endlich auch mehr JavaScript und React zu lernen.
-Um den Start etwas zu vereinfachen habe ich mit dem Gatsby Advanced Starter angefangen.
-
-> A starter skeleton with advanced features for [Gatsby](https://github.com/gatsbyjs/gatsby/).
-[`Vagr9K/gatsby-advanced-starter`](https://github.com/Vagr9K/gatsby-advanced-starter/)
+Um den Start etwas zu vereinfachen habe ich mit dem [`Gatsby Advanced Starter` von `Vagr9K`](https://github.com/Vagr9K/gatsby-advanced-starter/) angefangen.
 
 Aktueller Status: [![Netlify Status](https://api.netlify.com/api/v1/badges/bfc49937-8f96-4817-a493-6ceba1541296/deploy-status)](https://app.netlify.com/sites/rawblog/deploys)
 
-...und hier die [Demo website.](https://rawblog.netlify.com)
+...und hier die [Demo website.](https://rawblog.netlify.app)
 
 ## Lighthouse Audit Score
 
@@ -45,24 +44,18 @@ Der Score bevor ich mich dran gesetzt habe.
 
 Y not?
 
-## How can I use this?
-
-If you are a newcomer to Gatsby who's interested in the implementations of most needed features, this is a great place to start.
-
-[Demo website.](https://rawblog.netlify.com)
-
 ## Features
 
 - Gatsby v2 support
 - Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
 - Posts in Markdown
-  - Code syntax highlighting
+  - Code syntax highlighting *(via vs-code)*
   - Embed YouTube videos
   - Embed Tweets
 - Pagination
   - Configurable via `SiteConfig.js`
 - Tags
-  - Separate page for posts under each tag
+  - Separate page for snippets under each tag
 - Categories
   - Separate page for posts under each category
 - `/static/` and content folders are available to use with [gatsby-image](https://www.gatsbyjs.org/docs/gatsby-image/) out of the box for optimized image generation
@@ -70,14 +63,14 @@ If you are a newcomer to Gatsby who's interested in the implementations of most 
 - Separate components for everything:
   - User social profiles
   - Copyright information
-  - More!
+  - Maybe Unicorns
+  - Probably more!
 - [NetlifyCMS](https://www.netlifycms.org) support out of the box
 - PWA features
-  - Offline support
+  - Offline support *hopefully*
   - Web App Manifest support
   - Loading progress for slow networks
 - SEO
-  - [Google Analytics](https://marketingplatform.google.com/about/analytics/) support
   - Sitemap generation
   - robots.txt
   - General description tags
@@ -85,12 +78,7 @@ If you are a newcomer to Gatsby who's interested in the implementations of most 
   - [OpenGraph Tags (Facebook/Google+/Pinterest)](https://ogp.me/)
   - [Twitter Tags (Twitter Cards)](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/markup)
 - RSS feeds
-- Social features
-  - Twitter tweet button
-  - Facebook share/share count
-  - Reddit share/share count
-  - LinkedIn share button
-  - Telegram share button
+- Social features removed! _mostly_
 - Development tools
   - [ESLint](https://eslint.org/) for linting
   - [Prettier](https://prettier.io/) for code formatting
@@ -99,15 +87,14 @@ If you are a newcomer to Gatsby who's interested in the implementations of most 
   - gh-pages for deploying to GitHub pages
   - [Netlify](https://www.netlify.com/) deploy configuration
   - [CodeClimate](https://codeclimate.com/) configuration file and badge
-
-NOTE: Feel free to check out [Gatsby Material Starter](https://github.com/Vagr9K/gatsby-material-starter) if you are interested in a more opinionated starter with Material Design in mind.
+- and much more
 
 ## Getting Started
 
-Install this starter (assuming [Gatsby](https://github.com/gatsbyjs/gatsby/) is installed and updated) by running from your CLI:
+Install my website (assuming [Gatsby](https://github.com/gatsbyjs/gatsby/) is installed and updated) by running from your CLI:
 
 ```sh
-gatsby new YourProjectName https://github.com/Vagr9K/gatsby-advanced-starter
+gatsby new YourAwesomeProject https://github.com/rawsta/rawblog
 npm run develop # or gatsby develop
 ```
 
@@ -116,12 +103,14 @@ Or you can fork the project, make your changes there and merge new features when
 Alternatively:
 
 ```sh
-git clone https://github.com/Vagr9K/gatsby-advanced-starter YourProjectName # Clone the project
-cd YourProjectname
+git clone https://github.com/rawsta/rawblog YourAwesomeProject # Clone the project
+cd YourAwesomeProject
 rm -rf .git # So you can have your own changes stored in VCS.
-npm install # or yarn install
-npm run develop # or gatsby develop
+npm install # or yarn install or npx install or voodoo
+npm run develop # or gatsby develop or yarn run develop or ...you get it.
 ```
+
+Please don't forget to remove my content if just clone everything.
 
 ## Configuration
 
@@ -137,9 +126,6 @@ module.exports = {
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "A GatsbyJS stater with Advanced design in mind.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
-  siteFBAppID: "1825356251115265", // FB Application ID for using app insights
-  googleAnalyticsID: "UA-47311644-5", // GA tracking ID.
-  disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.
   postDefaultCategoryID: "Tech", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
   dateFormat: "DD/MM/YYYY", // Date format for display.
@@ -155,22 +141,22 @@ module.exports = {
   userLinks: [
     {
       label: "GitHub",
-      url: "https://github.com/Vagr9K/gatsby-advanced-starter",
+      url: "https://github.com/rawsta/rawblog",
       iconClassName: "fa fa-github"
     },
     {
       label: "Twitter",
-      url: "https://twitter.com/Vagr9K",
+      url: "https://twitter.com/rawsta",
       iconClassName: "fa fa-twitter"
     },
     {
       label: "Email",
-      url: "mailto:vagr9k@gmail.com",
+      url: "mailto:rawsta@rawsta.de",
       iconClassName: "fa fa-envelope"
     }
   ],
-  copyright: "Copyright © 2019. Advanced User", // Copyright string for the footer of the website and RSS feed.
-  themeColor: "#c62828", // Used for setting manifest and progress theme colors.
+  copyright: "Copyright © 2020. Advanced User", // Copyright string for the footer of the website and RSS feed.
+  themeColor: "#ff8300", // Used for setting manifest and progress theme colors.
   backgroundColor: "#e0e0e0" // Used for setting manifest background color.
 };
 ```
@@ -194,12 +180,28 @@ You can also optionally set `pathPrefix`:
 ```js
 module.exports = {
   // Note: it must *not* have a trailing slash.
-  pathPrefix: "/gatsby-advanced-starter" // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
+  pathPrefix: "/your-awesome-creation" // Prefixes all links. For cases when deployed to example.github.io/your-awesome-creation/.
 };
 ```
 
 WARNING: Make sure to edit `static/robots.txt` to include your domain for the sitemap!
 
-# Author
+# More Badges!
+![GitHub repo size](https://img.shields.io/github/repo-size/rawsta/rawblog?style=for-the-badge)
+![Netlify](https://img.shields.io/netlify/bfc49937-8f96-4817-a493-6ceba1541296?style=for-the-badge)
+![Issues](https://img.shields.io/badge/issues-a%20lot-orange?style=for-the-badge)
+![forthebadge](https://forthebadge.com/images/badges/approved-by-veridian-dynamics.svg)
+![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
+![GitHub](https://img.shields.io/github/license/rawsta/rawblog?style=for-the-badge)
+![forthebadge](https://forthebadge.com/images/badges/reading-6th-grade-level.svg)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/rawsta/rawblog?style=for-the-badge)
+![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)
+![forthebadge](https://forthebadge.com/images/badges/compatibility-betamax.svg)
+![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)
+![forthebadge](https://forthebadge.com/images/badges/fuck-it-ship-it.svg)]
+
+# Authors
 
 Ruben Harutyunyan ([@Vagr9K](https://twitter.com/Vagr9K))
+
+Sebastian Fiele ([@rawsta](https://twitter.com/rawsta))

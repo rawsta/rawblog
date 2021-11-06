@@ -1,3 +1,7 @@
+.post-single {
+  margin-bottom: 40px;
+}
+
 .post-single p a,
 .post-single p a:visited,
 .post-single p a:link {
@@ -24,7 +28,6 @@
 .post-single p a:hover::before {
     transform: scaleY(1);
     background-color: var(--secondary);
-
 }
 
 .post-single p a:hover,
@@ -187,4 +190,12 @@ span.post-info {
 
   .single-tag::before {
     content: "#";
+  }
+
+/* Table Of Contents */
+
+  .toc p {
+    margin: 0;
+    padding: 0;
+    display: inline;
   }

@@ -43,8 +43,11 @@ export default class SnippetPage extends Component {
             <h1 className="articles-title">Snippets</h1>
               <span className="count">
                 {filterCount}
+<<<<<<< HEAD
               </span>
               <span className="count-text">
+=======
+>>>>>>> testing
                 {` Snippets`}
               </span>
             </div>

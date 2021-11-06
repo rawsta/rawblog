@@ -19,14 +19,15 @@ checks:
     enabled: false
 
 ratings:
-   paths:
-    - "**.js"
-    - "**.jsx"
-    - "**.css"
-    - "**.less"
-    - "**.scss"
-    - "**.sss"
+    paths:
+      - "**.js"
+      - "**.jsx"
+      - "**.css"
+      - "**.less"
+      - "**.scss"
+      - "**.sss"
 
 exclude_paths:
 - static/**/*
 - src/templates/b16-tomorrow-dark.css
+- src/templates/solarized-dark.css

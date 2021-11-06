@@ -1,6 +1,7 @@
 
 .sidebar {
     display: flex;
+    -ms-flex-direction: column;
     flex-direction: column;
     justify-content: space-between;
     position: fixed;
@@ -50,6 +51,7 @@
     .sidebar footer {
         display: flex;
         flex-grow: 0;
+        -ms-flex-direction: column;
         flex-direction: column;
         justify-content: center;
     }
@@ -125,17 +127,19 @@
         padding: 0;
         position: relative;
         display: flex;
+        -ms-flex-direction: column;
         flex-direction: column;
     }
 
     .sidebar nav li {
         display: flex;
+        -ms-flex-direction: row;
         flex-direction: row;
         align-items: center;
         background-color: transparent;
         border: solid transparent;
         border-width: 2px 0 0 2px;
-        border-radius: 0px 0 0px 0px;
+        border-radius: 0;
         transition: all 350ms 300ms ease;
         /* margin-bottom: 20px; */
         margin-bottom: 0;
@@ -155,13 +159,11 @@
     .sidebar nav li span {
         display: none;
         opacity: 0;
-        /* width: 0; */
         animation: fadein 1s;
         visibility: hidden;
     }
 
     .sidebar nav li i {
-        /* margin:0 15px 0 -30px; */
         margin:0 15px 0 10px;
         width: 30px;
         line-height: 1;
@@ -171,8 +173,6 @@
     .sidebar nav li i,
     .sidebar nav li:hover > span,
     .sidebar.thicc nav li span {
-        /* display: inline-block; */
-        line-height: 1;
         opacity: 1;
         visibility: visible;
     }
@@ -269,12 +269,14 @@
         justify-content: space-around;
         padding: 0 5px 0;
     }
+
     .sidebar .rechtliches a,
     .sidebar .rechtliches {
         color: var(--bg-dark);
         font-size: 1.4rem;
         text-align: center;
     }
+
     .sidebar .rechtliches a:hover {
         color: var(--secondary);
     }
@@ -335,3 +337,18 @@
     }
 
 
+@media screen and (max-width: 1200px) {
+
+    .sidebar {
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        left: 0;
+        right: 0;
+        bottom: auto;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+    }
+}
