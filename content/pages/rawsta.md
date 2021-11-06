@@ -25,5 +25,4 @@ Ich war schon immer sehr interessiert an Elektronik, Technik und Compouter allge
 
 ## Der Neuanfang
 
-...und jetzt bin ich _(fast)_ Fachinformatiker Anwendungsentwicklung. :)
-
+...und jetzt bin ich Fachinformatiker Anwendungsentwicklung. :)
