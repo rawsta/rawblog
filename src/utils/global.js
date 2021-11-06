@@ -31,14 +31,4 @@ const scroll = {
     toHref: scrollToHref,
 }
 
-// $( window ).on('scroll', function() {
-
-//     if ( 50 < $( document ).scrollTop() ) {
-//         $( '.site-header' ).addClass( 'shrink' );
-//     } else {
-//         $( '.site-header' ).removeClass( 'shrink' );
-//     }
-
-// });
-
 export { formatDate, editOnGithub, scroll }

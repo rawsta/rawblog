@@ -64,6 +64,8 @@ html {
 
     --letter-spacing: -0.05em;
 
+    --transition: all 450ms ease;
+
     --grvsc-line-highlighted-background-color: rgba(255, 255, 255, 0.2); /* default: transparent */
     --grvsc-line-highlighted-border-color: rgba(255, 255, 255, 0.5); /* default: transparent */
     --grvsc-line-highlighted-border-width: 2px; /* default: 4px */
@@ -97,6 +99,7 @@ html {
     --black25: rgba(0, 0, 0, 0.25);
 
     --letter-spacing: -0.05em;
+    --transition: all 450ms ease;
 
     --border: 3px solid #ccc;
     --border-radius: 5px 15px 5px 25px;
@@ -269,11 +272,7 @@ body {
 
     h2 {
         font-size: 3.65rem;
-<<<<<<< HEAD
-        font-weight: 900;
-=======
         font-weight: 800;
->>>>>>> testing
     }
 
     h3 {
@@ -422,15 +421,9 @@ body {
     }
 
     .post-content blockquote p,
-<<<<<<< HEAD
-    blockquote p {
-        margin: 0 10px 20px;
-    padding: 10px 20px;
-=======
         blockquote p {
             margin: 0 10px 20px;
         padding: 10px 20px;
->>>>>>> testing
     }
 
     blockquote p:last-of-type {
@@ -584,30 +577,6 @@ body {
 
     .title-wrap {
         display: flex;
-<<<<<<< HEAD
-        flex-direction: row;
-        justify-content: space-between;
-        position: relative;
-        border-bottom: 4px solid var(--medium-grey);
-        padding: 0;
-        margin: 0;
-    }
-    .title-wrap span.count,
-    .title-wrap h1 {
-        font-size: 9rem;
-        font-weight: 900;
-        color: var(--medium-grey);
-        margin: -10px 0 0;
-        line-height: 0.8;
-        text-transform: uppercase;
-        letter-spacing: -0.06em;
-    }
-    .title-wrap span.count-text {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-    }
-=======
         align-items: baseline;
         justify-content: space-between;
         margin: 10px 20px 0px;
@@ -619,15 +588,12 @@ body {
         margin-bottom: 20px;
     }
 
->>>>>>> testing
     /* .category-container  */
     /* .articles-title, */
     /* .search-container {
         margin-top: 20px;
         margin-left: 40px;
     } */
-<<<<<<< HEAD
-=======
 
     span.count {
         margin-right: 40px;
@@ -635,7 +601,6 @@ body {
         font-weight: 900;
         letter-spacing: -0.05em;
     }
->>>>>>> testing
 
     .blog-header {
         padding: 5px 20px 10px 40px;

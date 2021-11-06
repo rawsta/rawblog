@@ -23,15 +23,7 @@ Ich war mein eigener Chef und konnte mir über die Jahre einen kleinen, aber fei
 Durch das stetige Arbeitsaufkommen, blieb wenig Zeit zur Weiterentwicklung und das Gefühl der Stagnation kam auf. Ich fühlte mich ausgebrannt und wusste, dass sich was ändern muss. Im Bereich der Gestaltung, sah ich nur ein Studium als wirklichen Fortschritt an um mich wirklich weiterzuentwickeln. Vielleicht geschürt durch das Gefühl des ausgebrannt-sein, beschloß ich mich auf ein neues Feld zu stürzen.
 Ich bin weit entfernt ein Topdesigner zu sein und wahrscheinlich würde ich in einer regulären Agentur auch nicht weit kommen, weswegen ich beschlossen habe, komplett neu anzufangen. Mit einer Ausbildung.
 
-<<<<<<< HEAD
-Über die Jahre habe ich mich immer besser in Photoshop, Illustrator zu recht gefunden. Zwischendurch kleine Ausflüge in Flash, Cinema 4D, Premiere Pro und After Effects stand jedoch fest, das es mir zwar Spaß macht aber nicht wirklich zufrieden stellte.
-
-## Der Neuanfang
-
-...und jetzt bin ich Fachinformatiker Anwendungsentwicklung. :)
-=======
 Ich fing an meinen Kunden Bescheid zu geben und, falls möglich, an einen neuen Gestalter zu vermitteln. Ich fing an Bewerbungen zu schreiben und war anfangs nicht besonders optimistisch. Mit 30+ bin ich eher im Ausbilder als Azubialter, aber ich wollte es wenigstens versuchen.
 
 Nach den ersten Absagen kamen bald erste Vorstellungsgespräche zustande.
 Ein paar Probearbeitstage später hatte ich den Luxus, gleich aus mehreren Angeboten auswählen zu können und hatte noch nichtmal auf alle Bewerbungen eine Antwort erhalten. Es dauerte nicht allzu lange mich für ein Angebot zu entscheiden und ich habe es keinen Tag bereut. Ich gehe jeden Tag mit einem Lächeln zur Arbeit.
->>>>>>> testing
