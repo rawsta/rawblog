@@ -15,6 +15,7 @@ class CodeListing extends React.Component {
         path: codeEdge.node.fields.slug,
         tags: codeEdge.node.frontmatter.tags,
         cover: codeEdge.node.frontmatter.cover,
+        category: codeEdge.node.frontmatter.category,
         title: codeEdge.node.frontmatter.title,
         date: codeEdge.node.fields.date,
         excerpt: codeEdge.node.excerpt,
@@ -43,25 +44,20 @@ class CodeListing extends React.Component {
     return (
       <section className="post-list">
         {codeList.map(code => (
-
           <Link to={code.path} key={code.title}>
-            <article className="post-item">
-              <div className="post-item-img">
-                <img
-                  src={code.cover}
-                  className="title-img"
-                  alt={code.title}
-                />
-              </div>
+            <article className="post-item" style={{backgroundImage: `url(${code.cover})`}}>
               <header className="post-item-content">
+                <span title={code.category}>
+                  {CAT_ICON[code.category]}
+                </span>
                 <div className="post-header">
                   <h2 className="post-title">{code.title}</h2>
-                  <span title="angebliches Beitragsdatum">
+                  <span title="Beitragsdatum">
                     <i className="far fa-calendar-alt" />
                     {` `}
                     {formatDate(code.date)}
                   </span>
-                  <span title="Grob überschätzte Lesezeit">
+                  <span title="Grob gechätzte Lesezeit">
                     {` | `}
                     <i className="fas fa-code" />
                     {` `}

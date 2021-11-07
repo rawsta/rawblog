@@ -2,6 +2,7 @@
 title: "Jolly jQuery Journey"
 date: 2020-02-05
 cover: /assets/sample1-title.jpg
+category: javascript
 template: snippet
 slug: jolly-jquery-journey
 tags:

@@ -3,6 +3,7 @@ title: "Helpful HTML"
 date: 2020-02-01
 cover: /assets/sample1-title.jpg
 template: snippet
+category: html
 slug: helpful-html
 tags:
     - html

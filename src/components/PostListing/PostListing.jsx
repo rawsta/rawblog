@@ -40,20 +40,20 @@ class PostListing extends React.Component {
       test: <i className="fab fa-diaspora" />,
     };
 
+              // <div className="post-item-img">
+              //   <img
+              //     src={post.cover}
+              //     className="title-img"
+              //     alt={post.title}
+              //   />
+              // </div>
 
     return (
       <section className="post-list">
         {postList.map(post => (
 
           <Link to={post.path} key={post.title}>
-            <article className="post-item">
-              <div className="post-item-img">
-                <img
-                  src={post.cover}
-                  className="title-img"
-                  alt={post.title}
-                />
-              </div>
+            <article className="post-item" style={{backgroundImage: `url(${post.cover})`}}>
               <header className="post-item-content">
                 <span title={post.category}>
                   {CAT_ICON[post.category]}

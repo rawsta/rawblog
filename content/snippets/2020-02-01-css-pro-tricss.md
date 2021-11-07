@@ -2,6 +2,7 @@
 title: "Pro TriCSS"
 date: 2020-02-01
 cover: /assets/sample2-title.jpg
+category: css
 template: snippet
 slug: pro-tricss
 tags:
