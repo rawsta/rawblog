@@ -1,14 +1,16 @@
 ---
-title: "Kontakt"
+title: "Contact"
 cover: /assets/bla-title.jpg
 date: "2021-05-02"
-slug: kontakt
+slug: contact
 template: page
 ---
 
-### Bei Fragen
+### In case of...
 
-oder ähnlichem:
+...questions
+...problems
+...something else, feel free to contact me.
 
 **Sebastian Fiele**
  - **Mail**: rawsta(ät)rawsta de
