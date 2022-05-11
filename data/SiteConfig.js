@@ -28,8 +28,8 @@ const config = {
       iconClassName: "far fa-newspaper"
     },
     {
-      name: 'Kontakt',
-      link: '/kontakt/',
+      name: 'Contact',
+      link: '/contact/',
       iconClassName: "fas fa-pager"
     },
   ],
@@ -59,7 +59,7 @@ const config = {
       iconClassName: "far fa-envelope"
     }
   ],
-  copyright: "©2022 Sebastian Fiele", // Copyright string for the footer of the website and RSS feed.
+  copyright: "&copy;2022 Sebastian Fiele", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#830000", // Used for setting manifest and progress theme colors.
   backgroundColor: "#363636" // Used for setting manifest background color.
 };
