@@ -5,7 +5,7 @@ const config = {
   siteLogo: "/logos/logo-512.png", // Logo used for SEO and manifest.
   siteUrl: "https://rawblog.netlify.app", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: "Playground and maybe-blog of Sebastian Fiele.", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "Playground of Sebastian Fiele.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/", // Path to the RSS file.
   postDefaultCategoryID: "test", // Default category for posts.
   dateFromFormat: "YYYY-MM-DD", // Date format used in the frontmatter.
@@ -59,7 +59,7 @@ const config = {
       iconClassName: "far fa-envelope"
     }
   ],
-  copyright: "©2021 Sebastian Fiele", // Copyright string for the footer of the website and RSS feed.
+  copyright: "©2022 Sebastian Fiele", // Copyright string for the footer of the website and RSS feed.
   themeColor: "#830000", // Used for setting manifest and progress theme colors.
   backgroundColor: "#363636" // Used for setting manifest background color.
 };
