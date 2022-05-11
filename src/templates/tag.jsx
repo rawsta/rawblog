@@ -13,7 +13,7 @@ export default class TagTemplate extends React.Component {
     return (
       <Layout>
         <span className="tag_container">
-          <Helmet title={`Snippets markiert als "${tag}" | ${config.siteTitle}`} />
+          <Helmet title={`Snippets marked as "${tag}" | ${config.siteTitle}`} />
           <PostListing postEdges={postEdges} />
         </span>
       </Layout>

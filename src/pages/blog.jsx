@@ -36,14 +36,14 @@ export default class BlogPage extends Component {
 
     return (
       <Layout>
-        <Helmet title={`Beiträge – ${config.siteTitle}`} />
+        <Helmet title={`Posts – ${config.siteTitle}`} />
         <SEO />
         <div className="container">
           <div className="title-wrap">
             <h1 className="articles-title">Blogposts</h1>
               <span className="count">
                 {filterCount}
-                {` Beiträge`}
+                {` Posts`}
               </span>
             </div>
           {/* <section className="blog-header">
@@ -70,7 +70,7 @@ export default class BlogPage extends Component {
                   type="text"
                   name="searchTerm"
                   value={searchTerm}
-                  placeholder="Beiträge filtern..."
+                  placeholder="Filter posts..."
                   onChange={this.handleChange}
                 />
                 <i className="fas fa-search"></i>

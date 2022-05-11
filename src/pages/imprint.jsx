@@ -12,24 +12,24 @@ export default class Imprint extends React.Component {
         return (
           <Layout>
             <Helmet>
-              <title>{`${config.siteTitle} | Impressum`}</title>
+              <title>{`Imprint | ${config.siteTitle}`}</title>
             </Helmet>
             <SEO />
             <div className="page-wrap">
               <section className="page">
                 <header className="page-header">
-                  <h1>Impressum</h1>
+                  <h1>Imprint</h1>
                 </header>
                 <hr />
                 <div className="page-content">
-                  <h3>Angaben gemäß § 5 TMG:</h3>
+                  <h3>Angaben gem&auml;&szlig; § 5 TMG:</h3>
                   <div className="one-half first">
                     <p>
                       Sebastian Fiele
                       <br />
-                      Von-Kluck-Str. 6
+                      Graestr. 45
                       <br />
-                      48151 Münster
+                      48151 M&uuml;nster
                     </p>
                   </div>
                   <div className="one-half">
@@ -43,12 +43,10 @@ export default class Imprint extends React.Component {
                   </div>
                   <hr className="clearfix" />
                   <div>
-                    <h4>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h4>
-                    Sebastian Fiele
-                    <br />
-                    Von-Kluck-Str. 6
-                    <br />
-                    48151 Münster
+                    <h4>Verantwortlich f&uuml;r den Inhalt nach § 55 Abs. 2 RStV:</h4>
+                    Sebastian Fiele <br />
+                    Graestr. 45 <br />
+                    48151 M&uuml;nster
                   </div>
                 </div>
                 <hr />

@@ -19,6 +19,7 @@ class Footer extends Component {
       <footer className="footer">
 
         {/* <UserLinks config={config} labeled /> */}
+        <UserLinks config={config} labeled />
         <div className="notice-container">
           {/* <Link to={url}>
             <span>RSS</span>
@@ -57,7 +58,7 @@ class Footer extends Component {
           </p>
 
           <p>
-            Made with love
+            Made with <i className="fas fa-code" />
             {copyright}
           </p>
         </div>

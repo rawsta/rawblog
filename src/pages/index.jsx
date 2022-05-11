@@ -16,27 +16,24 @@ export default class Index extends React.Component {
         return (
           <Layout>
             <Helmet>
-              <title>{`${config.siteTitle} | Sebastian Fiele`}</title>
+              <title>{`${config.siteTitle}`}</title>
             </Helmet>
             <SEO />
             <div className="page-wrap">
               <section className="frontpage">
                 <header className="welcome-header">
                   <h1>
-                    Sebastian
-                    <em>rawsta</em>
-                    {' '}
-                    Fiele
+                    rawBlog
                   </h1>
-                  <span>playground and incoherent ramblings</span>
+                  <span>the playground and incoherent ramblings of Sebastian <em>rawsta</em> Fiele.</span>
                 </header>
                 <div className="frontpage-main-contentarea-above-postlisting">
                   Diese Seite ist momentan ein Baustelle aus der sich eventuell irgendwann eine richtige Seite entwickelt. Und mit etwas Glück, folgt sogar in unregelmäßigen Abständen etwas Inhalt.
                 </div>
                 <PostListing postEdges={latestPostEdges} />
-                <Footer config={config} />
               </section>
             </div>
+            <Footer config={config} />
           </Layout>
         );
     }
