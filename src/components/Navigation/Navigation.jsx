@@ -88,8 +88,8 @@ class Navigation extends Component {
 
               <h5 className="legal-title">§</h5>
               <div className="rechtliches">
-                <Link to="/privacy">Datenschutz</Link>
-                <Link to="/imprint">Impressum</Link>
+                <Link to="/privacy">Privacy</Link>
+                <Link to="/imprint">Imprint</Link>
               </div>
 
             </footer>

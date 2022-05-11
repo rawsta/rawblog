@@ -40,7 +40,7 @@ export default class BlogPage extends Component {
         <SEO />
         <div className="container">
           <div className="title-wrap">
-            <h1 className="articles-title">Blogposts</h1>
+            <h1 className="articles-title">The Blog</h1>
               <span className="count">
                 {filterCount}
                 {` Posts`}

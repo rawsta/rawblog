@@ -19,7 +19,6 @@ class Footer extends Component {
       <footer className="footer">
 
         {/* <UserLinks config={config} labeled /> */}
-        <UserLinks config={config} labeled />
         <div className="notice-container">
           {/* <Link to={url}>
             <span>RSS</span>
