@@ -45,7 +45,7 @@ footer {
   text-align: center;
 }
 
-@media (max-width: 640px - 1px) {
+@media (max-width: 639px) {
   .notice-container {
       justify-content: space-around;
   }

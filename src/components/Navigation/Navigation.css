@@ -150,7 +150,7 @@
     .sidebar nav li:hover {
         /* border-color: var(--medium-grey); */
         background-color: var(--teal);
-        border-radius: 10px 0 20px 15px;
+        border-radius: 10px;
     }
 
     .sidebar.thicc nav li {
